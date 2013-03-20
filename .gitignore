@@ -1,0 +1,13 @@
+.hg
+octave-core
+*.log
+*.aux
+*.out
+*~
+*swp
+*backup
+*.toc
+*.pdf
+*.dvi
+*#
+*.gz
