@@ -332,5 +332,78 @@ Rezultat je
 
 \end_deeper
 \end_deeper
+\begin_layout Enumerate
+Napiši in nariši nekaj prvih Bernsteinovih polinomov
+\begin_inset Formula 
+\[
+b_{n,i}={n \choose i}x^{i}(1-x)^{n-i};\quad i=0,\ldots,n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev: 
+\series default
+Polinome za 
+\begin_inset Formula $n=3$
+\end_inset
+
+ narišemo z naslednjim programčkom
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+n=3;
+\end_layout
+
+\begin_layout Plain Layout
+
+t=linspace(0,1); % tabela tock na [0,1]
+\end_layout
+
+\begin_layout Plain Layout
+
+for i=0:n
+\end_layout
+
+\begin_layout Plain Layout
+
+  plot(t,nchoosek(n,i)*t.^i*.(1-t).^(n-i));
+\end_layout
+
+\begin_layout Plain Layout
+
+  hold on
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+hold off
+\end_layout
+
+\begin_layout Plain Layout
+
+print -dpng "bernstein.png"
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
