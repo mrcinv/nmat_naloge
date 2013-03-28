@@ -543,7 +543,7 @@ for k=1:10
 
 \begin_layout Plain Layout
 
-  r(k)=norm(f(x)-B(k,x),'inf');
+  r(k)=norm(f(x)-B(f,k,x),'inf');
 \end_layout
 
 \begin_layout Plain Layout
