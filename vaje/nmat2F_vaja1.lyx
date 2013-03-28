@@ -565,7 +565,13 @@ n",r)
 
 \end_inset
 
- 
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -581,6 +587,22 @@ status open
 
 \backslash
 begin{array}{c}
+\end_layout
+
+\begin_layout Plain Layout
+
+||f-B_nf||_
+\backslash
+infty
+\backslash
+cr
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
 \end_layout
 
 \begin_layout Plain Layout
@@ -602,6 +624,23 @@ end{array}
 
 \backslash
 ]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Napaka pri aproksimaciji z Bernsteinovimi polinomi 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
