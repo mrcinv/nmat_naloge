@@ -179,7 +179,7 @@ status open
 
 \begin_layout Plain Layout
 
-f2 = inline('1/(1+x^2)^2')
+f2 = @(x) 1/(1+x^2)^2;
 \end_layout
 
 \begin_layout Plain Layout
@@ -431,10 +431,6 @@ Bernsteinovi polinomi za
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -568,6 +564,7 @@ n",[(1:10);r'])
 
 
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
