@@ -488,7 +488,7 @@ b = @(n,i,x) nchoosek(n,i)*x.^i.*(1-x).^(n-i);
 
 \begin_layout Plain Layout
 
-function b=B(f,n,x) 
+function y=B(f,n,x) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -503,7 +503,7 @@ function b=B(f,n,x)
 
 \begin_layout Plain Layout
 
-  b = zeros(size(x));
+  y = zeros(size(x));
 \end_layout
 
 \begin_layout Plain Layout
@@ -513,7 +513,7 @@ function b=B(f,n,x)
 
 \begin_layout Plain Layout
 
-    b += f(i/n).*b(n,i,x);
+    y += f(i/n).*b(n,i,x);
 \end_layout
 
 \begin_layout Plain Layout
