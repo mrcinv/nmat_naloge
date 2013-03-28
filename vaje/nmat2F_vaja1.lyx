@@ -473,16 +473,13 @@ B_{n}f=\sum_{i=0}^{n}f(\frac{i}{n})b_{n,i}(x).
 Neskončno normo bomo ocenili kar z iskanjem maksima absolutne vrednosti
  na tabeli funkcijskih vrednosti v dovolj velikem številu točk.
 \begin_inset listings
+lstparams "lastline=15"
 inline false
 status open
 
 \begin_layout Plain Layout
 
 f = @(x) sqrt(x); % definiramo funkcijo
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -557,7 +554,13 @@ end
 
 \begin_layout Plain Layout
 
-printfs("napaka_Bernstein.tex","%f&",r)
+fprintfs("napaka_Bernstein.tex","%f
+\backslash
+
+\backslash
+cr
+\backslash
+n",r)
 \end_layout
 
 \end_inset
