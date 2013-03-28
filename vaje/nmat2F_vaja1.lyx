@@ -5,7 +5,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language slovene
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -403,6 +403,7 @@ print -dpng "bernstein.png"
 
  
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -410,7 +411,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename bernstein.png
-	width 80text%
+	width 100text%
 
 \end_inset
 
