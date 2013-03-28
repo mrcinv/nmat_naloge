@@ -489,7 +489,7 @@ function y=B(f,n,x)
 
 \begin_layout Plain Layout
 
-% funkcija B(f,n,x) izračuna Bernsteinovo 
+% funkcija B(f,n,x) izracuna Bernsteinovo 
 \end_layout
 
 \begin_layout Plain Layout
@@ -529,7 +529,7 @@ endfunction
 
 \begin_layout Plain Layout
 
-x = linspace(0,1); % točke na [0,1]
+x = linspace(0,1); % tocke na [0,1]
 \end_layout
 
 \begin_layout Plain Layout
