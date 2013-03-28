@@ -532,7 +532,7 @@ endfunction
 
 \begin_layout Plain Layout
 
-x = linspace(0,1,500); % točke na [0,1]
+x = linspace(0,1); % točke na [0,1]
 \end_layout
 
 \begin_layout Plain Layout
