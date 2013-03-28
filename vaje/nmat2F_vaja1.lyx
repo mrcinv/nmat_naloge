@@ -554,13 +554,13 @@ end
 
 \begin_layout Plain Layout
 
-fprintfs("napaka_Bernstein.tex","%f
+fprintfs("napaka_Bernstein.tex","%d& %f
 \backslash
 
 \backslash
 cr
 \backslash
-n",r)
+n",(1:10)',r)
 \end_layout
 
 \end_inset
@@ -586,7 +586,7 @@ status open
 
 
 \backslash
-begin{array}{c}
+begin{array}{cc}
 \end_layout
 
 \begin_layout Plain Layout
