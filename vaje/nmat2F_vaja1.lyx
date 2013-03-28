@@ -560,7 +560,7 @@ fprintfs("napaka_Bernstein.tex","%d& %f
 \backslash
 cr
 \backslash
-n",(1:10)',r)
+n",[(1:10)';r])
 \end_layout
 
 \end_inset
