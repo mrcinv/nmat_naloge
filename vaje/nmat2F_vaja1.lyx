@@ -440,5 +440,127 @@ Bernsteinovi polinomi za
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Numerično preverite obnašanje norme 
+\begin_inset Formula $||f-B_{n}f||_{\infty}$
+\end_inset
+
+ za funkcijo 
+\begin_inset Formula 
+\[
+f(x)=\sqrt{x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev:
+\series default
+ Bernsteinova aproksimacija je dana s formulo
+\begin_inset Formula 
+\[
+B_{n}f=\sum_{i=0}^{n}f(\frac{i}{n})b_{n,i}(x).
+\]
+
+\end_inset
+
+Neskončno normo bomo ocenili kar z iskanjem maksima absolutne vrednosti
+ na tabeli funkcijskih vrednosti v dovolj velikem številu točk.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f = @(x) sqrt(x); % definiramo funkcijo
+\end_layout
+
+\begin_layout Plain Layout
+
+b = @(n,i,x) nchoosek(n,i)*x.^i.*(1-x).^(n-i);
+\end_layout
+
+\begin_layout Plain Layout
+
+function b=B(f,n,x) 
+\end_layout
+
+\begin_layout Plain Layout
+
+% funkcija B(f,n,x) izračuna Bernsteinovo 
+\end_layout
+
+\begin_layout Plain Layout
+
+% aproksimacijo stopnje n funkcije f
+\end_layout
+
+\begin_layout Plain Layout
+
+  b = zeros(size(x));
+\end_layout
+
+\begin_layout Plain Layout
+
+  for i=0:n 
+\end_layout
+
+\begin_layout Plain Layout
+
+    b += f(i/n).*b(n,i,x);
+\end_layout
+
+\begin_layout Plain Layout
+
+  end
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+x = linspace(0,1,500); % točke na [0,1]
+\end_layout
+
+\begin_layout Plain Layout
+
+r = zeros(10,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+for k=1:10
+\end_layout
+
+\begin_layout Plain Layout
+
+  r(k)=norm(f(x)-B(k,x),'inf');
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+printfs("napaka_Bernstein.tex","%f&",r)
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
