@@ -483,7 +483,6 @@ f = @(x) sqrt(x); % definiramo funkcijo
 
 \begin_layout Plain Layout
 
-b = @(n,i,x) nchoosek(n,i)*x.^i.*(1-x).^(n-i);
 \end_layout
 
 \begin_layout Plain Layout
@@ -499,6 +498,11 @@ function y=B(f,n,x)
 \begin_layout Plain Layout
 
 % aproksimacijo stopnje n funkcije f
+\end_layout
+
+\begin_layout Plain Layout
+
+  b = @(n,i,x) nchoosek(n,i)*x.^i.*(1-x).^(n-i);  
 \end_layout
 
 \begin_layout Plain Layout
