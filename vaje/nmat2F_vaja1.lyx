@@ -566,6 +566,47 @@ n",r)
 \end_inset
 
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{array}{c}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{napaka_Bernstein.tex}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{array}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
