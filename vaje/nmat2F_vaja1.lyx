@@ -62,7 +62,8 @@
 \begin_body
 
 \begin_layout Title
-Rešitve vaj iz Numeričnih metod II
+Rešitve 1.
+ vaje iz Numeričnih metod II
 \end_layout
 
 \begin_layout Author
@@ -250,7 +251,7 @@ Nalogo rešimo podobno kot pri točki (a).
 \begin_layout Enumerate
 V tem primeru gre za polinom, zato lažje poiščemo neskončno normo
 \begin_inset listings
-lstparams "lastline=5"
+lstparams "lastline=5,lastline=7"
 inline false
 status open
 
