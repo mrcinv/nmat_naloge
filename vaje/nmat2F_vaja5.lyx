@@ -190,7 +190,7 @@ tocke = zeros(2,length(t));
 
 \begin_layout Plain Layout
 
-for i=1:n   
+for i=0:n   
 \end_layout
 
 \begin_layout Plain Layout
