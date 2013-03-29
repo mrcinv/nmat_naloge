@@ -226,11 +226,11 @@ fprintfs("bezier.tex","
 \backslash
 
 \backslash
-bmatrix{%f
+begin{bmatrix}%f & %f
 \backslash
 
 \backslash
-cr%f}
+end{bmatrix}
 \backslash
 n",tocke(1,:),tocke(2,:))
 \end_layout
