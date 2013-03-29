@@ -170,7 +170,7 @@ function tocke=bezier(t,P)
 
 \begin_layout Plain Layout
 
-b = @(n,i,t) nchoosek(n,i)*t.^i.*(1-t).^i; 
+b = @(n,i,t) nchoosek(n,i)*t.^i.*(1-t).^(n-i); 
 \end_layout
 
 \begin_layout Plain Layout
