@@ -232,7 +232,7 @@ fprintfs("bezier.tex","T_%d=(%1.4f,%1.4f)
 \backslash
 
 \backslash
-quad ",[0,0.25,0.5]tocke)
+quad ",[t;tocke])
 \end_layout
 
 \end_inset
