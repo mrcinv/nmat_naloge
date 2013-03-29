@@ -688,7 +688,7 @@ G=zeros(3);
 
 \begin_layout Plain Layout
 
-baza = {@(x) ones(size(x), @(x) sin(x), @(x) cos(x)}; 
+baza = {@(x) ones(size(x)), @(x) sin(x), @(x) cos(x)}; 
 \end_layout
 
 \begin_layout Plain Layout
