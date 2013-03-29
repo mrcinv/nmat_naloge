@@ -195,12 +195,44 @@ for i=1:n
 
 \begin_layout Plain Layout
 
-  tocke += P(i,:)*b(n,i,t); 
+  tocke += P(:,i)*b(n,i,t); 
 \end_layout
 
 \begin_layout Plain Layout
 
 end
+\end_layout
+
+\end_inset
+
+Najprej izračunamo zahtevane vrednosti
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+P = [0 4 4 0; 0 4 0 4];
+\end_layout
+
+\begin_layout Plain Layout
+
+tocke=bezier([0,0.25,0.5],P);
+\end_layout
+
+\begin_layout Plain Layout
+
+fprintfs("bezier.tex","
+\backslash
+
+\backslash
+bmatrix{%f
+\backslash
+
+\backslash
+cr%f}
+\backslash
+n",tocke(1,:),tocke(2,:))
 \end_layout
 
 \end_inset
