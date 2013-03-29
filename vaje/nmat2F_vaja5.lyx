@@ -245,6 +245,58 @@ quad ",[t;tocke])
 
 \end_inset
 
+Bezierovo krivuljo narišemo tako, da izračunamo vrednosti za veliko različnih
+ 
+\begin_inset Formula $t$
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+t = linspace(0,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+bk = bezier(t,P);
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(P(1,:),P(2,:),'*-')
+\end_layout
+
+\begin_layout Plain Layout
+
+hold on
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(bk(1,:),bk(2,:),'g')
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(tocke(1,:),tocke(2,:),'*r')
+\end_layout
+
+\begin_layout Plain Layout
+
+hold off
+\end_layout
+
+\begin_layout Plain Layout
+
+print -dpng "bezier.png"
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
