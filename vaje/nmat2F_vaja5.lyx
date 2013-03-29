@@ -207,6 +207,7 @@ end
 
 Najprej izračunamo zahtevane vrednosti
 \begin_inset listings
+lstparams "lastline=2"
 inline false
 status open
 
@@ -222,11 +223,11 @@ tocke=bezier([0,0.25,0.5],P);
 
 \begin_layout Plain Layout
 
-fprintfs("bezier.tex","T_%d=(%f, %f)
+fprintfs("bezier.tex","T_%d=(%1.4f,%1.4f)
 \backslash
 
 \backslash
-quad",[0,0.25,0.5],tocke(1,:),tocke(2,:))
+quad ",[0,0.25,0.5],tocke(1,:),tocke(2,:))
 \end_layout
 
 \end_inset
