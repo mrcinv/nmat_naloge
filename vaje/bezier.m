@@ -8,7 +8,7 @@ function tocke=bezier(t,P)
 % P ... 2xn tabela kontrolnih točk
 
 % Bernsteinov polinom
-b = @(n,i,t) nchoosek(n,i)*t.^i.*(1-t).^i;
+b = @(n,i,t) nchoosek(n,i)*t.^i.*(1-t).^(n-i);
 % stopnja Bezierove krivulje
 n = length(P)-1; 
 tocke = zeros(2,length(t));
