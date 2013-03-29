@@ -266,12 +266,22 @@ st = roots(polyder(p)); % stacionarne tocke
 
 \begin_layout Plain Layout
 
-st = st(find(abs(imag(st))<1e-10)); % izberemo le realne tocke
+% izberemo le realne tocke
 \end_layout
 
 \begin_layout Plain Layout
 
-st = st(find(0<=st & st<=1.5)); % izberemo le tocke na [0,1.5]
+st = st(find(abs(imag(st))<1e-10));
+\end_layout
+
+\begin_layout Plain Layout
+
+% izberemo le tocke na [0,1.5]
+\end_layout
+
+\begin_layout Plain Layout
+
+st = st(find(0<=st & st<=1.5)); 
 \end_layout
 
 \begin_layout Plain Layout
