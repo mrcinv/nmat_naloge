@@ -81,5 +81,133 @@ octave.
  
 \end_layout
 
+\begin_layout Enumerate
+Izračunajte koordinate točk na Bézierovi krivulji s kontrolnimi točkami
+ 
+\begin_inset Formula 
+\[
+\mathbf{b}_{0}=(0,0),\,\mathbf{b}_{1}=(4,4),{\bf b}_{2}=(4,0)\text{ in }{\bf b}_{4}=(0,4)
+\]
+
+\end_inset
+
+za vrednosti parametra 
+\begin_inset Formula $t=0,\frac{1}{4},\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev:
+\series default
+ Na vajah smo nalogo rešili z De Casteljaoujevim algoritmom, programček
+ v 
+\emph on
+octave
+\emph default
+ pa bo uporabil kar definicijo
+\begin_inset Formula 
+\[
+b(t)=\sum_{i=0}^{n}b_{n,i}(t)\mathbf{b}_{i}.
+\]
+
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function tocke=bezier(t,P) 
+\end_layout
+
+\begin_layout Plain Layout
+
+% funkcija tocke=bezier(t,P)  
+\end_layout
+
+\begin_layout Plain Layout
+
+% izračune točke na Bezierovi krivulji 
+\end_layout
+
+\begin_layout Plain Layout
+
+% s kontrolnim poligonom P 
+\end_layout
+
+\begin_layout Plain Layout
+
+% pri vrednoti parametra t  
+\end_layout
+
+\begin_layout Plain Layout
+
+% t ...
+ tabela parametrov  
+\end_layout
+
+\begin_layout Plain Layout
+
+% P ...
+ 2xn tabela kontrolnih točk
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Bernsteinov polinom 
+\end_layout
+
+\begin_layout Plain Layout
+
+b = @(n,i,t) nchoosek(n,i)*t.^i.*(1-t).^i; 
+\end_layout
+
+\begin_layout Plain Layout
+
+% stopnja Bezierove krivulje 
+\end_layout
+
+\begin_layout Plain Layout
+
+n = length(P)-1; t
+\end_layout
+
+\begin_layout Plain Layout
+
+tocke = zeros(2,length(t)); 
+\end_layout
+
+\begin_layout Plain Layout
+
+for i=1:n   
+\end_layout
+
+\begin_layout Plain Layout
+
+  tocke += P(i,:)*b(n,i,t); 
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
