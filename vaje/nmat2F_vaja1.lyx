@@ -743,6 +743,7 @@ in skalarne produkte polinoma
 
  z baznimi funkcijami
 \begin_inset listings
+lstparams "lastline=5"
 inline false
 status open
 
@@ -788,7 +789,35 @@ in rešimo sistem
 \begin{bmatrix}\input{gram}\end{bmatrix}\begin{bmatrix}\alpha_{1}\\
 \alpha_{2}\\
 \alpha_{3}
-\end{bmatrix}=\begin{bmatrix}\input{skal}\end{bmatrix}
+\end{bmatrix}=\begin{bmatrix}\input{skal}\end{bmatrix}.
+\]
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "lastline=1"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+alpha = G
+\backslash
+b;
+\end_layout
+
+\begin_layout Plain Layout
+
+fprintfs("enaprox.tex", "%1.4f+(%1.4f)sin(x)+(%1.4f)cos(x)",alpha)
+\end_layout
+
+\end_inset
+
+Element najboljše aproksimacije je tako enak
+\begin_inset Formula 
+\[
+\input{enaprox}.
 \]
 
 \end_inset
