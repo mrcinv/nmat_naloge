@@ -678,6 +678,7 @@ Rešitev:
 \series default
  Izračunamo Gramovo matriko
 \begin_inset listings
+lstparams "lastline=7"
 inline false
 status open
 
@@ -715,6 +716,72 @@ for i=1:3
 
 end
 \end_layout
+
+\begin_layout Plain Layout
+
+G = G + triu(G,1)';
+\end_layout
+
+\begin_layout Plain Layout
+
+latex(G,"gram.tex");
+\end_layout
+
+\end_inset
+
+in skalarne produkte polinoma 
+\begin_inset Formula $p(x)$
+\end_inset
+
+ z baznimi funkcijami
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+b = zeros(3,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+p = [1 1 -1];
+\end_layout
+
+\begin_layout Plain Layout
+
+for i=1:3
+\end_layout
+
+\begin_layout Plain Layout
+
+  b(i) = quad(@(x) polyval(p,x)*baza{i}(x),0,pi);
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+latex(b,"skal.tex")
+\end_layout
+
+\end_inset
+
+in rešimo sistem 
+\begin_inset Formula $G\alpha=b$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{bmatrix}\input{gram}\end{bmatrix}\begin{bmatrix}\alpha_{1}\\
+\alpha_{2}\\
+\alpha_{3}
+\end{bmatrix}=\begin{bmatrix}\input{skal}\end{bmatrix}
+\]
 
 \end_inset
 
