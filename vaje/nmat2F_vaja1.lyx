@@ -724,8 +724,16 @@ G = G + triu(G,1)';
 
 \begin_layout Plain Layout
 
-latex(G,"gram.tex");
+latex(G,"gram.tex",4);
 \end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G=\begin{bmatrix}\input{gram}\end{bmatrix}
+\]
 
 \end_inset
 
@@ -765,7 +773,7 @@ end
 
 \begin_layout Plain Layout
 
-latex(b,"skal.tex")
+latex(b,"skal.tex",4)
 \end_layout
 
 \end_inset
