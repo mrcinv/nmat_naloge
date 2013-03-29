@@ -647,5 +647,79 @@ Napaka pri aproksimaciji z Bernsteinovimi polinomi
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Naj bo 
+\begin_inset Formula $\mathcal{C}([0,\pi])$
+\end_inset
+
+ opremljen s skalarnim produktom
+\begin_inset Formula 
+\[
+\langle f,g\rangle=\int_{0}^{\pi}f(x)g(x)dx.
+\]
+
+\end_inset
+
+Poišči element najboljše aproksimacije za polinom 
+\begin_inset Formula $x^{2}+x-1$
+\end_inset
+
+ na prostor
+\begin_inset Formula 
+\[
+\mathcal{L}(1,\sin x,\cos x).
+\]
+
+\end_inset
+
+
+\series bold
+Rešitev:
+\series default
+ Izračunamo Gramovo matriko
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+G=zeros(3);
+\end_layout
+
+\begin_layout Plain Layout
+
+baza = {@(x) ones(size(x), @(x) sin(x), @(x) cos(x)}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+for i=1:3
+\end_layout
+
+\begin_layout Plain Layout
+
+  for j=i:3
+\end_layout
+
+\begin_layout Plain Layout
+
+    G(i,j) = quad(@(x) baza{i}(x)*baza{j}(x),0,pi);
+\end_layout
+
+\begin_layout Plain Layout
+
+  end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
