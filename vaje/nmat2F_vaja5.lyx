@@ -228,7 +228,7 @@ tocke = bezier(t,P);
 
 \begin_layout Plain Layout
 
-fprintfs("bezier.tex","T_{%1.2f}=(%1.4f,%1.4f)
+fprintfs("bezier.tex","T_{%f}=(%1.4f,%1.4f)
 \backslash
 
 \backslash
