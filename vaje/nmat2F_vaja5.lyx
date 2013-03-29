@@ -207,7 +207,7 @@ end
 
 Najprej izračunamo zahtevane vrednosti
 \begin_inset listings
-lstparams "lastline=2"
+lstparams "lastline=2,lastline=3"
 inline false
 status open
 
@@ -228,7 +228,7 @@ tocke = bezier(t,P);
 
 \begin_layout Plain Layout
 
-fprintfs("bezier.tex","T_%d=(%1.4f,%1.4f)
+fprintfs("bezier.tex","T_{%d}=(%1.4f,%1.4f)
 \backslash
 
 \backslash
