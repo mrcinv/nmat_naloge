@@ -217,7 +217,53 @@ hold off
 
 \begin_layout Plain Layout
 
+set(gca(), "visible", "off")
+\end_layout
+
+\begin_layout Plain Layout
+
 print -dpng "bezier.png"
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename bezier.png
+	width 80text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Bézierova krivulja (zeleno) in njen kontrolni poligon (modro).
+ Z rdečo so označene točke pri 
+\begin_inset Formula $t=0,0.25,0.5$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
