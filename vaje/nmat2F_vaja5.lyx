@@ -118,89 +118,14 @@ b(t)=\sum_{i=0}^{n}b_{n,i}(t)\mathbf{b}_{i}.
 \end_inset
 
 
-\begin_inset listings
-inline false
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-function tocke=bezier(t,P) 
-\end_layout
 
-\begin_layout Plain Layout
-
-% funkcija tocke=bezier(t,P)  
-\end_layout
-
-\begin_layout Plain Layout
-
-% izračune točke na Bezierovi krivulji 
-\end_layout
-
-\begin_layout Plain Layout
-
-% s kontrolnim poligonom P 
-\end_layout
-
-\begin_layout Plain Layout
-
-% pri vrednoti parametra t  
-\end_layout
-
-\begin_layout Plain Layout
-
-% t ...
- tabela parametrov  
-\end_layout
-
-\begin_layout Plain Layout
-
-% P ...
- 2xn tabela kontrolnih točk
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-% Bernsteinov polinom 
-\end_layout
-
-\begin_layout Plain Layout
-
-b = @(n,i,t) nchoosek(n,i)*t.^i.*(1-t).^(n-i); 
-\end_layout
-
-\begin_layout Plain Layout
-
-% stopnja Bezierove krivulje 
-\end_layout
-
-\begin_layout Plain Layout
-
-n = length(P)-1; t
-\end_layout
-
-\begin_layout Plain Layout
-
-tocke = zeros(2,length(t)); 
-\end_layout
-
-\begin_layout Plain Layout
-
-for i=0:n   
-\end_layout
-
-\begin_layout Plain Layout
-
-  tocke += P(:,i)*b(n,i,t); 
-\end_layout
-
-\begin_layout Plain Layout
-
-end
+\backslash
+lstinputlisting{bezier.m}
 \end_layout
 
 \end_inset
