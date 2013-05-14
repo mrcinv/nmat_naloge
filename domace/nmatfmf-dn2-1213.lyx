@@ -138,25 +138,26 @@ reference "eq:zacetni problem"
 
 \begin_layout Enumerate
 Narišite graf rešitve na intervalu 
-\begin_inset Formula $[0,5]$
+\begin_inset Formula $[-5,0]$
 \end_inset
 
 .
- Korak izberite tako, da bo napaka dovolj majhna.
- 
+ Korak izberite tako, da bo napaka dovolj majhna (relativna napaka manj
+ kot 1%).
+ Napako ocenite z Richardsonovo ekstrapolacijo.
 \end_layout
 
 \begin_layout Enumerate
 Dodatne točke.
  Čim bolj natančno poiščite 5.
- najmanjšo ničlo rešitve 
+ največjo ničlo rešitve 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:zacetni problem"
 
 \end_inset
 
-.
+ in njej najbližji lokalni minimum.
  Za vsako pravilno decimalko dobite 0.1 točke.
 \end_layout
 
@@ -167,8 +168,162 @@ Inverzna potenčna metoda.
 \begin_inset Formula $A$
 \end_inset
 
- matrika.
+ matrika z realnimi lastnimi vrednostmi večkratnosti 1.
+ Lastne vektorje matrike 
+\begin_inset Formula $A$
+\end_inset
+
+ lahko iščemo z zaporedjem
+\begin_inset Formula 
+\begin{equation}
+x_{n+1}=\frac{(A-\lambda I)^{-1}x_{n}}{||(A-\lambda I)^{-1}x_{n}||},\label{eq:inv iter}
+\end{equation}
+
+\end_inset
+
+kjer je 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ približek za lastno vrednost.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+Pokaži, da imata matriki 
+\begin_inset Formula $A$
+\end_inset
+
+ in 
+\begin_inset Formula $(A-\lambda I)^{-1}$
+\end_inset
+
+ iste lastne vektorje in izrazi lastne vrednosti matrike 
+\begin_inset Formula $A$
+\end_inset
+
+ z lastnimi vrednostmi matrike 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $(A-\lambda I)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Pokaži, da zaporedje 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ za skoraj vse začetne približke 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ konvergira k lastnemu vektorju matrike 
+\begin_inset Formula $A$
+\end_inset
+
+ za lastno vrednost, ki je po absolutni vrednosti najbližje 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ (
+\emph on
+Namig: začetni vektor 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ razvij po lastni bazi matrike 
+\begin_inset Formula $(A-\lambda I)^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+Napiši program, ki za dano matriko 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ in poljuben začetni vektor 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ izračuna zaporedje 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:inv iter"
+
+\end_inset
+
+.
+ Pazite, da bo program za posamezen korak porabil čim manj računskih operacij.
+\end_layout
+
+\begin_layout Enumerate
+Naj bo 
+\begin_inset Formula $L_{n}$
+\end_inset
+
+ tridiagonalna matrika z 
+\begin_inset Formula $-2$
+\end_inset
+
+ na diagonali in 
+\begin_inset Formula $1$
+\end_inset
+
+ na spodnji in zgornji diagonali 
+\begin_inset Formula 
+\[
+L_{n}=\begin{bmatrix}-2 & 1 & 0 & \ldots & 0\\
+1 & -2 & 1 & \ddots & \vdots\\
+0 & 1 & \ddots & \ddots & 0\\
+\vdots & \ddots & 1 & -2 & 1\\
+0 & \ldots & 0 & 1 & -2
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Poišči lastni vektor za lastno vrednost 
+\begin_inset Formula $L_{n}$
+\end_inset
+
+, ki je najbližje 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ Število 
+\begin_inset Formula $n$
+\end_inset
+
+ naj bo ostanek pri deljenju vaše vpisne številke s številom 
+\begin_inset Formula $999$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
