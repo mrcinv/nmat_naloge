@@ -61,7 +61,7 @@
 \begin_body
 
 \begin_layout Title
-Prva domača naloga iz Numerične matematike za finančne matematike
+Druga domača naloga iz Numerične matematike za finančne matematike
 \end_layout
 
 \begin_layout Standard
@@ -77,8 +77,8 @@ target "http://ucilnica.fmf.uni-lj.si"
 
 \end_inset
 
- najkasneje do konca 15.
- marca 2013.
+ najkasneje do konca 31.
+ maja 2013.
  ZIP datoteka naj vsebuje USTREZNO NAPISANO poročilo in programe.
  Poročilo naj poleg kratke matematične razlage, vsebuje številske rezultate,
  grafe, vhodne podatke in klice funkcij, s katerimi ste do rezultatov prišli.
@@ -86,252 +86,79 @@ target "http://ucilnica.fmf.uni-lj.si"
 \end_layout
 
 \begin_layout Enumerate
-V observatoriju Mauna Loa na Hawaiih že od leta 1979 merijo koncentracijo
- 
-\begin_inset Formula $\text{CO}_{2}$
-\end_inset
-
- v ozračju.
- Podatki so dostopni na spletu 
-\begin_inset CommandInset href
-LatexCommand href
-name "tedenska povprečja"
-target "ftp://ftp.cmdl.noaa.gov/ccg/co2/trends/co2_weekly_mlo.txt"
-
-\end_inset
-
-.
- V 
-\emph on
-Octave
-\emph default
- jih lahko uvozite z ukazom 
-\family typewriter
-load("co2_weekly_mlo.txt")
-\family default
- in podatki bodo dostopni v spremenljivki 
-\emph on
-co2_weekly_mlo.
- 
-\emph default
-Model za opis podatkov temelji na opazki, da koncentracija 
-\begin_inset Formula $\text{CO}_{2}$
-\end_inset
-
- v povprečju narašča.
- Poleg naraščanja je opaziti tudi vpliv letnih časov.
- Spreminjanje koncentracije 
-\begin_inset Formula $\text{CO}_{2}$
-\end_inset
-
- lahko opišemo s funkcijo
+Rešujemo začetni problem za navadno diferencialno enačbo
 \begin_inset Formula 
 \begin{equation}
-at^{2}+bt+c+d\sin(2\pi t+\delta),\label{eq:model}
+y''(x)-xy(x)=0\label{eq:zacetni problem}
 \end{equation}
 
 \end_inset
 
-kjer so 
-\begin_inset Formula $a,b,c,d$
+z začetnimi pogoji 
+\begin_inset Formula $y(0)=y_{0}$
 \end_inset
 
  in 
-\begin_inset Formula $\delta$
-\end_inset
-
- neznani parametri, 
-\begin_inset Formula $t$
-\end_inset
-
- pa čas v letih od rojstva Kristusa.
- Kvadratni del modela predstavlja naraščanje, funkcija 
-\begin_inset Formula $\sin(2\pi t+\delta)$
-\end_inset
-
- pa nihanje zaradi letnih časov.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Poišči bazo prostora funkcij oblike 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:model"
-
-\end_inset
-
- (
-\emph on
-uporabi adicijski izrek
-\emph default
- za 
-\begin_inset Formula $\sin$
-\end_inset
-
-).
- Da bo baza primerna za numerične izračune, namesto 
-\begin_inset Formula $t$
-\end_inset
-
- uporabi 
-\begin_inset Formula $t-\tau$
+\begin_inset Formula $y'(0)=0$
 \end_inset
 
 .
  Vrednost 
-\begin_inset Formula $\tau$
+\begin_inset Formula $y_{0}$
 \end_inset
 
- naj bo izbrana na podlagi zadnjih treh števk 
-\begin_inset Formula $v_{1},v_{2},v_{3}$
+ sestavite v decimalnem zapisu , tako da 
+\begin_inset Formula $0.$
 \end_inset
 
- tvoje vpisne številke po formuli 
-\begin_inset Formula 
-\[
-\tau=1970+10v_{1}+v_{2}+0.1v_{3}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Poišči funkcijo oblike 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:model"
-
-\end_inset
-
-, ki najbolje aproksimira podatke o koncentraciji 
-\begin_inset Formula $\text{CO}_{2}$
-\end_inset
-
- v kvadratni normi.
- Aproksimacijsko funkcijo zapišite v bazi iz prejšnje točke.
- 
-\end_layout
-
-\begin_layout Enumerate
-Na istem grafu prikaži podatke in funkcijo najboljše aproksimacije.
-\end_layout
-
-\begin_layout Enumerate
-Kakšno letno povprečno koncentracijo predvideva model 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:model"
-
-\end_inset
-
- za leta 2014, 2020 in 2050.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Naj bodo 
-\begin_inset Formula $b_{i}$
-\end_inset
-
-, 
-\begin_inset Formula $i=0,1,\dots,n$
-\end_inset
-
-, točke v ravnini.
- Bézierova ravninska krivulja stopnje 
-\begin_inset Formula $n$
-\end_inset
-
- je definirana s predpisom 
-\begin_inset Formula 
-\[
-\mathbf{b}(t)=\sum_{i=0}^{n}b_{i}\, B_{i}^{n}(t),\ B_{i}^{n}(t)={n \choose i}\, t^{i}\,(1-t)^{n-i},\quad t\in[0,1].
-\]
-
-\end_inset
-
-Točkam 
-\begin_inset Formula $\mathbf{b}_{i}$
-\end_inset
-
- rečemo kontrolne točke Bézierove krivulje, daljicam, ki jih zaporedoma
- povezujejo, pa kontrolni poligon.
- Pri danem parametru 
-\begin_inset Formula $t_{0}\in[0,1]$
-\end_inset
-
-, lahko točko 
-\begin_inset Formula $\mathbf{b}(t_{0})$
-\end_inset
-
- na krivulji izračunamo direktno po formuli, ali po De Casteljauovem algoritmu
- takole: 
-\begin_inset Formula 
-\[
-\mathbf{b}_{i}^{(r)}(t_{0})=(1-t_{0})\,\mathbf{b}_{i}^{(r-1)}(t_{0})+t_{0}\,\mathbf{b}_{i+1}^{(r-1)}(t_{0}),\quad r=1,\dots,n,\quad i=0,\dots,n-r,
-\]
-
-\end_inset
-
-kjer je 
-\begin_inset Formula $\mathbf{b}_{i}^{(0)}(t_{0})=\mathbf{b}_{i}$
-\end_inset
-
- in 
-\begin_inset Formula $\mathbf{b}_{0}^{(n)}(t_{0})=\mathbf{b}(t_{0})$
-\end_inset
-
-.
- Pri tem zgornji indeksi ne pomenijo potenciranje, ampak nivo, na katerem
- se trenutno nahajamo! 
+ dodate števke vaše vpisne številke.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Napišite funkcijo 
-\family typewriter
-bezier2d.m
-\family default
-, ki izračuna vrednost 
-\begin_inset Formula $\mathbf{b}(t_{0})$
+Napišite program, ki reši začetni problem 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:zacetni problem"
+
 \end_inset
 
- po De Casteljauovem algoritmu.
- Vhodni podatki naj bodo tabela kontrolnih točk dimenzije 
-\begin_inset Formula $2\times(n+1)$
+ z metodo Runge-Kutta reda 4 s tabelo
+\end_layout
+
+\begin_layout Enumerate
+Narišite graf rešitve na intervalu 
+\begin_inset Formula $[0,5]$
 \end_inset
 
- (v prvi vrstici so 
-\begin_inset Formula $x$
-\end_inset
-
- koordinate točk, v drugi pa 
-\begin_inset Formula $y$
-\end_inset
-
- koordi nate točk) in parameter 
-\begin_inset Formula $t$
-\end_inset
-
-, pri katerem računamo vrednost Bézierove krivulje.
+.
+ Korak izberite tako, da bo napaka dovolj majhna.
  
 \end_layout
 
 \begin_layout Enumerate
-Napišite funkcijo, ki za dani kontrolni poligon nariše Bézierovo krivuljo
- in njen kontrolni poligon.
-\end_layout
+Dodatne točke.
+ Čim bolj natančno poiščite 5.
+ najmanjšo ničlo rešitve 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:zacetni problem"
 
-\begin_layout Enumerate
-Poišči kontrolne poligone za Bézierove krivulje, s katerimi lahko opišemo
- črke C, S in O (velike tiskane in velike pisane) in številko 6.
- Pri tem uporabi čim nižjo stopnjo krivulje.
- 
+\end_inset
+
+.
+ Za vsako pravilno decimalko dobite 0.1 točke.
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Inverzna potenčna metoda.
+ Naj bo 
+\begin_inset Formula $A$
+\end_inset
+
+ matrika.
+\end_layout
+
 \end_body
 \end_document
