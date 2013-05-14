@@ -95,23 +95,19 @@ y''(x)-xy(x)=0\label{eq:zacetni problem}
 \end_inset
 
 z začetnimi pogoji 
-\begin_inset Formula $y(0)=y_{0}$
+\begin_inset Formula $y(0)=\sin(v)$
 \end_inset
 
  in 
-\begin_inset Formula $y'(0)=0$
+\begin_inset Formula $y'(0)=\cos(v)$
 \end_inset
 
 .
  Vrednost 
-\begin_inset Formula $y_{0}$
+\begin_inset Formula $v$
 \end_inset
 
- sestavite v decimalnem zapisu , tako da 
-\begin_inset Formula $0.$
-\end_inset
-
- dodate števke vaše vpisne številke.
+ naj bo vaša vpisna številka.
 \end_layout
 
 \begin_deeper
@@ -124,6 +120,20 @@ reference "eq:zacetni problem"
 \end_inset
 
  z metodo Runge-Kutta reda 4 s tabelo
+\begin_inset Formula 
+\[
+\begin{array}{c|cccc}
+0\\
+\frac{1}{2} & \frac{1}{2}\\
+\frac{1}{2} & 0 & \frac{1}{2}\\
+1 & 0 & 0 & 1\\
+\hline  & \frac{1}{6} & \frac{1}{3} & \frac{1}{3} & \frac{1}{6}
+\end{array}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
