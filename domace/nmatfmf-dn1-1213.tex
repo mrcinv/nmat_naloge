@@ -1,0 +1,85 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[slovene]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage{babel}
+\usepackage{amstext}
+\usepackage[unicode=true]
+ {hyperref}
+\begin{document}
+
+\title{Prva domaèa naloga iz Numeriène matematike za finanène matematike}
+
+\maketitle
+Re¹itve stisnite v ZIP datoteko z imenom \texttt{ime-priimek-vpisna-1.zip}
+in jih oddajte na \href{http://ucilnica.fmf.uni-lj.si}{spletni uèilnici}
+najkasneje do konca 15. marca 2013. ZIP datoteka naj vsebuje USTREZNO
+NAPISANO poroèilo in programe. Poroèilo naj poleg kratke matematiène
+razlage, vsebuje ¹tevilske rezultate, grafe, vhodne podatke in klice
+funkcij, s katerimi ste do rezultatov pri¹li. Naloge naj bodo re¹ene
+v Octave/Matlabu.
+\begin{enumerate}
+\item V observatoriju Mauna Loa na Hawaiih ¾e od leta 1979 merijo koncentracijo
+$\text{CO}_{2}$ v ozraèju. Podatki so dostopni na spletu \href{ftp://ftp.cmdl.noaa.gov/ccg/co2/trends/co2_weekly_mlo.txt}{tedenska povpreèja}.
+V \emph{Octave} jih lahko uvozite z ukazom \texttt{load(\textquotedbl{}co2\_weekly\_mlo.txt\textquotedbl{})}
+in podatki bodo dostopni v spremenljivki \emph{co2\_weekly\_mlo. }Model
+za opis podatkov temelji na opazki, da koncentracija $\text{CO}_{2}$
+v povpreèju nara¹èa. Poleg nara¹èanja je opaziti tudi vpliv letnih
+èasov. Spreminjanje koncentracije $\text{CO}_{2}$ lahko opi¹emo s
+funkcijo
+\begin{equation}
+at^{2}+bt+c+d\sin(2\pi t+\delta),\label{eq:model}
+\end{equation}
+kjer so $a,b,c,d$ in $\delta$ neznani parametri, $t$ pa èas v letih
+od rojstva Kristusa. Kvadratni del modela predstavlja nara¹èanje,
+funkcija $\sin(2\pi t+\delta)$ pa nihanje zaradi letnih èasov.
+
+\begin{enumerate}
+\item Poi¹èi bazo prostora funkcij oblike (\ref{eq:model}) (\emph{uporabi
+adicijski izrek} za $\sin$). Da bo baza primerna za numeriène izraèune,
+namesto $t$ uporabi $t-\tau$. Vrednost $\tau$ naj bo izbrana na
+podlagi zadnjih treh ¹tevk $v_{1},v_{2},v_{3}$ tvoje vpisne ¹tevilke
+po formuli 
+\[
+\tau=1970+10v_{1}+v_{2}+0.1v_{3}.
+\]
+
+\item Poi¹èi funkcijo oblike (\ref{eq:model}), ki najbolje aproksimira
+podatke o koncentraciji $\text{CO}_{2}$ v kvadratni normi. Aproksimacijsko
+funkcijo zapi¹ite v bazi iz prej¹nje toèke. 
+\item Na istem grafu prika¾i podatke in funkcijo najbolj¹e aproksimacije.
+\item Kak¹no letno povpreèno koncentracijo predvideva model (\ref{eq:model})
+za leta 2014, 2020 in 2050.
+\end{enumerate}
+\item Naj bodo $b_{i}$, $i=0,1,\dots,n$, toèke v ravnini. Bézierova ravninska
+krivulja stopnje $n$ je definirana s predpisom 
+\[
+\mathbf{b}(t)=\sum_{i=0}^{n}b_{i}\, B_{i}^{n}(t),\ B_{i}^{n}(t)={n \choose i}\, t^{i}\,(1-t)^{n-i},\quad t\in[0,1].
+\]
+Toèkam $\mathbf{b}_{i}$ reèemo kontrolne toèke Bézierove krivulje,
+daljicam, ki jih zaporedoma povezujejo, pa kontrolni poligon. Pri
+danem parametru $t_{0}\in[0,1]$, lahko toèko $\mathbf{b}(t_{0})$
+na krivulji izraèunamo direktno po formuli, ali po De Casteljauovem
+algoritmu takole: 
+\[
+\mathbf{b}_{i}^{(r)}(t_{0})=(1-t_{0})\,\mathbf{b}_{i}^{(r-1)}(t_{0})+t_{0}\,\mathbf{b}_{i+1}^{(r-1)}(t_{0}),\quad r=1,\dots,n,\quad i=0,\dots,n-r,
+\]
+kjer je $\mathbf{b}_{i}^{(0)}(t_{0})=\mathbf{b}_{i}$ in $\mathbf{b}_{0}^{(n)}(t_{0})=\mathbf{b}(t_{0})$.
+Pri tem zgornji indeksi ne pomenijo potenciranje, ampak nivo, na katerem
+se trenutno nahajamo! 
+
+\begin{enumerate}
+\item Napi¹ite funkcijo \texttt{bezier2d.m}, ki izraèuna vrednost $\mathbf{b}(t_{0})$
+po De Casteljauovem algoritmu. Vhodni podatki naj bodo tabela kontrolnih
+toèk dimenzije $2\times(n+1)$ (v prvi vrstici so $x$ koordinate
+toèk, v drugi pa $y$ koordi nate toèk) in parameter $t$, pri katerem
+raèunamo vrednost Bézierove krivulje. 
+\item Napi¹ite funkcijo, ki za dani kontrolni poligon nari¹e Bézierovo krivuljo
+in njen kontrolni poligon.
+\item Poi¹èi kontrolne poligone za Bézierove krivulje, s katerimi lahko
+opi¹emo èrke C, S in O (velike tiskane in velike pisane) in ¹tevilko
+6. Pri tem uporabi èim ni¾jo stopnjo krivulje. \end{enumerate}
+\end{enumerate}
+
+\end{document}
