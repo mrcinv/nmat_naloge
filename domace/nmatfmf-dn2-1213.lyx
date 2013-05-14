@@ -312,15 +312,15 @@ Poišči lastni vektor za lastno vrednost
 \end_inset
 
 .
- Število 
+ Koliko iteracij potrebujete, da dosežete 
+\begin_inset Formula $5$
+\end_inset
+
+ pravilnih decimalk' Število 
 \begin_inset Formula $n$
 \end_inset
 
- naj bo ostanek pri deljenju vaše vpisne številke s številom 
-\begin_inset Formula $999$
-\end_inset
-
-.
+ naj bo vsota števk vaše vpisne številke.
  
 \end_layout
 
