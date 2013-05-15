@@ -1,0 +1,78 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[slovene]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage[unicode=true]
+ {hyperref}
+\begin{document}
+
+\title{Druga domaèa naloga iz Numeriène matematike za finanène matematike}
+
+\maketitle
+Re¹itve stisnite v ZIP datoteko z imenom \texttt{ime-priimek-vpisna-2.zip}
+in jih oddajte na \href{http://ucilnica.fmf.uni-lj.si}{spletni uèilnici}
+najkasneje do konca 31. maja 2013. ZIP datoteka naj vsebuje USTREZNO
+NAPISANO poroèilo in programe. Poroèilo naj poleg kratke matematiène
+razlage, vsebuje ¹tevilske rezultate, grafe, vhodne podatke in klice
+funkcij, s katerimi ste do rezultatov pri¹li. Naloge naj bodo re¹ene
+v Octave/Matlabu.
+\begin{enumerate}
+\item Re¹ujemo zaèetni problem za navadno diferencialno enaèbo
+\begin{equation}
+y''(x)+xy(x)=0\label{eq:zacetni problem}
+\end{equation}
+z zaèetnimi pogoji $y(0)=\sin(v)$ in $y'(0)=\cos(v)$. Vrednost $v$
+naj bo va¹a vpisna ¹tevilka.
+
+\begin{enumerate}
+\item Napi¹ite program, ki re¹i zaèetni problem (\ref{eq:zacetni problem})
+z metodo Runge-Kutta reda 4 s tabelo
+\[
+\begin{array}{c|cccc}
+0\\
+\frac{1}{2} & \frac{1}{2}\\
+\frac{1}{2} & 0 & \frac{1}{2}\\
+1 & 0 & 0 & 1\\
+\hline  & \frac{1}{6} & \frac{1}{3} & \frac{1}{3} & \frac{1}{6}
+\end{array}
+\]
+
+\item Nari¹ite graf re¹itve na intervalu $[0,5]$. Korak naj bo konstanten
+in ga izberite tako, da bo napaka dovolj majhna (relativna napaka
+manj kot 1\%). Napako v toèki $x=5$ ocenite z Richardsonovo ekstrapolacijo.
+\item Dodatna toèka. Èim bolj natanèno poi¹èite 5. najmanj¹o nièlo re¹itve
+(\ref{eq:zacetni problem}). Za vsako pravilno decimalko dobite $1/12$
+toèke (skupaj najveè 1 toèko).
+\end{enumerate}
+\item Inverzna potenèna metoda. Naj bo $A$ matrika z realnimi lastnimi
+vrednostmi veèkratnosti 1. Lastne vektorje matrike $A$ lahko i¹èemo
+z zaporedjem
+\begin{equation}
+x_{n+1}=\frac{(A-\lambda I)^{-1}x_{n}}{||(A-\lambda I)^{-1}x_{n}||},\label{eq:inv iter}
+\end{equation}
+kjer je $\lambda$ pribli¾ek za lastno vrednost.
+
+\begin{enumerate}
+\item Napi¹i program, ki za dano matriko $A$, $\lambda$ in poljuben zaèetni
+vektor $x_{0}$ izraèuna zaporedje (\ref{eq:inv iter}). Pazite, kako
+raèunate $(A-\lambda I)^{-1}x_{n}$, da bo program za posamezen korak
+iteracije porabil èim manj raèunskih operacij.
+\item Naj bo $L_{n}$ tridiagonalna matrika z $-2$ na diagonali in $1$
+na spodnji in zgornji diagonali 
+\[
+L_{n}=\begin{bmatrix}-2 & 1 & 0 & \ldots & 0\\
+1 & -2 & 1 & \ddots & \vdots\\
+0 & 1 & \ddots & \ddots & 0\\
+\vdots & \ddots & 1 & -2 & 1\\
+0 & \ldots & 0 & 1 & -2
+\end{bmatrix}.
+\]
+Poi¹èi lastni vektor za lastno vrednost $L_{n}$, ki je najbli¾je
+$-1$. Koliko iteracij potrebujete, da dose¾ete $5$ pravilnih decimalk?
+©tevilo $n$ naj bo vsota ¹tevk va¹e vpisne ¹tevilke. \end{enumerate}
+\end{enumerate}
+
+\end{document}
