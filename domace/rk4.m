@@ -1,12 +1,12 @@
-function [y,x]=rk4(f,x0,y0,h,n)
-% funkcija [y,x]=rk4(f,x0,y0,h,n)
+function [y,x]=rk4(f,x0,y0,tk,n)
+% funkcija [y,x]=rk4(f,x0,y0,tk,n)
 % izračuna približek za začetni problem
 % za NDE y'(x)=f(x,y) z y(x0)=y0
 % z Runge-Kutta metodo reda 4 s korakom h
 % Vhod
 % f ... desna stran DE
 % x0,y0 ... začetni pogoj y(x0)=y0
-% h ... korak
+% tk ... končni čas
 % n ... število korakov
 % Rezultat
 % y ... zaporedje približkov
