@@ -67,7 +67,7 @@ Druga domača naloga iz Numerične matematike za finančne matematike
 \begin_layout Standard
 Rešitve stisnite v ZIP datoteko z imenom 
 \family typewriter
-ime-priimek-vpisna-1.zip
+ime-priimek-vpisna-2.zip
 \family default
  in jih oddajte na 
 \begin_inset CommandInset href
@@ -89,7 +89,7 @@ target "http://ucilnica.fmf.uni-lj.si"
 Rešujemo začetni problem za navadno diferencialno enačbo
 \begin_inset Formula 
 \begin{equation}
-y''(x)-xy(x)=0\label{eq:zacetni problem}
+y''(x)+xy(x)=0\label{eq:zacetni problem}
 \end{equation}
 
 \end_inset
@@ -138,27 +138,35 @@ reference "eq:zacetni problem"
 
 \begin_layout Enumerate
 Narišite graf rešitve na intervalu 
-\begin_inset Formula $[-5,0]$
+\begin_inset Formula $[0,5]$
 \end_inset
 
 .
- Korak izberite tako, da bo napaka dovolj majhna (relativna napaka manj
- kot 1%).
- Napako ocenite z Richardsonovo ekstrapolacijo.
+ Korak naj bo konstanten in ga izberite tako, da bo napaka dovolj majhna
+ (relativna napaka manj kot 1%).
+ Napako v točki 
+\begin_inset Formula $x=5$
+\end_inset
+
+ ocenite z Richardsonovo ekstrapolacijo.
 \end_layout
 
 \begin_layout Enumerate
-Dodatne točke.
+Dodatna točka.
  Čim bolj natančno poiščite 5.
- največjo ničlo rešitve 
+ najmanjšo ničlo rešitve 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:zacetni problem"
 
 \end_inset
 
- in njej najbližji lokalni minimum.
- Za vsako pravilno decimalko dobite 0.1 točke.
+.
+ Za vsako pravilno decimalko dobite 
+\begin_inset Formula $1/12$
+\end_inset
+
+ točke (skupaj največ 1 točko).
 \end_layout
 
 \end_deeper
@@ -190,70 +198,6 @@ kjer je
 
 \begin_deeper
 \begin_layout Enumerate
-Pokaži, da imata matriki 
-\begin_inset Formula $A$
-\end_inset
-
- in 
-\begin_inset Formula $(A-\lambda I)^{-1}$
-\end_inset
-
- iste lastne vektorje in izrazi lastne vrednosti matrike 
-\begin_inset Formula $A$
-\end_inset
-
- z lastnimi vrednostmi matrike 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang english
-
-\begin_inset Formula $(A-\lambda I)^{-1}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-Pokaži, da zaporedje 
-\begin_inset Formula $x_{n}$
-\end_inset
-
- za skoraj vse začetne približke 
-\begin_inset Formula $x_{0}$
-\end_inset
-
- konvergira k lastnemu vektorju matrike 
-\begin_inset Formula $A$
-\end_inset
-
- za lastno vrednost, ki je po absolutni vrednosti najbližje 
-\begin_inset Formula $\lambda$
-\end_inset
-
-.
- (
-\emph on
-Namig: začetni vektor 
-\begin_inset Formula $x_{0}$
-\end_inset
-
- razvij po lastni bazi matrike 
-\begin_inset Formula $(A-\lambda I)^{-1}$
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Enumerate
 Napiši program, ki za dano matriko 
 \begin_inset Formula $A$
 \end_inset
@@ -274,7 +218,12 @@ reference "eq:inv iter"
 \end_inset
 
 .
- Pazite, da bo program za posamezen korak porabil čim manj računskih operacij.
+ Pazite, kako računate 
+\begin_inset Formula $(A-\lambda I)^{-1}x_{n}$
+\end_inset
+
+, da bo program za posamezen korak iteracije porabil čim manj računskih
+ operacij.
 \end_layout
 
 \begin_layout Enumerate
