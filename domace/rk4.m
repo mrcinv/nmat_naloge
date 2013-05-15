@@ -13,7 +13,7 @@ function [y,x]=rk4(f,x0,y0,xk,n)
 % x ... točke, v katerih računamo približke
 y=zeros(length(y0),n+1);
 x=linspace(x0,xk,n+1);
-h=x(2)-x(1);
+h=x(2)-x(1)
 
 y(:,1)=y0; % zacetni pogoj v y0
 
