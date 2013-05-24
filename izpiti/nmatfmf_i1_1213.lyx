@@ -109,27 +109,38 @@ g(x)=2^{-x^{2}}
 \end_inset
 
 interpoliraj v točkah 
-\begin_inset Formula $x=-1,0,0,1$
+\begin_inset Formula $x=-1,0,1$
 \end_inset
 
  s kubičnim polinomom 
-\begin_inset Formula $p_{2}(x)$
+\begin_inset Formula $p_{3}(x)$
 \end_inset
 
-.
- Čim bolj natančno oceni 
+, pri čemer naj se ujema tudi odvod v točki 0
 \begin_inset Formula 
 \[
-||p_{2}-g||_{\infty}.
+p_{3}'(0)=g'(0).
 \]
 
 \end_inset
 
- Uporabiš lahko dejstvo, da 
+ Čim bolj natančno oceni 
+\begin_inset Formula 
+\[
+||p_{3}-g||_{\infty}.
+\]
+
+\end_inset
+
+Uporabiš lahko dejstvo, da 
 \begin_inset Formula $g^{(4)}$
 \end_inset
 
- doseže maksimum v ničli in si pomagaš z razvojem 
+ doseže maksimum pri 
+\begin_inset Formula $x=0$
+\end_inset
+
+ in si pomagaš z razvojem 
 \begin_inset Formula $g(x)$
 \end_inset
 
