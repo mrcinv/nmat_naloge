@@ -160,7 +160,7 @@ Izpelji odprto Newton-Cortesovo formulo za računanje integrala
 
 \end_inset
 
-Določite tudi napako 
+Določi tudi napako 
 \begin_inset Formula $R_{f}$
 \end_inset
 
@@ -176,8 +176,8 @@ y_{n}=y_{n-1}+h(\frac{5}{12}f(x_{n},y_{n})+\frac{2}{3}f(x_{n-1},y_{n-1})-\frac{1
 
 \end_inset
 
-zapišite oba rodovna polinoma.
- Poiščite približek za začetni problem
+zapiši oba rodovna polinoma.
+ Poišči približek za začetni problem
 \begin_inset Formula 
 \[
 y'=x-y;\quad y(0)=1,
@@ -198,7 +198,7 @@ v
 \begin_inset Formula $y(0.1)$
 \end_inset
 
- izračunajte z enim korakom metode Runge-Kutta
+ izračunaj z enim korakom metode Runge-Kutta
 \begin_inset Formula 
 \begin{eqnarray*}
 k_{1} & = & hf(x_{n},y_{n})\\
