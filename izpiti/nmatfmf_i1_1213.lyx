@@ -27,8 +27,8 @@
 \paperfontsize default
 \spacing single
 \use_hyperref false
-\papersize default
-\use_geometry false
+\papersize a4paper
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
@@ -43,6 +43,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 3cm
+\topmargin 1cm
+\rightmargin 3cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -91,7 +95,7 @@ f(x)=\frac{1}{x+1}
  Kolikšna je napaka 
 \begin_inset Formula 
 \[
-||p_{1}-f||_{\infty}
+||p_{1}-f||_{\infty}?
 \]
 
 \end_inset
