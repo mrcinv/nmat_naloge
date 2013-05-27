@@ -103,6 +103,188 @@ f(x)=\frac{1}{x+1}
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev:
+\series default
+ Premico poiščemo z Remesovem postopkom.
+ Najprej izberemo 
+\begin_inset Formula $3$
+\end_inset
+
+ točke na intervalu 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Recimo 
+\begin_inset Formula $x_{0}=0$
+\end_inset
+
+, 
+\begin_inset Formula $x_{1}=\frac{1}{2}$
+\end_inset
+
+ in 
+\begin_inset Formula $x_{2}=1$
+\end_inset
+
+ in poiščemo premico 
+\begin_inset Formula $p(x)=ax+b$
+\end_inset
+
+, ki zadošča enačbam
+\begin_inset Formula 
+\begin{eqnarray}
+f(x_{i})-p(x_{i}) & = & (-1)^{i}m\text{ oziroma}\nonumber \\
+p(x_{i})+(-1)^{i}m & = & f(x_{i})\label{eq:remes}
+\end{eqnarray}
+
+\end_inset
+
+Dobimo linearen sistem
+\begin_inset Formula 
+\begin{eqnarray*}
+b+m & = & 1\\
+\frac{1}{2}a+b-m & = & \frac{2}{3}\\
+a+b+m & = & \frac{1}{2}
+\end{eqnarray*}
+
+\end_inset
+
+katerega rešitev je 
+\begin_inset Formula $a=-\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $b=\frac{23}{24}$
+\end_inset
+
+ in 
+\begin_inset Formula $m=\frac{1}{24}$
+\end_inset
+
+.
+ Poiščemo maksimum absolutne vrednosti razlike 
+\begin_inset Formula 
+\[
+r(x)=f(x)-p(x),
+\]
+
+\end_inset
+
+tako da poiščemo ničlo odvoda 
+\begin_inset Formula 
+\begin{eqnarray*}
+r'(x) & = & f'(x)-a=-\frac{1}{(x+1)^{2}}+\frac{1}{2}=0\\
+(x+1)^{2} & = & 2\\
+x_{1,2} & = & \pm\sqrt{2}-1
+\end{eqnarray*}
+
+\end_inset
+
+in izberemo 
+\begin_inset Formula $x_{2}=\sqrt{2}-1$
+\end_inset
+
+ v katerem ima funkcija 
+\begin_inset Formula $r(x)$
+\end_inset
+
+ globalni minimum 
+\begin_inset Formula $\frac{1}{\sqrt{2}}-\frac{\sqrt{2}}{2}-\frac{23}{24}=\frac{23}{24}.$
+\end_inset
+
+ V naboru točk 
+\begin_inset Formula $\{x_{0},x_{1},x_{2}\}$
+\end_inset
+
+ nadomestimo 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ z 
+\begin_inset Formula $\sqrt{2}-1$
+\end_inset
+
+.
+ Ponovno rešimo sistem 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:remes"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+b+m & = & 1\\
+(\sqrt{2}-1)a+b-m & = & \frac{1}{\sqrt{2}}\\
+a+b+m & = & \frac{1}{2}
+\end{eqnarray*}
+
+\end_inset
+
+in dobimo rešitev 
+\begin_inset Formula $a=-\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $b=\frac{1}{\sqrt{2}}+\frac{1}{4}$
+\end_inset
+
+ in 
+\begin_inset Formula $m=\frac{3}{4}-\frac{1}{\sqrt{2}}$
+\end_inset
+
+.
+ Preverimo, kako je z ekstremi razlike 
+\begin_inset Formula $r(x)=f(x)-p(x)$
+\end_inset
+
+ in dobimo isto enačbo za odvod, saj se 
+\begin_inset Formula $a$
+\end_inset
+
+ ni spremenil
+\begin_inset Formula 
+\[
+r'(x)=f'(x)-a=0.
+\]
+
+\end_inset
+
+Ekstremi 
+\begin_inset Formula $r(x)$
+\end_inset
+
+ so v točkah 
+\begin_inset Formula $x_{0},x_{1},x_{2}$
+\end_inset
+
+ in zato je 
+\begin_inset Formula $p(x)=-\frac{1}{2}x+\frac{1}{\sqrt{2}}+\frac{1}{4}$
+\end_inset
+
+ premica najboljše enakomerne aproksimacije funkcije 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Norma
+\begin_inset Formula 
+\[
+||f-p||_{\infty,[0,1]}=m=\frac{3}{4}-\frac{\sqrt{2}}{2}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Za funkcijo 
 \begin_inset Formula 
