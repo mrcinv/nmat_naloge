@@ -585,8 +585,48 @@ y_{n+1} & = & y_{n}+\frac{k_{1}+2k_{2}+2k_{3}+k_{4}}{6}.
 
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev: 
+\series default
+Rodovne polinome dobimo iz koeficientov v večkoračni formuli 
+\begin_inset Formula $\alpha_{0}=-1,\alpha_{1}=1$
+\end_inset
+
+ in 
+\begin_inset Formula $\beta_{0}=\frac{5}{12},\beta_{1}=\frac{2}{3},\beta_{2}=-\frac{1}{12}.$
+\end_inset
+
+ Rodovni polinomi so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\rho & = & -x^{2}+x^{1}\\
+\sigma & = & \frac{1}{12}\left(5x^{2}+8x-1\right).
+\end{eqnarray*}
+
+\end_inset
+
+Za izračun 
+\begin_inset Formula $y(0.2)$
+\end_inset
+
+ potrebujemo še ne približek z RK metodo
+\begin_inset Formula 
+\begin{eqnarray*}
+k_{1} & = & 0.1(0-1)=-0.1\\
+k_{2} & = & 0.1(0.05-(1-0.05))=
+\end{eqnarray*}
+
+\end_inset
+
  
 \end_layout
 
+\end_deeper
 \end_body
 \end_document
