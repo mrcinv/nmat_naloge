@@ -112,7 +112,7 @@ g(x)=\frac{6x}{3+x}
 
 \end_inset
 
-poišči kubični polinom 
+poiščite kubični polinom 
 \begin_inset Formula $p_{3}$
 \end_inset
 
@@ -129,7 +129,7 @@ poišči kubični polinom
 \end_inset
 
 .
- Čim bolj natančno oceni 
+ Čim bolj natančno ocenite 
 \begin_inset Formula 
 \[
 ||p_{3}-g||_{\infty,[-1,1]}.
@@ -137,23 +137,11 @@ poišči kubični polinom
 
 \end_inset
 
-Uporabiš lahko dejstvo, da 
-\begin_inset Formula $g^{(4)}$
-\end_inset
 
- doseže maksimum pri 
-\begin_inset Formula $x=0$
-\end_inset
-
- in si pomagaš z razvojem 
-\begin_inset Formula $g(x)$
-\end_inset
-
- v Taylorjevo vrsto.
 \end_layout
 
 \begin_layout Enumerate
-Izpelji odprto Newton-Cotesovo formulo za računanje integrala
+Izpeljite odprto Newton-Cotesovo formulo za računanje integrala
 \begin_inset Formula 
 \[
 \int_{x_{0}}^{x_{4}}f(x)\mathrm{d}x=Af(x_{1})+Bf(x_{2})+Cf(x_{3})+R(f).
@@ -161,7 +149,7 @@ Izpelji odprto Newton-Cotesovo formulo za računanje integrala
 
 \end_inset
 
-Določi tudi napako 
+Določite tudi napako 
 \begin_inset Formula $R(f)$
 \end_inset
 
