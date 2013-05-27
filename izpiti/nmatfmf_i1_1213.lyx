@@ -744,7 +744,7 @@ y_{2} & = & -\frac{5}{24}y_{2}+0.85570,
 \end_inset
 
 iz katere lahko eksplicitno izračunamo 
-\begin_inset Formula $y_{2}=0.70816$
+\begin_inset Formula $y_{2}=\frac{0.85570}{(1+\frac{5}{12})}=0.70816$
 \end_inset
 
 .
