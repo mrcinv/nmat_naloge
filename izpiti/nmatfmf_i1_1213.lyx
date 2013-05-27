@@ -337,8 +337,8 @@ Polinom
 \[
 \begin{array}{c|cccc}
 x & g(x)\\
-\hline -1 & -3 & -3 & 1 & \frac{5}{4}\\
-0 & 0 & g'(0)=-2 & \frac{7}{2}\\
+\hline -1 & -3 & 3 & 1 & \frac{5}{4}\\
+0 & 0 & g'(0)=2 & -\frac{1}{2}\\
 0 & 0 & \frac{3}{2}\\
 1 & \frac{3}{2}
 \end{array}
@@ -370,12 +370,32 @@ g = @(x) 6*x./(3+x);
 
 \begin_layout Plain Layout
 
-x=[-1;0;1];
+x=[-1;0;0;1];
 \end_layout
 
 \begin_layout Plain Layout
 
-g(x)
+p = g(x');
+\end_layout
+
+\begin_layout Plain Layout
+
+p(2:end)=p(2:end)-p(1:end-1);
+\end_layout
+
+\begin_layout Plain Layout
+
+p(3)=18/(0+3)^2; % odvod g'(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+p(3:end)=p(3:end)-p(2:end-1);
+\end_layout
+
+\begin_layout Plain Layout
+
+p(4)=(p(4)-p(3))/2
 \end_layout
 
 \end_inset
