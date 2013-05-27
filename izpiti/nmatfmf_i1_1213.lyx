@@ -508,19 +508,37 @@ Rešitev poiščemo z eliminacijo in je
 
 .
  Napako dobimo tako, da v formulo vstavimo 
-\begin_inset Formula $(x-x_{0})^{3}$
+\begin_inset Formula $(x-x_{0})^{4}$
 \end_inset
 
 
 \begin_inset Formula 
 \begin{eqnarray*}
-64h^{4} & = & \frac{8}{3}h^{4}-\frac{4}{3}2^{3}h^{4}+\frac{8}{3}3^{3}h^{4}+R(f)\\
-R(f) & = & \left(64-\frac{8}{3}(1-4+27)\right)
+\frac{4^{5}}{5}h^{4} & = & \frac{8}{3}h^{5}-\frac{4}{3}2^{4}h^{5}+\frac{8}{3}3^{4}h^{5}+R(f)\\
+R(f) & = & \left(\frac{4^{5}}{5}-\frac{8}{3}(1-8+81)\right)h^{5}\\
+R(f) & =\frac{16}{15} & \left(3\cdot64-37\cdot5\right)=\frac{112}{15}.
 \end{eqnarray*}
 
 \end_inset
 
- 
+Ker je 
+\begin_inset Formula $R(f)$
+\end_inset
+
+ oblike 
+\begin_inset Formula $\frac{1}{4!}Cf^{(4)}(\xi)h^{5},$
+\end_inset
+
+ je 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{4!}C\cdot4!h^{5} & = & \frac{112}{15}h^{5}\\
+C & = & \frac{112}{15}
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
