@@ -337,7 +337,7 @@ Polinom
 \[
 \begin{array}{c|cccc}
 x & g(x)\\
-\hline -1 & -3 & 3 & 1 & \frac{5}{4}\\
+\hline -1 & -3 & 3 & -1 & \frac{1}{4}\\
 0 & 0 & g'(0)=2 & -\frac{1}{2}\\
 0 & 0 & \frac{3}{2}\\
 1 & \frac{3}{2}
@@ -353,7 +353,7 @@ Koeficiente v razvoju po bazi
  razberemo iz prve vrstice
 \begin_inset Formula 
 \[
-p_{3}(x)=-3-3(x+1)+x(x+1)+\frac{5}{4}x^{2}(x+1).
+p_{3}(x)=-3+3(x+1)-x(x+1)+\frac{1}{4}x^{2}(x+1).
 \]
 
 \end_inset
@@ -404,7 +404,7 @@ Napako ocenimo s formulo
 \begin_inset Formula 
 \begin{eqnarray*}
 |R(x)| & = & |\frac{\omega(x)}{4!}g^{(4)}(\xi)|\le\frac{1}{24}|\omega|_{\infty,[-1,-1]}|g^{(4)}|_{\infty,[-1,1]}\\
-|R(x)| & \le & \frac{1}{24}\cdot\frac{1}{4}\cdot\frac{27}{2}=\frac{9}{32}.
+|R(x)| & \le & \frac{1}{24}\cdot\frac{1}{4}\cdot\frac{27}{32}=\frac{9}{1024}.
 \end{eqnarray*}
 
 \end_inset
@@ -435,8 +435,8 @@ in dobimo, da je ekstremna vrednost dosežena v
 \begin_inset Formula $g^{(4)}$
 \end_inset
 
- je padajoča funkcija, zato je ekstrem dosežen v levem krajišču 
-\begin_inset Formula $-1$
+ je naraščajoča funkcija, zato je ekstrem dosežen v desnem krajišču 
+\begin_inset Formula $1$
 \end_inset
 
 .
@@ -446,25 +446,25 @@ in dobimo, da je ekstremna vrednost dosežena v
 \end_inset
 
  okrog 
-\begin_inset Formula $-1$
+\begin_inset Formula $1$
 \end_inset
 
 
 \begin_inset Formula 
 \[
-g(x)=3+\frac{-9}{1+\frac{x+1}{2}}=6-9\left(1-\frac{x+1}{2}+\frac{(x+1)^{2}}{4}-\frac{(x+1)^{3}}{8}+\frac{(x+1)^{4}}{16}+\ldots\right)
+g(x)=6-\frac{9}{2\left(1+\frac{x+1}{4}\right)}=6-\frac{9}{2}\left(1-\frac{x-1}{4}+\frac{(x-1)^{2}}{16}-\frac{(x-1)^{3}}{64}+\frac{(x-1)^{4}}{256}+\ldots\right)
 \]
 
 \end_inset
 
 Vrednost 
-\begin_inset Formula $g^{(4)}(-1)=-\frac{27}{2}$
+\begin_inset Formula $g^{(4)}(1)=-\frac{27}{32}$
 \end_inset
 
  dobimo iz enačbe
 \begin_inset Formula 
 \[
-\frac{-9}{16}(x+1)^{4}=\frac{1}{24}g^{4}(-1)(x+1)^{4},
+\frac{-9}{512}(x-1)^{4}=\frac{1}{24}g^{4}(-1)(x+1)^{4},
 \]
 
 \end_inset
@@ -550,20 +550,24 @@ Rešitev poiščemo z eliminacijo in je
 
 .
  Napako dobimo tako, da v formulo vstavimo 
-\begin_inset Formula $(x-x_{0})^{4}$
+\begin_inset Formula $p_{4}(x)=(x-x_{0})^{4}$
 \end_inset
 
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{4^{5}}{5}h^{4} & = & \frac{8}{3}h^{5}-\frac{4}{3}2^{4}h^{5}+\frac{8}{3}3^{4}h^{5}+R(f)\\
-R(f) & = & \left(\frac{4^{5}}{5}-\frac{8}{3}(1-8+81)\right)h^{5}\\
-R(f) & =\frac{16}{15} & \left(3\cdot64-37\cdot5\right)=\frac{112}{15}.
+\frac{4^{5}}{5}h^{4} & = & \frac{8}{3}h^{5}-\frac{4}{3}2^{4}h^{5}+\frac{8}{3}3^{4}h^{5}+R(p_{4})\\
+R(p_{4}) & = & \left(\frac{4^{5}}{5}-\frac{8}{3}(1-8+81)\right)h^{5}\\
+R(p_{4}) & =\frac{16}{15} & \left(3\cdot64-37\cdot5\right)h^{5}=\frac{112}{15}h^{5}.
 \end{eqnarray*}
 
 \end_inset
 
-Ker je 
+Za poljuben 
+\begin_inset Formula $f$
+\end_inset
+
+ je 
 \begin_inset Formula $R(f)$
 \end_inset
 
@@ -571,10 +575,18 @@ Ker je
 \begin_inset Formula $\frac{1}{4!}Cf^{(4)}(\xi)h^{5},$
 \end_inset
 
- je 
+ kjer 
+\begin_inset Formula $C$
+\end_inset
+
+ izračunamo iz 
+\begin_inset Formula $R(p_{4})$
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{1}{4!}C\cdot4!h^{5} & = & \frac{112}{15}h^{5}\\
+\frac{1}{4!}C\cdot p_{4}'(\xi)h^{5} & = & Ch^{5}=\frac{112}{15}h^{5}\\
 C & = & \frac{112}{15}.
 \end{eqnarray*}
 
@@ -663,6 +675,43 @@ Za izračun
 k_{1} & = & 0.1(0-1)=-0.1\\
 k_{2} & = & 0.1(0.05-(1-0.05))=
 \end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+h=0.1; y0=1; x0=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+k1 = h*(x0-y0)
+\end_layout
+
+\begin_layout Plain Layout
+
+k2 = h*(x0+h/2-(y0+k1/2))
+\end_layout
+
+\begin_layout Plain Layout
+
+k3 = h*(x0+h/2-(y0+k2/2))
+\end_layout
+
+\begin_layout Plain Layout
+
+k4 = h*(x0+h-(y0+k3))
+\end_layout
+
+\begin_layout Plain Layout
+
+y1 = y0 +(k1+2*(k2+k3)+k4)/6
+\end_layout
 
 \end_inset
 
