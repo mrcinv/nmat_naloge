@@ -55,6 +55,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "basicstyle={\footnotesize},frame=lines,language=Octave"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -495,8 +496,8 @@ Določite tudi napako
 \series bold
 Rešitev: 
 \series default
-Upoabimo lahko metodo nedoločenih koeficientov ali pa lagrangeve interpolacijske
- polinome.
+Uporabimo lahko metodo nedoločenih koeficientov ali pa Lagrangeve interpolacijsk
+e polinome.
  Z metodo nedoločenih koeficientov z vstavljanjem baznih polinomiv 
 \begin_inset Formula $\{1,x-x_{0},(x-x_{0})^{2}\}$
 \end_inset
@@ -683,6 +684,7 @@ y_{1} & = & 0.90968
 
 
 \begin_inset listings
+lstparams "caption={deljene diference},float"
 inline false
 status open
 
