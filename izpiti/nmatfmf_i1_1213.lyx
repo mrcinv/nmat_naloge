@@ -322,6 +322,115 @@ poiščite kubični polinom
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev: 
+\series default
+Polinom 
+\begin_inset Formula $p_{3}$
+\end_inset
+
+ dobimo najhitreje s tabelo deljenih diferenc
+\begin_inset Formula 
+\[
+\begin{array}{c|cccc}
+x & g(x)\\
+\hline -1 & -3 & -3 & 1 & \frac{5}{4}\\
+0 & 0 & g'(0)=-2 & \frac{7}{2}\\
+0 & 0 & \frac{3}{2}\\
+1 & \frac{3}{2}
+\end{array}
+\]
+
+\end_inset
+
+Koeficiente v razvoju po bazi 
+\begin_inset Formula $\{1,x+1,x(x+1),x^{2}(x+1)\}$
+\end_inset
+
+ razberemo iz prve vrstice
+\begin_inset Formula 
+\[
+p_{3}(x)=-3-3(x+1)+x(x+1)+\frac{5}{4}x^{2}(x+1).
+\]
+
+\end_inset
+
+Napako ocenimo s formulo
+\begin_inset Formula 
+\begin{eqnarray*}
+|R(x)| & = & |\frac{\omega(x)}{4!}g^{(4)}(\xi)|\le\frac{1}{24}|\omega|_{\infty,[-1,-1]}|g^{(4)}|_{\infty,[-1,1]}\\
+|R(x)| & \le & \frac{1}{24}\cdot\frac{1}{4}\cdot\frac{27}{2}=\frac{9}{32}.
+\end{eqnarray*}
+
+\end_inset
+
+Oceno za 
+\begin_inset Formula $|\omega(x)|$
+\end_inset
+
+ dobimo tako, da poiščemo maksimum absolutne vrednosti.
+ Odvod izenačimo z 0
+\begin_inset Formula 
+\[
+0=\omega'(x)=\left(x^{2}(x^{2}-1)\right)'=2x\left(2x^{2}-1\right)
+\]
+
+\end_inset
+
+in dobimo, da je ekstremna vrednost dosežena v 
+\begin_inset Formula $x=\pm\frac{1}{\sqrt{2}}$
+\end_inset
+
+ in je enaka 
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+.
+ Odvod 
+\begin_inset Formula $g^{(4)}$
+\end_inset
+
+ je padajoča funkcija, zato je ekstrem dosežen v levem krajišču 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ Lahko ga poiščemo npr.
+ z razvojem v Taylorjevo vrsto fukcije 
+\begin_inset Formula $g$
+\end_inset
+
+ okrog 
+\begin_inset Formula $-1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g(x)=3+\frac{-9}{1+\frac{x+1}{2}}=6-9\left(1-\frac{x+1}{2}+\frac{(x+1)^{2}}{4}-\frac{(x+1)^{3}}{8}+\frac{(x+1)^{4}}{16}+\ldots\right)
+\]
+
+\end_inset
+
+Vrednost 
+\begin_inset Formula $g^{(4)}(-1)=-\frac{27}{2}$
+\end_inset
+
+ dobimo iz enačbe
+\begin_inset Formula 
+\[
+\frac{-9}{16}(x+1)^{4}=\frac{1}{24}g^{4}(-1)(x+1)^{4},
+\]
+
+\end_inset
+
+Lahko pa jo tudi izračunamo direktno z odvajanjem.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Izpeljite odprto Newton-Cotesovo formulo za računanje integrala
 \begin_inset Formula 
