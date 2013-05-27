@@ -110,7 +110,7 @@ f(x)=\frac{1}{x+1}
 \series bold
 Rešitev:
 \series default
- Premico poiščemo z Remesovem postopkom.
+ Premico poiščemo z Remezovim postopkom.
  Najprej izberemo 
 \begin_inset Formula $3$
 \end_inset
