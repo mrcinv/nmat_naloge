@@ -361,12 +361,18 @@ p_{3}(x)=-3+3(x+1)-x(x+1)+\frac{1}{4}x^{2}(x+1).
 
 
 \begin_inset listings
+lstparams "title={deljene diference v Octave}"
 inline false
 status open
 
 \begin_layout Plain Layout
 
 g = @(x) 6*x./(3+x);
+\end_layout
+
+\begin_layout Plain Layout
+
+dg = @(x) 18./(3+x).^2; % odvod
 \end_layout
 
 \begin_layout Plain Layout
@@ -381,22 +387,22 @@ p = g(x');
 
 \begin_layout Plain Layout
 
-p(2:end)=p(2:end)-p(1:end-1);
+p(2:end) = p(2:end) - p(1:end-1);
 \end_layout
 
 \begin_layout Plain Layout
 
-p(3)=18/(0+3)^2; % odvod g'(0)
+p(3) = dg(0);
 \end_layout
 
 \begin_layout Plain Layout
 
-p(3:end)=p(3:end)-p(2:end-1);
+p(3:end) = p(3:end) - p(2:end-1);
 \end_layout
 
 \begin_layout Plain Layout
 
-p(4)=(p(4)-p(3))/2
+p(4) = (p(4) - p(3))/2
 \end_layout
 
 \end_inset
@@ -684,7 +690,7 @@ y_{1} & = & 0.90968
 
 
 \begin_inset listings
-lstparams "caption={deljene diference},float"
+lstparams "title={korak RK4 v octave}"
 inline false
 status open
 
