@@ -447,6 +447,83 @@ Določite tudi napako
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev: 
+\series default
+Upoabimo lahko metodo nedoločenih koeficientov ali pa lagrangeve interpolacijske
+ polinome.
+ Z metodo nedoločenih koeficientov z vstavljanjem baznih polinomiv 
+\begin_inset Formula $\{1,x-x_{0},(x-x_{0})^{2}\}$
+\end_inset
+
+ dobimo sistem enačb za 
+\begin_inset Formula $A,B,$
+\end_inset
+
+ in 
+\begin_inset Formula $C$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+4h & = & A+B+C\\
+8h^{2} & = & hA+2hB+3hC\\
+\frac{4^{3}}{3}h^{3} & = & h^{2}A+4h^{2}B+9h^{2}C,
+\end{eqnarray*}
+
+\end_inset
+
+ki ga lahko predstavimo v matrični obliki
+\begin_inset Formula 
+\[
+\begin{bmatrix}1 & 1 & 1\\
+1 & 2 & 3\\
+1 & 4 & 9
+\end{bmatrix}\begin{bmatrix}A\\
+B\\
+C
+\end{bmatrix}=4h\begin{bmatrix}1\\
+2\\
+\frac{16}{3}
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Rešitev poiščemo z eliminacijo in je 
+\begin_inset Formula $A=\frac{8}{3}h$
+\end_inset
+
+,
+\begin_inset Formula $B=-\frac{4}{3}h$
+\end_inset
+
+ in 
+\begin_inset Formula $C=\frac{8}{3}h$
+\end_inset
+
+.
+ Napako dobimo tako, da v formulo vstavimo 
+\begin_inset Formula $(x-x_{0})^{3}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+64h^{4} & = & \frac{8}{3}h^{4}-\frac{4}{3}2^{3}h^{4}+\frac{8}{3}3^{3}h^{4}+R(f)\\
+R(f) & = & \left(64-\frac{8}{3}(1-4+27)\right)
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Za implicitno večkoračno metodo 
 \begin_inset Formula 
