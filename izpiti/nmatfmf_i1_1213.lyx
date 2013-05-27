@@ -65,7 +65,7 @@
 \begin_body
 
 \begin_layout Title
-Izpit iz Numerične matematike 2 za Finančne matematike
+Izpit iz Numeričnih metod 2 za Finančne matematike
 \end_layout
 
 \begin_layout Date
@@ -75,7 +75,7 @@ Izpit iz Numerične matematike 2 za Finančne matematike
 \end_layout
 
 \begin_layout Enumerate
-Poišči premico 
+Poiščite premico 
 \begin_inset Formula $p_{1}\in\mathbb{P}_{1}$
 \end_inset
 
@@ -95,7 +95,7 @@ f(x)=\frac{1}{x+1}
  Kolikšna je napaka 
 \begin_inset Formula 
 \[
-||p_{1}-f||_{\infty}?
+||p_{1}-f||_{\infty,[0,1]}?
 \]
 
 \end_inset
@@ -104,34 +104,35 @@ f(x)=\frac{1}{x+1}
 \end_layout
 
 \begin_layout Enumerate
-Funkcijo 
+Za funkcijo 
 \begin_inset Formula 
 \[
-g(x)=2^{-x^{2}}
+g(x)=\frac{6x}{3+x}
 \]
 
 \end_inset
 
-interpoliraj v točkah 
-\begin_inset Formula $x=-1,0,1$
+poišči kubični polinom 
+\begin_inset Formula $p_{3}$
 \end_inset
 
- s kubičnim polinomom 
-\begin_inset Formula $p_{3}(x)$
+, ki zadošča pogojem 
+\begin_inset Formula $p_{3}(i)=g(i)$
 \end_inset
 
-, pri čemer naj se ujema tudi odvod v točki 0
-\begin_inset Formula 
-\[
-p_{3}'(0)=g'(0).
-\]
-
+ za 
+\begin_inset Formula $i=-1,0,1$
 \end_inset
 
+ in 
+\begin_inset Formula $p'(0)=g'(0)$
+\end_inset
+
+.
  Čim bolj natančno oceni 
 \begin_inset Formula 
 \[
-||p_{3}-g||_{\infty}.
+||p_{3}-g||_{\infty,[-1,1]}.
 \]
 
 \end_inset
@@ -152,16 +153,16 @@ Uporabiš lahko dejstvo, da
 \end_layout
 
 \begin_layout Enumerate
-Izpelji odprto Newton-Cortesovo formulo za računanje integrala
+Izpelji odprto Newton-Cotesovo formulo za računanje integrala
 \begin_inset Formula 
 \[
-\int_{x_{0}}^{x_{4}}f(x)\mathrm{d}x=Af(x_{1})+Bf(x_{2})+Cf(x_{3})+R_{f}.
+\int_{x_{0}}^{x_{4}}f(x)\mathrm{d}x=Af(x_{1})+Bf(x_{2})+Cf(x_{3})+R(f).
 \]
 
 \end_inset
 
 Določi tudi napako 
-\begin_inset Formula $R_{f}$
+\begin_inset Formula $R(f)$
 \end_inset
 
 .
@@ -171,13 +172,13 @@ Določi tudi napako
 Za implicitno večkoračno metodo 
 \begin_inset Formula 
 \[
-y_{n}=y_{n-1}+h(\frac{5}{12}f(x_{n},y_{n})+\frac{2}{3}f(x_{n-1},y_{n-1})-\frac{1}{12}f(x_{n-2},y_{n-2}))
+y_{n}=y_{n-1}+h\left(\frac{5}{12}f(x_{n},y_{n})+\frac{2}{3}f(x_{n-1},y_{n-1})-\frac{1}{12}f(x_{n-2},y_{n-2})\right)
 \]
 
 \end_inset
 
-zapiši oba rodovna polinoma.
- Poišči približek za začetni problem
+zapišite oba rodovna polinoma.
+ Poiščite približek za začetni problem
 \begin_inset Formula 
 \[
 y'=x-y;\quad y(0)=1,
@@ -198,7 +199,7 @@ v
 \begin_inset Formula $y(0.1)$
 \end_inset
 
- izračunaj z enim korakom metode Runge-Kutta
+ izračunajte z enim korakom metode Runge-Kutta
 \begin_inset Formula 
 \begin{eqnarray*}
 k_{1} & = & hf(x_{n},y_{n})\\
