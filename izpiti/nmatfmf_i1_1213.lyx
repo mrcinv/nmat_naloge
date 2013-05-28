@@ -411,7 +411,7 @@ Napako ocenimo s formulo
 \begin_inset Formula 
 \begin{eqnarray*}
 |R(x)| & = & |\frac{\omega(x)}{4!}g^{(4)}(\xi)|\le\frac{1}{24}|\omega|_{\infty,[-1,-1]}|g^{(4)}|_{\infty,[-1,1]}\\
-|R(x)| & \le & \frac{1}{24}\cdot\frac{1}{4}\cdot\frac{27}{32}=\frac{9}{1024}.
+|R(x)| & \le & \frac{1}{24}\cdot\frac{1}{4}\cdot\frac{27}{64}=\frac{3^{2}}{2^{11}}=4.39453125\cdot10^{-3}.
 \end{eqnarray*}
 
 \end_inset
@@ -465,18 +465,22 @@ g(x)=6-\frac{9}{2\left(1+\frac{x+1}{4}\right)}=6-\frac{9}{2}\left(1-\frac{x-1}{4
 \end_inset
 
 Vrednost 
-\begin_inset Formula $g^{(4)}(1)=-\frac{27}{32}$
+\begin_inset Formula $g^{(4)}(1)=-\frac{27}{64}$
 \end_inset
 
  dobimo iz enačbe
 \begin_inset Formula 
 \[
-\frac{-9}{512}(x-1)^{4}=\frac{1}{24}g^{4}(-1)(x+1)^{4},
+\frac{-9}{512}(x-1)^{4}=\frac{1}{24}g^{(4)}(1)(x-1)^{4}.
 \]
 
 \end_inset
 
-Lahko pa jo tudi izračunamo direktno z odvajanjem.
+Lahko pa jo tudi izračunamo direktno z odvajanjem 
+\begin_inset Formula $g^{(4)}(x)=-\frac{18\cdot4!}{(3+x)^{5}}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
