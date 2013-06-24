@@ -198,7 +198,7 @@ Z osnovno simpsonovo formulo izračunaj
 .
  
 \emph on
-(Upoštevate lahko, da je 
+(Upoštevaš lahko, da je 
 \begin_inset Formula $||\frac{d^{4}}{dx^{4}}\frac{\sin x}{x}||_{\infty,[1,1.3]}=-20\cos(1)+13\sin(1)$
 \end_inset
 
