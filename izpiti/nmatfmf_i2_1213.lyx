@@ -130,7 +130,7 @@ na podprostor
 \begin_layout Enumerate
 Integralski sinus 
 \begin_inset FormulaMacro
-\renewcommand{\si}{\mathrm{si}}
+\newcommand{\si}{\mathrm{si}}
 \end_inset
 
  
@@ -178,20 +178,33 @@ Vrednosti v tabeli interploliraj z linearnim zlepkom in poišči
 \end_layout
 
 \begin_layout Enumerate
-Z osnovno simpsonovo formulo izračunaj, za koliko se vrednost 
+Z osnovno simpsonovo formulo izračunaj 
 \begin_inset Formula $\si(x_{0})$
 \end_inset
 
- razlikuje od 
+ za približek iz prejšnje točke.
+ Na podlagi približka za 
+\begin_inset Formula $\si(x_{0})$
+\end_inset
+
+ in ocene za napako simpsonove formule oceni, za koliko se lahko 
+\begin_inset Formula $\si(x_{0})$
+\end_inset
+
+ največ razlikuje od 
 \begin_inset Formula $1$
 \end_inset
 
- za približek iz prejšnje točke.
+.
  
 \end_layout
 
 \begin_layout Enumerate
-Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet
+
+\emph on
+(Dodatek 3 točke)
+\emph default
+ Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet
  preveri, za koliko se vrednost 
 \begin_inset Formula $\si$
 \end_inset
