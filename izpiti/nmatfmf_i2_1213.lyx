@@ -313,7 +313,7 @@ Q=\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 0 & 1 & 0\\
 \end_inset
 
 faktorja v realni Schurovi formi matrike 
-\begin_inset Formula $A=QR$
+\begin_inset Formula $A=QRQ^{T}$
 \end_inset
 
 .
