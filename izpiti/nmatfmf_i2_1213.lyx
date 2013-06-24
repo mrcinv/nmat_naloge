@@ -130,7 +130,7 @@ na podprostor
 \begin_layout Enumerate
 Integralski sinus 
 \begin_inset FormulaMacro
-\newcommand{\si}{\mathrm{si}}
+\renewcommand{\si}{\mathrm{si}}
 \end_inset
 
  
@@ -206,46 +206,6 @@ Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet
 
 \end_deeper
 \begin_layout Enumerate
-Naj bosta 
-\begin_inset Formula 
-\[
-Q=\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 0 & 1 & 0\\
-0 & 1 & 0 & 1\\
-1 & 0 & -1 & 0\\
-0 & 1 & 0 & -1
-\end{bmatrix}\quad R=\begin{bmatrix}2 & 0 & 1 & 2\\
-0 & -3 & 0 & 1\\
-0 & 0 & 2 & 1\\
-0 & 0 & -1 & 2
-\end{bmatrix}
-\]
-
-\end_inset
-
-faktorja v realni Schurovi formi matrike 
-\begin_inset Formula $A=QR$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Poišči vse lastne vrednosti matrike in realne lastne vektorje za vsako od
- realnih lastnih vrednosti matrike 
-\begin_inset Formula $A$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Ali potenčna metoda konvergira?
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
 Iščemo rešitev začetnega problema za NDE 
 \begin_inset Formula 
 \begin{equation}
@@ -311,6 +271,46 @@ Izračunaj absolutno in relativno napako (točno rešitev dobiš z nastavkom
 
 ).
  
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Naj bosta 
+\begin_inset Formula 
+\[
+Q=\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 0 & 1 & 0\\
+0 & 1 & 0 & 1\\
+1 & 0 & -1 & 0\\
+0 & 1 & 0 & -1
+\end{bmatrix}\quad R=\begin{bmatrix}2 & 0 & 1 & 2\\
+0 & -3 & 0 & 1\\
+0 & 0 & 2 & 1\\
+0 & 0 & -1 & 2
+\end{bmatrix}
+\]
+
+\end_inset
+
+faktorja v realni Schurovi formi matrike 
+\begin_inset Formula $A=QR$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Poišči vse lastne vrednosti matrike in realne lastne vektorje za vsako od
+ realnih lastnih vrednosti matrike 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ali potenčna metoda konvergira?
 \end_layout
 
 \end_deeper
