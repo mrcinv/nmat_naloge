@@ -1,0 +1,290 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language slovene
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 1cm
+\rightmargin 3cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "basicstyle={\footnotesize},frame=lines,language=Octave"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Izpit iz Numeričnih metod 2 za Finančne matematike
+\end_layout
+
+\begin_layout Date
+28.
+ 6.
+ 2013
+\end_layout
+
+\begin_layout Enumerate
+V prostoru 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrik lahko definiramo skalrni produkt s formulo
+\begin_inset Formula 
+\[
+\langle A,B\rangle=\mathrm{sled}(A^{T}B),
+\]
+
+\end_inset
+
+kjer je 
+\begin_inset Formula $\mathrm{sled}\left(\begin{bmatrix}a & b\\
+c & d
+\end{bmatrix}\right)=a+d$
+\end_inset
+
+.
+ Poišči element najboljše aproksimacije za matriko
+\begin_inset Formula 
+\[
+\begin{bmatrix}1 & 2\\
+3 & 2
+\end{bmatrix}
+\]
+
+\end_inset
+
+na podprostor 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ simetričnih matrik s sledjo enako 
+\begin_inset Formula $0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{S}=\{A;\quad A^{T}=A\text{ in }\mbox{\mathrm{sled}}(A)=0\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Iščemo ničlo funkcije
+\begin_inset Formula 
+\[
+f(x)=x-2^{-x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Pokaži, da je ničla na intervalu 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ in jo poišči na 2 decimalke natančno.
+\end_layout
+
+\begin_layout Enumerate
+Ničlo poišči z inverzno interpolacijo, tako da inverzno funkcijo 
+\begin_inset Formula $f^{-1}(x)$
+\end_inset
+
+ interpoliraš v točkah 
+\begin_inset Formula $f(0),$
+\end_inset
+
+ 
+\begin_inset Formula $f\left(\frac{1}{2}\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $f(1)$
+\end_inset
+
+ s kvadratnim polinomom.
+ Tako dobljeno ničlo primerjaj z rešitvijo iz točke 
+\begin_inset Formula $(a)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Integralski sinus 
+\begin_inset FormulaMacro
+\renewcommand{\si}{\mathrm{si}}
+\end_inset
+
+
+\begin_inset Formula $\si(x)$
+\end_inset
+
+ je dan s formulo
+\begin_inset Formula 
+\[
+\si(x)=\int_{0}^{x}\frac{\sin t}{t}\mathrm{d}t.
+\]
+
+\end_inset
+
+Nekatere vrednosti 
+\begin_inset Formula $\si(x)$
+\end_inset
+
+ so zbrane v tabeli
+\begin_inset Formula 
+\[
+\begin{array}{c|cccc}
+x & 1 & 1.1 & 1.2 & 1.3\\
+\hline \si(x) & 0.94608 & 1.02869 & 1.10805 & 1.18396
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Vrednosti v tabeli interploliraj z linearnim zlepkom in poišči 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, za katerega je 
+\begin_inset Formula $\si(x_{0})=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+S simpsonovo formulo izračunaj, za koliko se vrednosti 
+\begin_inset Formula $\si(x_{0})$
+\end_inset
+
+ razlikuje od 
+\begin_inset Formula $1$
+\end_inset
+
+ za približek iz prejšnje točke.
+\end_layout
+
+\begin_layout Enumerate
+Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet
+ preveri, za koliko se vrednost 
+\begin_inset Formula $\si$
+\end_inset
+
+ razlikuje od 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Naj bosta 
+\begin_inset Formula 
+\[
+Q=\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 0 & 1 & 0\\
+0 & 1 & 0 & 1\\
+1 & 0 & -1 & 0\\
+0 & 1 & 0 & -1
+\end{bmatrix}\quad R=\begin{bmatrix}2 & 0 & 1 & 2\\
+0 & -3 & 0 & 1\\
+0 & 0 & 2 & 1\\
+0 & 0 & -1 & 2
+\end{bmatrix}
+\]
+
+\end_inset
+
+faktorja v realni Schurovi formi matrike 
+\begin_inset Formula $A=QR$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Poišči vse lastne vrednosti matrike in realne lastne vektorje za vsako od
+ realnih lastnih vrednosti matrike 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ali potenčna metoda konvergira?
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
