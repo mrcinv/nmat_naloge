@@ -1,13 +1,13 @@
-#LyX file created by tex2lyx 2.0.3
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
 \lyxformat 413
 \begin_document
 \begin_header
 \textclass article
 \begin_preamble
 \usepackage{babel}
-
 \end_preamble
 \use_default_options false
+\maintain_unincluded_children false
 \language slovene
 \language_package default
 \inputencoding latin2
@@ -16,14 +16,20 @@
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref 0
+\use_hyperref false
 \papersize a4paper
 \use_geometry true
 \use_amsmath 2
@@ -36,6 +42,10 @@
 \paperorientation portrait
 \suppress_date false
 \use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
 \leftmargin 3cm
 \topmargin 1cm
 \rightmargin 3cm
@@ -58,25 +68,24 @@
 \begin_body
 
 \begin_layout Title
-
 Izpit iz Numeričnih metod 2 za Finančne matematike
 \end_layout
 
 \begin_layout Date
-
  
 \end_layout
 
 \begin_layout Enumerate
-
 V prostoru 
 \begin_inset Formula $2\times2$
 \end_inset
 
  matrik lahko definiramo skalrni produkt s formulo 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \langle A,B\rangle=\mathrm{sled}(A^{T}B),
 \]
+
 \end_inset
 
 kjer je 
@@ -85,12 +94,16 @@ c & d
 \end{bmatrix}\right)=a+d$
 \end_inset
 
-. Poišči element najboljše aproksimacije za matriko 
-\begin_inset Formula \[
+.
+ Poišči element najboljše aproksimacije po metodi najmanjših kvadratov za
+ matriko 
+\begin_inset Formula 
+\[
 \begin{bmatrix}1 & 2\\
 3 & 2
 \end{bmatrix}
 \]
+
 \end_inset
 
 na podprostor 
@@ -102,20 +115,23 @@ na podprostor
 \end_inset
 
  
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \mathcal{S}=\{A;\quad A^{T}=A\text{ in }\mbox{\ensuremath{\mathrm{sled}}}(A)=0\}.
 \]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-
 Iščemo ničlo funkcije 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 f(x)=x-2^{-x}
 \]
+
 \end_inset
 
 
@@ -123,16 +139,15 @@ f(x)=x-2^{-x}
 
 \begin_deeper
 \begin_layout Enumerate
-
 Pokaži, da je ničla na intervalu 
 \begin_inset Formula $[0,1]$
 \end_inset
 
- in jo poišči na 2 decimalke natančno. 
+ in jo poišči na 2 decimalke natančno.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Ničlo poišči z inverzno interpolacijo, tako da inverzno funkcijo 
 \begin_inset Formula $f^{-1}(x)$
 \end_inset
@@ -149,19 +164,20 @@ Ničlo poišči z inverzno interpolacijo, tako da inverzno funkcijo
 \begin_inset Formula $f(1)$
 \end_inset
 
- s kvadratnim polinomom. Tako dobljeno ničlo primerjaj z rešitvijo iz točke 
+ s kvadratnim polinomom.
+ Tako dobljeno ničlo primerjaj z rešitvijo iz točke 
 \begin_inset Formula $(a)$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-
 Integralski sinus 
 \begin_inset FormulaMacro
-\def\si {\mathrm{si}}
+\renewcommand{\si}{\mathrm{si}}
 \end_inset
 
  
@@ -169,9 +185,11 @@ Integralski sinus
 \end_inset
 
  je dan s formulo 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \si(x)=\int_{0}^{x}\frac{\sin x}{x}\mathrm{d}x.
 \]
+
 \end_inset
 
 Nekatere vrednosti 
@@ -179,12 +197,14 @@ Nekatere vrednosti
 \end_inset
 
  so zbrane v tabeli 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \begin{array}{c|cccc}
 x & 1 & 1.1 & 1.2 & 1.3\\
 \hline \si(x) & 0.94608 & 1.02869 & 1.10805 & 1.18396
 \end{array}
 \]
+
 \end_inset
 
 
@@ -192,7 +212,6 @@ x & 1 & 1.1 & 1.2 & 1.3\\
 
 \begin_deeper
 \begin_layout Enumerate
-
 Vrednosti v tabeli interploliraj z linearnim zlepkom in poišči 
 \begin_inset Formula $x_{0}$
 \end_inset
@@ -201,11 +220,11 @@ Vrednosti v tabeli interploliraj z linearnim zlepkom in poišči
 \begin_inset Formula $\si(x_{0})=1$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 S simpsonovo formulo izračunaj, za koliko se vrednosti 
 \begin_inset Formula $\si(x_{0})$
 \end_inset
@@ -214,12 +233,13 @@ S simpsonovo formulo izračunaj, za koliko se vrednosti
 \begin_inset Formula $1$
 \end_inset
 
- za približek iz prejšnje točke. 
+ za približek iz prejšnje točke.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
-Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet preveri, za koliko se vrednost 
+Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet
+ preveri, za koliko se vrednost 
 \begin_inset Formula $\si$
 \end_inset
 
@@ -227,14 +247,15 @@ Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet pre
 \begin_inset Formula $1$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-
 Naj bosta 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 Q=\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 0 & 1 & 0\\
 0 & 1 & 0 & 1\\
 1 & 0 & -1 & 0\\
@@ -245,6 +266,7 @@ Q=\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 0 & 1 & 0\\
 0 & 0 & -1 & 2
 \end{bmatrix}
 \]
+
 \end_inset
 
 faktorja v realni Schurovi formi matrike 
@@ -256,16 +278,16 @@ faktorja v realni Schurovi formi matrike
 
 \begin_deeper
 \begin_layout Enumerate
-
-Poišči vse lastne vrednosti matrike in realne lastne vektorje za vsako od realnih lastnih vrednosti matrike 
+Poišči vse lastne vrednosti matrike in realne lastne vektorje za vsako od
+ realnih lastnih vrednosti matrike 
 \begin_inset Formula $A$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Ali potenčna metoda konvergira?
 \end_layout
 
