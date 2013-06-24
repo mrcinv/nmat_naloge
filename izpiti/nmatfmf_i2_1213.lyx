@@ -126,50 +126,70 @@ na podprostor
 \end_layout
 
 \begin_layout Enumerate
-Iščemo ničlo funkcije 
+Iščemo rešitev začetnega problema za NDE 
 \begin_inset Formula 
-\[
-f(x)=x-2^{-x}
-\]
+\begin{equation}
+x^{2}y''(x)-2xy'(x)+2y(x)=0\label{eq:cauchy}
+\end{equation}
 
 \end_inset
 
+z začetnimi pogoji 
+\begin_inset Formula $y(1)=0$
+\end_inset
 
+ in 
+\begin_inset Formula $y'(1)=1$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Pokaži, da je ničla na intervalu 
-\begin_inset Formula $[0,1]$
+Enačbo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cauchy"
+
 \end_inset
 
- in jo poišči na 2 decimalke natančno.
+ zapiši v obliki sistema dveh enačb 1.
+ reda.
+\end_layout
+
+\begin_layout Enumerate
+Poišči 
+\begin_inset Formula $y(1.1)$
+\end_inset
+
+ z metodo Runge-Kutta s tabelo
+\begin_inset Formula 
+\[
+\begin{array}{c|cc}
+0 & 0\\
+1 & 1 & 0\\
+\hline  & \frac{1}{2} & \frac{1}{2}
+\end{array}
+\]
+
+\end_inset
+
+in korakom 
+\begin_inset Formula $h=0.1$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Enumerate
-Ničlo poišči z inverzno interpolacijo, tako da inverzno funkcijo 
-\begin_inset Formula $f^{-1}(x)$
-\end_inset
-
- interpoliraš v točkah 
-\begin_inset Formula $f(0),$
-\end_inset
-
+Izračunaj absolutno in relativno napako (točno rešitev dobiš z nastavkom
  
-\begin_inset Formula $f\left(\frac{1}{2}\right)$
+\begin_inset Formula $y=x^{m}$
 \end_inset
 
- in 
-\begin_inset Formula $f(1)$
-\end_inset
-
- s kvadratnim polinomom.
- Tako dobljeno ničlo primerjaj z rešitvijo iz točke 
-\begin_inset Formula $(a)$
-\end_inset
-
-.
+).
  
 \end_layout
 
@@ -225,7 +245,7 @@ Vrednosti v tabeli interploliraj z linearnim zlepkom in poišči
 \end_layout
 
 \begin_layout Enumerate
-S simpsonovo formulo izračunaj, za koliko se vrednosti 
+Z osnovno simpsonovo formulo izračunaj, za koliko se vrednost 
 \begin_inset Formula $\si(x_{0})$
 \end_inset
 
@@ -238,7 +258,11 @@ S simpsonovo formulo izračunaj, za koliko se vrednosti
 \end_layout
 
 \begin_layout Enumerate
-Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet
+
+\emph on
+(Dodatne 3 točke)
+\emph default
+ Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet
  preveri, za koliko se vrednost 
 \begin_inset Formula $\si$
 \end_inset
