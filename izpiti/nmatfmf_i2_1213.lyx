@@ -72,7 +72,9 @@ Izpit iz Numeričnih metod 2 za Finančne matematike
 \end_layout
 
 \begin_layout Date
- 
+28.
+ 6.
+ 2013 
 \end_layout
 
 \begin_layout Enumerate
@@ -197,7 +199,7 @@ Izračunaj absolutno in relativno napako (točno rešitev dobiš z nastavkom
 \begin_layout Enumerate
 Integralski sinus 
 \begin_inset FormulaMacro
-\renewcommand{\si}{\mathrm{si}}
+\newcommand{\si}{\mathrm{si}}
 \end_inset
 
  
