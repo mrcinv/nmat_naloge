@@ -1,0 +1,96 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[slovene]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage{listings}
+\lstset{basicstyle={\footnotesize},
+frame=lines,
+language=Octave}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=1cm,bmargin=2cm,lmargin=3cm,rmargin=3cm}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{babel}
+\begin{document}
+
+\title{Izpit iz Numeriènih metod 2 za Finanène matematike}
+
+
+\date{28. 6. 2013}
+\maketitle
+\begin{enumerate}
+\item V prostoru $2\times2$ matrik lahko definiramo skalrni produkt s formulo
+\[
+\langle A,B\rangle=\mathrm{sled}(A^{T}B),
+\]
+kjer je $\mathrm{sled}\left(\begin{bmatrix}a & b\\
+c & d
+\end{bmatrix}\right)=a+d$. Poi¹èi element najbolj¹e aproksimacije za matriko
+\[
+\begin{bmatrix}1 & 2\\
+3 & 2
+\end{bmatrix}
+\]
+na podprostor $\mathcal{S}$ simetriènih matrik s sledjo enako $0$
+\[
+\mathcal{S}=\{A;\quad A^{T}=A\text{ in }\mbox{\ensuremath{\mathrm{sled}}}(A)=0\}.
+\]
+
+\item I¹èemo nièlo funkcije
+\[
+f(x)=x-2^{-x}
+\]
+
+
+\begin{enumerate}
+\item Poka¾i, da je nièla na intervalu $[0,1]$ in jo poi¹èi na 2 decimalke
+natanèno.
+\item Nièlo poi¹èi z inverzno interpolacijo, tako da inverzno funkcijo $f^{-1}(x)$
+interpolira¹ v toèkah $f(0),$ $f\left(\frac{1}{2}\right)$ in $f(1)$
+s kvadratnim polinomom. Tako dobljeno nièlo primerjaj z re¹itvijo
+iz toèke $(a)$.
+\end{enumerate}
+\item Integralski sinus \global\long\def\si{\mathrm{si}}
+$\si(x)$ je dan s formulo
+\[
+\si(x)=\int_{0}^{x}\frac{\sin x}{x}\mathrm{d}x.
+\]
+Nekatere vrednosti $\si(x)$ so zbrane v tabeli
+\[
+\begin{array}{c|cccc}
+x & 1 & 1.1 & 1.2 & 1.3\\
+\hline \si(x) & 0.94608 & 1.02869 & 1.10805 & 1.18396
+\end{array}
+\]
+
+
+\begin{enumerate}
+\item Vrednosti v tabeli interploliraj z linearnim zlepkom in poi¹èi $x_{0}$,
+za katerega je $\si(x_{0})=1$.
+\item S simpsonovo formulo izraèunaj, za koliko se vrednosti $\si(x_{0})$
+razlikuje od $1$ za pribli¾ek iz prej¹nje toèke.
+\item Pribli¾ek iz toèke (a) izbolj¹aj z enim korakom Newtonove metode in
+zopet preveri, za koliko se vrednost $\si$ razlikuje od $1$.
+\end{enumerate}
+\item Naj bosta 
+\[
+Q=\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 0 & 1 & 0\\
+0 & 1 & 0 & 1\\
+1 & 0 & -1 & 0\\
+0 & 1 & 0 & -1
+\end{bmatrix}\quad R=\begin{bmatrix}2 & 0 & 1 & 2\\
+0 & -3 & 0 & 1\\
+0 & 0 & 2 & 1\\
+0 & 0 & -1 & 2
+\end{bmatrix}
+\]
+faktorja v realni Schurovi formi matrike $A=QR$. 
+
+\begin{enumerate}
+\item Poi¹èi vse lastne vrednosti matrike in realne lastne vektorje za vsako
+od realnih lastnih vrednosti matrike $A$.
+\item Ali potenèna metoda konvergira?\end{enumerate}
+\end{enumerate}
+
+\end{document}
