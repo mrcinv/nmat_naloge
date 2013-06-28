@@ -109,5 +109,109 @@ Ničlo poišči z inverzno interpolacijo, tako da inverzno funkcijo
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Integralski sinus 
+\begin_inset FormulaMacro
+\newcommand{\si}{\mathrm{si}}
+\end_inset
+
+ 
+\begin_inset Formula $\si(x)$
+\end_inset
+
+ je dan s formulo 
+\begin_inset Formula 
+\[
+\si(x)=\int_{0}^{x}\frac{\sin x}{x}\mathrm{d}x.
+\]
+
+\end_inset
+
+Nekatere vrednosti 
+\begin_inset Formula $\si(x)$
+\end_inset
+
+ so zbrane v tabeli 
+\begin_inset Formula 
+\[
+\begin{array}{c|cccc}
+x & 1 & 1.1 & 1.2 & 1.3\\
+\hline \si(x) & 0.94608 & 1.02869 & 1.10805 & 1.18396
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Vrednosti v tabeli interpoliraj s 
+\begin_inset Formula $\mathcal{C}^{1}$
+\end_inset
+
+ kubičnim zlepkom, ki se z 
+\begin_inset Formula $\si(x)$
+\end_inset
+
+ ujema tudi v odvodih.
+ Poišči 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, za katerega je 
+\begin_inset Formula $\si(x_{0})=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Izračunaj 
+\begin_inset Formula $\si(x_{0})$
+\end_inset
+
+ za približek iz prejšnje točke s Simpsonovim pravilom z 
+\begin_inset Formula $m=1$
+\end_inset
+
+ in 
+\begin_inset Formula $m=2$
+\end_inset
+
+ koraki.
+ Oceni, za koliko se lahko 
+\begin_inset Formula $\si(x_{0})$
+\end_inset
+
+ največ razlikuje od 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+(Dodatek 3 točke)
+\emph default
+ Približek iz točke (a) izboljšaj z enim korakom Newtonove metode in zopet
+ preveri, za koliko se vrednost 
+\begin_inset Formula $\si$
+\end_inset
+
+ razlikuje od 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
