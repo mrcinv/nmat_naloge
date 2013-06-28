@@ -178,16 +178,20 @@ Vrednosti v tabeli interpoliraj z linearnim zlepkom in poišči
 \end_layout
 
 \begin_layout Enumerate
-Z osnovno simpsonovo formulo izračunaj 
+Izračunaj 
 \begin_inset Formula $\si(x_{0})$
 \end_inset
 
- za približek iz prejšnje točke.
- Na podlagi približka za 
-\begin_inset Formula $\si(x_{0})$
+ za približek iz prejšnje točke s Simpsonovim pravilom z 
+\begin_inset Formula $m=1$
 \end_inset
 
- in ocene za napako simpsonove formule oceni, za koliko se lahko 
+ in 
+\begin_inset Formula $m=2$
+\end_inset
+
+ koraki.
+ Oceni, za koliko se lahko 
 \begin_inset Formula $\si(x_{0})$
 \end_inset
 
@@ -196,14 +200,6 @@ Z osnovno simpsonovo formulo izračunaj
 \end_inset
 
 .
- 
-\emph on
-(Upoštevaš lahko, da je 
-\begin_inset Formula $||\frac{d^{4}}{dx^{4}}\frac{\sin x}{x}||_{\infty,[1,1.3]}=-20\cos(1)+13\sin(1)$
-\end_inset
-
-.)
-\emph default
  
 \end_layout
 
@@ -230,7 +226,7 @@ Z osnovno simpsonovo formulo izračunaj
 Iščemo rešitev začetnega problema za NDE 
 \begin_inset Formula 
 \begin{equation}
-x^{2}y''(x)-2xy'(x)+2y(x)=0\label{eq:cauchy}
+x^{2}y''-2xy'+2y=0\label{eq:cauchy}
 \end{equation}
 
 \end_inset
@@ -331,7 +327,7 @@ Poišči vse lastne vrednosti matrike in realne lastne vektorje za vsako od
 \end_layout
 
 \begin_layout Enumerate
-Ali potenčna metoda konvergira?
+Kam potenčna metoda konvergira, če konvergira?
 \end_layout
 
 \end_deeper
