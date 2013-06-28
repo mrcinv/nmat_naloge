@@ -10,7 +10,7 @@
 \maintain_unincluded_children false
 \language slovene
 \language_package default
-\inputencoding latin2
+\inputencoding utf8
 \fontencoding T1
 \font_roman default
 \font_sans default
@@ -82,7 +82,7 @@ V prostoru
 \begin_inset Formula $2\times2$
 \end_inset
 
- matrik lahko definiramo skalrni produkt s formulo 
+ matrik lahko definiramo skalarni produkt s formulo 
 \begin_inset Formula 
 \[
 \langle A,B\rangle=\mathrm{sled}(A^{T}B),
@@ -108,7 +108,7 @@ c & d
 
 \end_inset
 
-na podprostor 
+v podprostoru 
 \begin_inset Formula $\mathcal{S}$
 \end_inset
 
@@ -165,7 +165,7 @@ x & 1 & 1.1 & 1.2 & 1.3\\
 
 \begin_deeper
 \begin_layout Enumerate
-Vrednosti v tabeli interploliraj z linearnim zlepkom in poišči 
+Vrednosti v tabeli interpoliraj z linearnim zlepkom in poišči 
 \begin_inset Formula $x_{0}$
 \end_inset
 
