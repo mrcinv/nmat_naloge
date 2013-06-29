@@ -479,9 +479,42 @@ t = linspace(a,b,5);
 I2 = (b-a)/12*[1 4 2 4 1]*f(t')
 \end_layout
 
+\begin_layout Plain Layout
+
+R =(I2-I1)/15
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Enumerate
+Izboljšan približek dobimo s formulo
+\begin_inset Formula 
+\[
+x_{1}=x_{0}-\frac{\si(x_{0})-1}{\si'(x_{0})}=1.0653-\frac{3.7499\cdot10^{-04}}{\sin(1.0653)}1.0653=1.0648
+\]
+
+\end_inset
+
+Vrednost 
+\begin_inset Formula $\si(x_{1})$
+\end_inset
+
+ zopet poiščemo z Simpsonovim pravilom za 
+\begin_inset Formula $m=1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\si(x_{1})\approxeq1-3\cdot10^{-8}.
+\]
+
+\end_inset
+
+ 
 \end_layout
 
 \end_deeper
