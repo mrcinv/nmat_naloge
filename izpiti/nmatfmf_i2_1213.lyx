@@ -127,10 +127,115 @@ v podprostoru
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev:
+\series default
+ Matrike iz množice 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ lahko zapišemo kot 
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}a & b\\
+b & -a
+\end{bmatrix}=a\begin{bmatrix}1 & 0\\
+0 & -1
+\end{bmatrix}+b\begin{bmatrix}0 & 1\\
+1 & 0
+\end{bmatrix},\label{eq:baza}
+\end{equation}
+
+\end_inset
+
+kar pomeni, da matriki 
+\begin_inset Formula 
+\[
+s_{1}=\begin{bmatrix}1 & 0\\
+0 & -1
+\end{bmatrix},\quad s_{2}=\begin{bmatrix}0 & 1\\
+1 & 0
+\end{bmatrix}
+\]
+
+\end_inset
+
+sestavljata bazo podprostora 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+.
+ Element najboljše aproksimacije dobimo kot linearno kombinacijo baznih
+ elementov 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:baza"
+
+\end_inset
+
+.
+ Koeficienta 
+\begin_inset Formula $a$
+\end_inset
+
+ in 
+\begin_inset Formula $b$
+\end_inset
+
+ sta rešitev linearnega sistema z Gramovo matriko
+\begin_inset Formula 
+\[
+G=\begin{bmatrix}\langle s_{1},s_{1}\rangle & \langle s_{1},s_{2}\rangle\\
+\langle s_{2},s_{1}\rangle & \langle s_{2},s_{2}\rangle
+\end{bmatrix}=\begin{bmatrix}2 & 0\\
+0 & 2
+\end{bmatrix}
+\]
+
+\end_inset
+
+in desnimi stranmi 
+\begin_inset Formula 
+\[
+\begin{bmatrix}\langle x,s_{1}\rangle\\
+\langle x,s_{1}\rangle
+\end{bmatrix}=\begin{bmatrix}-1\\
+5
+\end{bmatrix}
+\]
+
+\end_inset
+
+in sta enaka 
+\begin_inset Formula $a=-\frac{1}{2}$
+\end_inset
+
+ in 
+\begin_inset Formula $b=\frac{5}{2}$
+\end_inset
+
+.
+ Element najboljše aproksimacije je enak
+\begin_inset Formula 
+\[
+\frac{1}{2}\begin{bmatrix}-1 & 5\\
+5 & 1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Integralski sinus 
 \begin_inset FormulaMacro
-\newcommand{\si}{\mathrm{si}}
+\renewcommand{\si}{\mathrm{si}}
 \end_inset
 
  
