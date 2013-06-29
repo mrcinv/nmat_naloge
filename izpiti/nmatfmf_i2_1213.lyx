@@ -389,7 +389,7 @@ Vrednost
 \begin_inset Formula 
 \begin{align*}
 \si(1.0653) & =\si(1)+\int_{1}^{1.0653}\frac{\sin t}{t}\mathrm{d}t\\
-\approxeq & 0.94608+\frac{0.0653}{6}\left(\sin(1)+4\frac{\sin(1.0362)}{1.0362}+\frac{\sin(1.0653)}{1.0653}\right)\\
+\approxeq & 0.94608+\frac{0.0653}{6}\left(\sin(1)+4\frac{\sin(1.0326)}{1.0326}+\frac{\sin(1.0653)}{1.0653}\right)\\
 = & 1.0004
 \end{align*}
 
@@ -400,16 +400,35 @@ Podobno izračunamo še za
 \begin_inset Formula $m=2$
 \end_inset
 
-.
- Napako pri računanju integrala ocenimo s pomočjo Richardsonove ekstrapolacije
+
 \begin_inset Formula 
 \[
-R=\frac{I_{2}-I_{1}}{15}
+\int_{1}^{1.0653}\frac{\sin t}{t}\mathrm{d}t\approxeq\frac{0.0653}{12}\left(\sin(1)+4\frac{\sin(1.0163)}{1.0163}+2\frac{\sin(1.0362)}{1.0362}+4\frac{\sin(1.0490)}{1.0490}+\frac{\sin(1.0653)}{1.0653}\right)
 \]
 
 \end_inset
 
+ Napako pri računanju integrala ocenimo s pomočjo Richardsonove ekstrapolacije
+\begin_inset Formula 
+\[
+R=\frac{I_{2}-I_{1}}{15}\approxeq-3\cdot10^{-12},
+\]
 
+\end_inset
+
+kar pomeni, da se 
+\begin_inset Formula $\si(x_{0})$
+\end_inset
+
+ razlikuje od 
+\begin_inset Formula $1$
+\end_inset
+
+ za največ 
+\begin_inset Formula $0.0004$
+\end_inset
+
+.
 \lang slovene
 
 \begin_inset listings
