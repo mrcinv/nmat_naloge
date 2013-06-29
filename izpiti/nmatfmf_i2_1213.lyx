@@ -402,9 +402,10 @@ Podobno izračunamo še za
 
 
 \begin_inset Formula 
-\[
-\int_{1}^{1.0653}\frac{\sin t}{t}\mathrm{d}t\approxeq\frac{0.0653}{12}\left(\sin(1)+4\frac{\sin(1.0163)}{1.0163}+2\frac{\sin(1.0362)}{1.0362}+4\frac{\sin(1.0490)}{1.0490}+\frac{\sin(1.0653)}{1.0653}\right)
-\]
+\begin{align*}
+\int_{1}^{1.0653}\frac{\sin t}{t}\mathrm{d}t & \approxeq\\
+ & \frac{0.0653}{12}\left(\sin(1)+4\frac{\sin(1.0163)}{1.0163}+2\frac{\sin(1.0362)}{1.0362}+4\frac{\sin(1.0490)}{1.0490}+\frac{\sin(1.0653)}{1.0653}\right)
+\end{align*}
 
 \end_inset
 
