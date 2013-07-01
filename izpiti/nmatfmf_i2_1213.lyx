@@ -235,7 +235,7 @@ in sta enaka
 \begin_layout Enumerate
 Integralski sinus 
 \begin_inset FormulaMacro
-\renewcommand{\si}{\mathrm{si}}
+\newcommand{\si}{\mathrm{si}}
 \end_inset
 
  
@@ -395,7 +395,6 @@ Vrednost
 
 \end_inset
 
-
 Podobno izračunamo še za 
 \begin_inset Formula $m=2$
 \end_inset
@@ -431,8 +430,6 @@ kar pomeni, da se
 \end_inset
 
 .
-\lang slovene
-
 \begin_inset listings
 inline false
 status open
@@ -444,19 +441,7 @@ f = @(t) sin(t)./t;
 
 \begin_layout Plain Layout
 
-a = 1; b = 1.0653
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-;
+a = 1; b = 1.0653;
 \end_layout
 
 \begin_layout Plain Layout
@@ -584,6 +569,223 @@ Izračunaj absolutno in relativno napako (točno rešitev dobiš z nastavkom
 
 ).
  
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Rešitev:
+\series default
+ 
+\end_layout
+
+\begin_layout Enumerate
+Enačbo zapišemo v obliki sistema, tako da vpeljemo novo spremenljivko 
+\begin_inset Formula $z=y'$
+\end_inset
+
+.
+ Enačba 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cauchy"
+
+\end_inset
+
+ se tako glasi
+\begin_inset Formula 
+\[
+x^{2}z'-2xz+2y=0.
+\]
+
+\end_inset
+
+Če ji dodamo še enačbo za 
+\begin_inset Formula $y'$
+\end_inset
+
+ in izrazimo odvode, dobimo sistem 2 enačb z 2 neznankama
+\begin_inset Formula 
+\begin{align*}
+y' & =z\\
+z' & =2\frac{z}{x}-2\frac{y}{x^{2}}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Formule za RK s dano tabelo se glasijo
+\begin_inset Formula 
+\begin{align*}
+k_{1} & =hf(x_{n},Y_{n})\\
+k_{2} & =hf(x_{n}+h,Y_{n}+k_{1})\\
+Y_{n+1} & =Y_{n}+\frac{1}{2}\left(k_{1}+k_{2}\right),
+\end{align*}
+
+\end_inset
+
+kjer je 
+\begin_inset Formula $Y=[y,z]^{T}$
+\end_inset
+
+ vektor, katerega komponente sta neznani funkciji, desna stran DE, pa je
+ dana z 
+\begin_inset Formula 
+\[
+f(x,Y)=\begin{bmatrix}z\\
+2\frac{z}{x}-2\frac{y}{x^{2}}
+\end{bmatrix}=\begin{bmatrix}0 & 1\\
+\frac{2}{x} & -\frac{2}{x^{2}}
+\end{bmatrix}\begin{bmatrix}y\\
+z
+\end{bmatrix}=\begin{bmatrix}0 & 1\\
+\frac{2}{x} & -\frac{2}{x^{2}}
+\end{bmatrix}Y.
+\]
+
+\end_inset
+
+Če vstavimo začetne pogoje 
+\begin_inset Formula $y(1)=0,z(1)=1$
+\end_inset
+
+ oziroma 
+\begin_inset Formula $Y(1)=[0,1]^{T}$
+\end_inset
+
+ in korak 
+\begin_inset Formula $h=0.1$
+\end_inset
+
+, dobimo
+\begin_inset Formula 
+\begin{align*}
+k_{1} & =0.1\begin{bmatrix}0 & 1\\
+2 & -2
+\end{bmatrix}\begin{bmatrix}0\\
+1
+\end{bmatrix}=\begin{bmatrix}0.1\\
+-0.2
+\end{bmatrix}\\
+k_{2} & =0.1\begin{bmatrix}0 & 1\\
+\frac{2}{1.1} & -\frac{2}{1.1^{2}}
+\end{bmatrix}\begin{bmatrix}0.1\\
+0.8
+\end{bmatrix}=\begin{bmatrix}0.08\\
+-0.11405
+\end{bmatrix}\\
+Y_{1} & =\begin{bmatrix}0\\
+1
+\end{bmatrix}+\frac{1}{2}\left(\begin{bmatrix}0.1\\
+-0.2
+\end{bmatrix}+\begin{bmatrix}0.08\\
+-0.11405
+\end{bmatrix}\right)=\begin{bmatrix}0.09\\
+0.842975
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+Približek za 
+\begin_inset Formula $y(1.1)=0.09$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Če nastavek 
+\begin_inset Formula $y=x^{m}$
+\end_inset
+
+ vstavimo v enačbo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cauchy"
+
+\end_inset
+
+, dobimo
+\begin_inset Formula 
+\begin{align*}
+x^{2}m(m-1)x^{m-2}-2xmx^{m-1}+2x^{m} & =0\\
+m(m-1)-2m+2 & =0\\
+m^{2}-3m+2 & =0
+\end{align*}
+
+\end_inset
+
+kar pomeni, da mora biti 
+\begin_inset Formula $m$
+\end_inset
+
+ rešitev kvadratne enačbe, torej enak 
+\begin_inset Formula $m_{1}=1$
+\end_inset
+
+ ali 
+\begin_inset Formula $m_{2}=2$
+\end_inset
+
+.
+ Splošno rešitev dobimo kot linearno kombinacijo 
+\begin_inset Formula 
+\[
+y=A\cdot x+B\cdot x^{2},
+\]
+
+\end_inset
+
+rešitev začetnega problema pa iz sistema enačb
+\begin_inset Formula 
+\begin{align*}
+y(1) & =0=A+B\\
+y'(1) & =1=A+2B,
+\end{align*}
+
+\end_inset
+
+torej 
+\begin_inset Formula $A=-1$
+\end_inset
+
+ in 
+\begin_inset Formula $B=1$
+\end_inset
+
+, kar pomeni, da je 
+\begin_inset Formula 
+\[
+y=x^{2}-x.
+\]
+
+\end_inset
+
+Absolutna napaka v 
+\begin_inset Formula $y(1.1)$
+\end_inset
+
+ je enaka
+\begin_inset Formula 
+\[
+\varepsilon_{a}=0.09-0.11=-0.02,
+\]
+
+\end_inset
+
+relativna pa 
+\begin_inset Formula 
+\[
+\varepsilon_{r}=-\frac{0.02}{0.11}=-0.18=-18\%.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
