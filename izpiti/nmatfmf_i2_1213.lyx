@@ -235,7 +235,7 @@ in sta enaka
 \begin_layout Enumerate
 Integralski sinus 
 \begin_inset FormulaMacro
-\newcommand{\si}{\mathrm{si}}
+\renewcommand{\si}{\mathrm{si}}
 \end_inset
 
  
@@ -245,7 +245,7 @@ Integralski sinus
  je dan s formulo 
 \begin_inset Formula 
 \[
-\si(x)=\int_{0}^{x}\frac{\sin x}{x}\mathrm{d}x.
+\si(x)=\int_{0}^{x}\frac{\sin t}{t}\mathrm{d}t.
 \]
 
 \end_inset
