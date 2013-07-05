@@ -431,6 +431,7 @@ kar pomeni, da se
 
 .
 \begin_inset listings
+lstparams "title={koda v octave za Simpsonovo pravilo}"
 inline false
 status open
 
@@ -638,11 +639,11 @@ kjer je
 f(x,Y)=\begin{bmatrix}z\\
 2\frac{z}{x}-2\frac{y}{x^{2}}
 \end{bmatrix}=\begin{bmatrix}0 & 1\\
-\frac{2}{x} & -\frac{2}{x^{2}}
+-\frac{2}{x^{2}} & \frac{2}{x}
 \end{bmatrix}\begin{bmatrix}y\\
 z
 \end{bmatrix}=\begin{bmatrix}0 & 1\\
-\frac{2}{x} & -\frac{2}{x^{2}}
+-\frac{2}{x^{2}} & \frac{2}{x}
 \end{bmatrix}Y.
 \]
 
@@ -664,34 +665,34 @@ z
 \begin_inset Formula 
 \begin{align*}
 k_{1} & =0.1\begin{bmatrix}0 & 1\\
-2 & -2
+-2 & 2
 \end{bmatrix}\begin{bmatrix}0\\
 1
 \end{bmatrix}=\begin{bmatrix}0.1\\
--0.2
+0.2
 \end{bmatrix}\\
 k_{2} & =0.1\begin{bmatrix}0 & 1\\
-\frac{2}{1.1} & -\frac{2}{1.1^{2}}
+-\frac{2}{1.1^{2}} & \frac{2}{1.1}
 \end{bmatrix}\begin{bmatrix}0.1\\
-0.8
-\end{bmatrix}=\begin{bmatrix}0.08\\
--0.11405
+1.2
+\end{bmatrix}=\begin{bmatrix}0.12\\
+0.20165
 \end{bmatrix}\\
 Y_{1} & =\begin{bmatrix}0\\
 1
 \end{bmatrix}+\frac{1}{2}\left(\begin{bmatrix}0.1\\
--0.2
-\end{bmatrix}+\begin{bmatrix}0.08\\
--0.11405
-\end{bmatrix}\right)=\begin{bmatrix}0.09\\
-0.842975
+0.2
+\end{bmatrix}+\begin{bmatrix}0.12\\
+0.20165
+\end{bmatrix}\right)=\begin{bmatrix}0.11\\
+1.2008
 \end{bmatrix}.
 \end{align*}
 
 \end_inset
 
 Približek za 
-\begin_inset Formula $y(1.1)=0.09$
+\begin_inset Formula $y(1.1)=0.11$
 \end_inset
 
 .
@@ -765,27 +766,15 @@ y=x^{2}-x.
 
 \end_inset
 
-Absolutna napaka v 
+Tako absolutna kot tudi relativna napaka v 
 \begin_inset Formula $y(1.1)$
 \end_inset
 
- je enaka
-\begin_inset Formula 
-\[
-\varepsilon_{a}=0.09-0.11=-0.02,
-\]
-
+ sta enaki 
+\begin_inset Formula $0$
 \end_inset
 
-relativna pa 
-\begin_inset Formula 
-\[
-\varepsilon_{r}=-\frac{0.02}{0.11}=-0.18=-18\%.
-\]
-
-\end_inset
-
-
+.
 \end_layout
 
 \end_deeper
@@ -826,6 +815,206 @@ Poišči vse lastne vrednosti matrike in realne lastne vektorje za vsako od
 
 \begin_layout Enumerate
 Kam potenčna metoda konvergira, če konvergira?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Rešitev:
+\end_layout
+
+\begin_layout Enumerate
+Matriki 
+\begin_inset Formula $A$
+\end_inset
+
+ in 
+\begin_inset Formula $R$
+\end_inset
+
+ imata iste lastne vrednosti, zato poiščemo lastne vrednosti 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Realne lastne vrednosti so kar enake diagonalnim elementom 
+\begin_inset Formula $2$
+\end_inset
+
+ in 
+\begin_inset Formula $-3$
+\end_inset
+
+, kompleknse lastne vrednosti, pa so lastne vrednosti 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ bloka na diagonali
+\begin_inset Formula 
+\[
+\begin{bmatrix}2 & 1\\
+-1 & 2
+\end{bmatrix},
+\]
+
+\end_inset
+
+ki jih dobimo kot rešitve karakteristične enačbe
+\begin_inset Formula 
+\begin{align*}
+\left|\begin{matrix}2-\lambda & 1\\
+-1 & 2-\lambda
+\end{matrix}\right| & =(2-\lambda)^{2}+1=\lambda^{2}-2\lambda+5=0\\
+\lambda_{1,2} & =1\pm2i.
+\end{align*}
+
+\end_inset
+
+Lastne vektorje matrike 
+\begin_inset Formula $A$
+\end_inset
+
+ za 
+\begin_inset Formula $\lambda=2,-3$
+\end_inset
+
+ izračunamo iz lastnih vektorjev za matriko 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Če je 
+\begin_inset Formula $v$
+\end_inset
+
+ lastni vektor 
+\begin_inset Formula $R$
+\end_inset
+
+, je 
+\begin_inset Formula $Qv$
+\end_inset
+
+ lastni vektor 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+Rv & =\lambda v\\
+RQ^{T}Qv & =\lambda v\\
+QRQ^{T}Qv & =\lambda Qv\\
+AQv & =\lambda Qv.
+\end{align*}
+
+\end_inset
+
+Lastne vektorje poiščemo v jedru matrike 
+\begin_inset Formula $R-\lambda I$
+\end_inset
+
+.
+ Za 
+\begin_inset Formula $\lambda=2$
+\end_inset
+
+ je
+\begin_inset Formula 
+\[
+R-2I=\begin{bmatrix}0 & 0 & 1 & 2\\
+0 & -5 & 0 & 1\\
+0 & 0 & 0 & 1\\
+0 & 0 & -1 & 0
+\end{bmatrix}
+\]
+
+\end_inset
+
+in jedro je razpeto na vektor 
+\begin_inset Formula $e_{1}=[1,0,0,0]^{T}$
+\end_inset
+
+.
+ Lastni vektor za 
+\begin_inset Formula $A$
+\end_inset
+
+ je torej enak 
+\begin_inset Formula 
+\[
+Qe_{1}=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\
+0\\
+1\\
+0
+\end{bmatrix}
+\]
+
+\end_inset
+
+ prvemu stolpcu matrike 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Lastni vektor 
+\begin_inset Formula $R$
+\end_inset
+
+ za 
+\begin_inset Formula $\lambda=-3$
+\end_inset
+
+ leži v jedru
+\begin_inset Formula 
+\[
+\begin{bmatrix}5 & 0 & 1 & 2\\
+0 & 0 & 0 & 1\\
+0 & 0 & 5 & 1\\
+0 & 0 & -1 & 5
+\end{bmatrix},
+\]
+
+\end_inset
+
+ki je razpeto na 
+\begin_inset Formula $e_{2}=[0,1,0,0]^{T}$
+\end_inset
+
+.
+ Tako je lastni vektor za 
+\begin_inset Formula $A$
+\end_inset
+
+ enak drugemu stolpcu matrike 
+\begin_inset Formula $Q$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Qe_{2}=\frac{1}{\sqrt{2}}\begin{bmatrix}0\\
+1\\
+0\\
+1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ker so kompleksne lastne vrednosti po absolutni vrednosti manjše od 
+\begin_inset Formula $3$
+\end_inset
+
+, potenčna metoda konvergira k enotskemu lastnemu vektorju za 
+\begin_inset Formula $\lambda=-3$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
