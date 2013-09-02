@@ -27,8 +27,8 @@
 \paperfontsize default
 \spacing single
 \use_hyperref false
-\papersize default
-\use_geometry false
+\papersize a4paper
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
@@ -43,6 +43,9 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 1cm
+\rightmargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -60,11 +63,16 @@
 
 \begin_body
 
-\begin_layout Title
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
 Izpit iz Numeričnih metod 2 za Finančne matematike
 \end_layout
 
-\begin_layout Date
+\begin_layout Standard
+\align center
 4.
  9.
  2013
