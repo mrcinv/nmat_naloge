@@ -162,7 +162,85 @@ reference "eq:formula"
 \end_layout
 
 \begin_layout Enumerate
+Za Hermitovo NDE 
+\begin_inset Formula 
+\[
+y''-2xy'+2y=0
+\]
 
+\end_inset
+
+je ena od rešitev polinom 
+\begin_inset Formula $y_{1}(x)=x$
+\end_inset
+
+.
+ Naj bo 
+\begin_inset Formula $y_{2}(x)$
+\end_inset
+
+ ena od rešitev Hermitove DE, ki je neodvisna od 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+.
+ Poišči približke za 
+\begin_inset Formula $y_{2}(0)$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2}(0.1)$
+\end_inset
+
+ in 
+\begin_inset Formula $y_{2}(0.2)$
+\end_inset
+
+ z metodo Runge-Kutta s tabelo
+\begin_inset Formula 
+\[
+\begin{array}{c|cc}
+0 & 0\\
+1 & 1 & 0\\
+\hline  & \frac{1}{2} & \frac{1}{2}
+\end{array}.
+\]
+
+\end_inset
+
+Začetni približek izberite tako, da bo 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ neodvisen od 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Naj bo 
+\begin_inset Formula 
+\[
+A=\begin{bmatrix}20 & 0 & 1 & 2\\
+0 & 1 & 1 & 2\\
+0 & 0 & 1 & -2\\
+1 & 0 & 0 & 2
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Z Geršgorinovimi krogi čim bolj natančno ocenite lokacijo največje lastne
+ vrednosti.
+ Z enim korakom potenčne metode izračunajte približek za največjo lastno
+ vrednost in pripadajoči lastni vektor.
+ Izračunaj lastne vrednosti matrike 
+\begin_inset Formula $A$
+\end_inset
+
+ in primerjaj vrednosti s približkom potenčne metode.
 \end_layout
 
 \end_body
