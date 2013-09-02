@@ -1,0 +1,74 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[slovene]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{babel}
+\begin{document}
+
+\title{Izpit iz Numeriènih metod 2 za Finanène matematike}
+
+
+\date{4. 9. 2013}
+\maketitle
+\begin{enumerate}
+\item I¹èemo nièlo funkcije 
+\[
+f(x)=x-2^{-x}
+\]
+
+
+\begin{enumerate}
+\item Poka¾i, da je nièla na intervalu $[0,1]$ in jo poi¹èi na 2 decimalke
+natanèno. 
+\item Nièlo poi¹èi z inverzno interpolacijo, tako da inverzno funkcijo $f^{-1}(x)$
+interpolira¹ v toèkah $f(0),$ $f\left(\frac{1}{2}\right)$ in $f(1)$
+s kvadratnim polinomom. Oceni napako in dobljeno nièlo primerjaj z
+re¹itvijo iz toèke $(a)$. 
+\end{enumerate}
+\item Izpeljite formulo za raèunanje integrala oblike
+\begin{equation}
+\int_{0}^{4h}f(x)\mathrm{d}x=Af(h)+Bf(2h)+Cf(3h)+R(f),\label{eq:formula}
+\end{equation}
+kjer so $A,B,C$ realna ¹tevila in $R(f)$ napaka odvisna od funkcije
+$f$. S formulo (\ref{eq:formula}) izraèunajte integral
+\begin{equation}
+\int_{0}^{2}\cos x\,{\rm dx}.\label{eq:integral}
+\end{equation}
+Kolik¹na je relativna in absolutna napaka? Na podlagi formule (\ref{eq:formula})
+izpeljite sestavljeno integracijsko pravilo in ugotovite, na ocenite
+na koliko podintervalov je treba razdeliti interval $[0,2]$, da bo
+pravilnih 5 decimalnih mest.
+\item Za Hermitovo NDE 
+\[
+y''-2xy'+2y=0
+\]
+je ena od re¹itev polinom $y_{1}(x)=x$. Naj bo $y_{2}(x)$ ena od
+re¹itev Hermitove DE, ki je neodvisna od $y_{1}$. Poi¹èi pribli¾ke
+za $y_{2}(0)$, $y_{2}(0.1)$ in $y_{2}(0.2)$ z metodo Runge-Kutta
+s tabelo
+\[
+\begin{array}{c|cc}
+0 & 0\\
+1 & 1 & 0\\
+\hline  & \frac{1}{2} & \frac{1}{2}
+\end{array}.
+\]
+Zaèetni pribli¾ek izberite tako, da bo $y_{2}$ neodvisen od $y_{1}$.
+\item Naj bo 
+\[
+A=\begin{bmatrix}20 & 0 & 1 & 2\\
+0 & 1 & 1 & 2\\
+0 & 0 & 1 & -2\\
+1 & 0 & 0 & 2
+\end{bmatrix}.
+\]
+Z Ger¹gorinovimi krogi èim bolj natanèno ocenite lokacijo najveèje
+lastne vrednosti. Z enim korakom potenène metode izraèunajte pribli¾ek
+za najveèjo lastno vrednost in pripadajoèi lastni vektor. Izraèunaj
+lastne vrednosti matrike $A$ in primerjaj vrednosti s pribli¾kom
+potenène metode.\end{enumerate}
+
+\end{document}
