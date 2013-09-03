@@ -205,11 +205,11 @@ je ena od rešitev polinom
 \end_inset
 
 , 
-\begin_inset Formula $y_{2}(0.1)$
+\begin_inset Formula $y_{2}(-0.1)$
 \end_inset
 
  in 
-\begin_inset Formula $y_{2}(0.2)$
+\begin_inset Formula $y_{2}(-0.2)$
 \end_inset
 
  z metodo Runge-Kutta s tabelo
@@ -224,12 +224,17 @@ je ena od rešitev polinom
 
 \end_inset
 
-Začetni približek izberite tako, da bo 
+Začetni pogoj izberite tako, da bo 
 \begin_inset Formula $y_{2}$
 \end_inset
 
  neodvisen od 
 \begin_inset Formula $y_{1}$
+\end_inset
+
+ npr.
+ 
+\begin_inset Formula $y_{2}(0)=1,\quad y_{2}'(0)=0$
 \end_inset
 
 .
@@ -248,7 +253,7 @@ A=\begin{bmatrix}20 & 0 & 1 & 2\\
 
 \end_inset
 
-Z Geršgorinovimi krogi čim bolj natančno ocenite lokacijo največje lastne
+Z Gershgorinovimi krogi čim bolj natančno ocenite lokacijo največje lastne
  vrednosti.
  Z enim korakom potenčne metode izračunajte približek za največjo lastno
  vrednost in pripadajoči lastni vektor.
