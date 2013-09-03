@@ -129,7 +129,7 @@ Ničlo poišči z inverzno interpolacijo, tako da inverzno funkcijo
 Izpeljite formulo za računanje integrala oblike
 \begin_inset Formula 
 \begin{equation}
-\int_{0}^{4h}f(x)\mathrm{d}x=Af(h)+Bf(2h)+Cf(3h)+R(f),\label{eq:formula}
+\int_{0}^{3h}f(x)\mathrm{d}x=Af(0)+Bf(h)+Cf(2h)+R(f),\label{eq:formula}
 \end{equation}
 
 \end_inset
