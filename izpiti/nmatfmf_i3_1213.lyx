@@ -43,9 +43,9 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
+\leftmargin 3cm
 \topmargin 1cm
-\rightmargin 2cm
+\rightmargin 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -63,16 +63,14 @@
 
 \begin_body
 
-\begin_layout Standard
-\align center
+\begin_layout Title
 
 \series bold
 \size large
 Izpit iz Numeričnih metod 2 za Finančne matematike
 \end_layout
 
-\begin_layout Standard
-\align center
+\begin_layout Date
 4.
  9.
  2013
