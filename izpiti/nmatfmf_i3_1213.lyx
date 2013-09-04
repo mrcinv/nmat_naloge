@@ -124,6 +124,190 @@ Ničlo poišči z inverzno interpolacijo, tako da inverzno funkcijo
  
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Rešitev:
+\end_layout
+
+\begin_layout Enumerate
+Ker je sta vrednosti 
+\begin_inset Formula $f$
+\end_inset
+
+ v krajiščih intervala različnega predznaka in j e
+\begin_inset Formula $f$
+\end_inset
+
+ zvezna, mora biti v notranjosti intervala ničla.
+ Poiščemo jo npr.
+ s tangentno metodo
+\begin_inset Formula 
+\[
+x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}.
+\]
+
+\end_inset
+
+Če za začetni približek vzamemo 
+\begin_inset Formula $x_{0}=1/2$
+\end_inset
+
+, dobimo že po 3 korakih dve pravilni decimalki
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1} & = & 0.63899\\
+x_{2} & = & 0.64119\\
+x_{3} & = & 0.64119.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f=@(x) x-2.^(-x)
+\end_layout
+
+\begin_layout Plain Layout
+
+df = @(x) 1+log(2).*2.^(-x)
+\end_layout
+
+\begin_layout Plain Layout
+
+x=1/2
+\end_layout
+
+\begin_layout Plain Layout
+
+x=x-f(x)/df(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+x=x-f(x)/df(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+x=x-f(x)/df(x)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Inverzno interpolacijo naredimo s tabelo deljenih diferenc, le da zamenjamo
+ vlogi 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $y$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{c|ccc}
+-1 & 0 & \frac{0.5}{-0.20711+1}=0.63060 & \frac{0.076504}{1.5}=0.051002\\
+-0.20711 & 0.5 & \frac{1-0.5}{0.5+0.20711}=0.70710\\
+0.5 & 1
+\end{array}
+\]
+
+\end_inset
+
+Vrednost 
+\begin_inset Formula $f^{-1}(0)$
+\end_inset
+
+ dobimo, če 
+\begin_inset Formula $0$
+\end_inset
+
+ vstavimo namesto 
+\begin_inset Formula $x$
+\end_inset
+
+ v polinom
+\begin_inset Formula 
+\[
+0+0.6306(x+1)+0.051(x+1)(x+0.20711)
+\]
+
+\end_inset
+
+in 
+\begin_inset Formula 
+\[
+f^{-1}(0)=0.6306+0.051\cdot0.20711=0.64116
+\]
+
+\end_inset
+
+Napaka polinomske interpolacije lahko ocenimo s formulo 
+\begin_inset Formula 
+\[
+\frac{1}{6}\frac{d^{3}}{dx^{3}}f^{-1}(\xi)(x+1)(x+0.20711)(x-0.5).
+\]
+
+\end_inset
+
+Oceno za 
+\begin_inset Formula $\frac{d^{3}}{dx^{3}}f^{-1}(\xi)$
+\end_inset
+
+ izpeljemo z implicitnim odvajanjem enačbe
+\begin_inset Formula 
+\begin{eqnarray*}
+x & = & y-2^{-y}\\
+1 & = & y'+\log2\cdot2^{-y}y'\\
+0 & = & y''-\log^{2}2\cdot2^{-y}y'^{2}+\log2\cdot2^{-y}y''\\
+0 & = & y'''+\log^{3}2\cdot2^{-y}y'^{3}-\log^{2}2\cdot2^{-y}2y'y''-\log^{2}2\cdot2^{-y}y''y'+\log2\cdot2^{-y}y'''
+\end{eqnarray*}
+
+\end_inset
+
+od tod dobimo
+\begin_inset Formula 
+\[
+y'''=\frac{y'\cdot2^{-y}\log^{2}2\left(\log2\cdot y'^{2}-3y''\right)}{1+\log2\cdot2^{-y}}
+\]
+
+\end_inset
+
+Izraz 
+\begin_inset Formula $2^{-y}$
+\end_inset
+
+ ocenimo v imenovalcu z najmanjšo, v števcu pa z največjo vrednostjo
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\Vert y'''\right\Vert _{\infty} & < & \frac{\left\Vert y'\right\Vert _{\infty}\cdot2^{0}(\log2\left\Vert y'\right\Vert _{\infty}+3\left\Vert y''\right\Vert _{\infty})}{1+\log2\cdot2^{-1}}=1.2573(\log2\left\Vert y'\right\Vert _{\infty}+3\left\Vert y''\right\Vert _{\infty})\\
+ & < & 1.2573(1.1736+3\cdot1.0228)=5.3335
+\end{eqnarray*}
+
+\end_inset
+
+Napaka za 
+\begin_inset Formula $f^{-1}(0)$
+\end_inset
+
+ je torej manjša od 
+\begin_inset Formula $0.092$
+\end_inset
+
+.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Izpeljite formulo za računanje integrala oblike
