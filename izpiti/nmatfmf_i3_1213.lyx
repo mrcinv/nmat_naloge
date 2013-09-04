@@ -370,6 +370,127 @@ reference "eq:formula"
 , da bo pravilnih 5 decimalnih mest.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Rešitev: 
+\series default
+Koeficiente 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ najlažje poiščemo z metodo nedoločenih koeficientov.
+ Če v formulo zaporedoma vstavimo 
+\begin_inset Formula $1,x$
+\end_inset
+
+ in 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+, dobimo naslednji sistem enačb
+\begin_inset Formula 
+\begin{eqnarray*}
+3h & = & A+B+C\\
+\frac{9h^{2}}{2} & = & hB+2hC\\
+9h^{3} & = & h^{2}B+4h^{2}C,
+\end{eqnarray*}
+
+\end_inset
+
+katerega rešitve so
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & \frac{3}{4}h\\
+B & = & 0\\
+C & = & \frac{9}{4}h.
+\end{eqnarray*}
+
+\end_inset
+
+Napako 
+\begin_inset Formula $R_{f}$
+\end_inset
+
+ poiščemo, tako da vstavimo 
+\begin_inset Formula $x^{3}$
+\end_inset
+
+ v formulo
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{81}{4}h^{4} & = & \frac{9\cdot8}{4}h^{4}+R_{x^{3}}\\
+R_{x^{3}} & = & \frac{9}{4}h^{4}.
+\end{eqnarray*}
+
+\end_inset
+
+Če zgornji rezultat primerjamo s formulo 
+\begin_inset Formula $R_{f}=Df^{(3)}(\xi)h^{4}$
+\end_inset
+
+ in upoštevamo, da je 3.
+ odvod od 
+\begin_inset Formula $x^{3}$
+\end_inset
+
+ enak 
+\begin_inset Formula $6$
+\end_inset
+
+, dobimo formulo 
+\begin_inset Formula 
+\[
+R_{f}=\frac{3}{8}f^{(3)}(\xi)h^{4}.
+\]
+
+\end_inset
+
+Če formulo uporabimo za integral, dobimo 
+\begin_inset Formula 
+\[
+\int_{0}^{2}\cos xdx\dot{=}\frac{2}{3}\left(\frac{3}{4}+\frac{9}{4}\cos\frac{4}{3}\right)=0.85286.
+\]
+
+\end_inset
+
+Točna vrednost je enaka 
+\begin_inset Formula 
+\[
+\int_{0}^{2}\cos xdx=\sin2=0.90930
+\]
+
+\end_inset
+
+kar pomeni, da je absolutna napaka enaka
+\begin_inset Formula 
+\[
+\varepsilon_{a}=0.85286-0.90930=-0.056441
+\]
+
+\end_inset
+
+relativna pa
+\begin_inset Formula 
+\[
+\varepsilon_{r}=\frac{-0.056441}{0.90930}=-6.2\%.
+\]
+
+\end_inset
+
+Sestavljeno pravilo za interval 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ dobimo tako, da interval 
+\begin_inset Formula $[$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Za Hermitovo NDE 
 \begin_inset Formula 
