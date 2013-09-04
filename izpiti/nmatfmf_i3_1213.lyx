@@ -306,6 +306,15 @@ Napaka za
 \end_inset
 
 .
+ Dejanska napaka je 
+\begin_inset Formula $0.00003$
+\end_inset
+
+, kar pomeni, da smo slabo ocenili 
+\begin_inset Formula $y'''$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
