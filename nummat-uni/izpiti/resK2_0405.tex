@@ -1,0 +1,190 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts}
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\NN{\mathbb{N}}
+% Boldface math
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}
+       \copy0\kern-\wd0
+       \raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       \kern\dimen0\box0}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large Re"sitve drugega kolokvija iz UVNM\\
+    31.1.2005\\
+    }
+\end{center}
+
+\begin{enumerate}
+
+  \item Naj bo $A\in\RR^{n\times n}$ tridiagonalna matrika. 
+    Napi"site algoritem, ki v "casu ${\cal O}(n)$ izra"cuna
+    $LU$ razcep matrike $A$. Utemeljite, zakaj je va"s
+    algoritem res ustrezne "casovne zahtevnosti.\\
+    Predlagani algoritem uporabite za izra"cun $LU$ razcepa matrike
+    $$A=\left(
+      \begin{array}{ccc}
+        1 & 2 & 0\\
+        1 & 3 & 2\\
+        0 & 1 & 3
+      \end{array}
+      \right).$$
+   {\bf Re"sitev}: Ker je matrika tridiagonalna, lahko pri $LU$
+   razcepu upo\-"ste\-va\-mo njeno strukturo in ne izvajamo odve"cnih operacij
+   (mno"zenj z ni"clo). Algoritem zapi"semo v Matlabovi obliki takole:
+   \begin{verbatim}
+     function [L,U]=lu3diag(A);
+       n=size(A,1); %stevilo vrstic matrike A
+       L=eye(n); %identiteta dim. nxn
+       U=triu(A);%U=A na zacetku!
+       for i=2:n
+           L(i,i-1)=A(i,i-1)/U(i-1,i-1);%kvocient
+           U(i,i)=U(i,i)-L(i,i-1)*U(i-1,i);%eliminacija
+       end
+   \end{verbatim}
+   Ker je v algoritmu ena sama zanka dol"zine $n-1$, znotraj nje
+   pa na vsakem koraku konstantno mnogo operacij, je "casovna
+   zahtevnost ${\cal O}(n)$.\\
+   Za matriko $A$ dobimo
+   $$L=\left(
+         \begin{array}{ccc}
+           1 & 0 & 0\\
+           1 & 1 & 0\\
+           0 & 1 & 0
+         \end{array}
+      \right) \quad {\rm in} \quad 
+      U=\left(
+         \begin{array}{ccc}
+           1 & 2 & 0\\
+           0 & 1 & 2\\
+           0 & 0 & 1
+         \end{array}
+      \right)$$
+  
+  \item Tabelo podatkov
+   $$\begin{array}{c|rrrrr}
+     x_i & -2 & -1 & 0 & 1 & 2\\ \hline
+     y_i &  2 &  1 & 0 & 1 & 2
+     \end{array}
+   $$
+   zaradi o"citne simetrije aproksimiramo s parabolo oblike
+    $p(x)=\alpha\,x^2+\beta$. 
+    Izra"cunajte tisti par parametrov $\alpha$ in
+    $\beta$, pri katerem je dose"zena vrednost
+    $$\min_{\alpha,\beta\in\RR}\sum_{i=1}^5(p(x_i)-y_i)^2.$$
+    {\bf Re"sitev}: Opazimo, da gre za klasi"cno metodo najmanj"sih 
+    kvadratov, z aproksimacijsko funkcijo $p(x)=\alpha\,x^2+\beta$.
+    Lahko re"sujemo preko normalnega sistema ena"cb (vemo, v praksi bi
+    uporabili $QR$ razcep). Matrika normalnega sistema je torej
+    $M=A^TA$, kjer je 
+    $$A=\left(
+             \begin{array}{cc}
+               x_1^2 & 1\\
+               x_2^2 & 1 \\
+               \vdots & \vdots \\
+               x_5^2 & 1
+             \end{array}
+      \right).
+      $$
+      Torej je 
+      $$M=\left(
+                   \begin{array}{cc}
+                     34 & 10\\
+                     10 & 5
+                   \end{array}
+      \right),
+      $$
+      koeficienta $\alpha$ in $\beta$ pa re"sitev sistema
+      $M[\alpha,\beta]^T=A^T[y_1,\dots,y_5]^T=[18,6]^T$.
+      Dobimo $\alpha=0.4286$ in $\beta=0.3429$.
+      
+      
+  \item Naj bo 
+    $$ 
+    A=\pmatrix{1   & 0.1 & 0.2\cr
+               0.1 &  2  & -0.1\cr
+               x   &  0.2& 3 }.
+    $$
+    Naslednje probleme re"site {\bf brez ra"cunanja} lastnih vrednosti:
+    \begin{itemize}
+      \item[a)] Preverite, da matrika $A$ za $x\in(-2.8,2.8)$ ne more imeti 
+        negativnih lastnih vrednosti. 
+      \item[b)] Za kak"sne $x\in\RR$ gotovo nima nobene dvojne
+        lastne vrednosti? 
+      \item[c)] "Cim bolje ocenite najmanj"so lastno vrednost v primeru, 
+        ko je $x=0$.
+    \end{itemize}
+    {\sl Namig: Uporabite Gershgorinov izrek.}\\
+    {\bf Re"sitev}: Po Gersgorinovem izreku je vsaka lastna vrednost
+    	matrike $A\in \RR^{n\times n}$ vsebovana v uniji krogov
+    	$K_i$, kjer je 
+    	$$K_i=\{z\in\CC;\ |z-a_{ii}|\leq \sum_{j=1,j\neq i}^n |a_{ij}|.$$
+    	Velja "se ve"c, "ce je kak"sen krog izoliran od ostalih, je v njem
+    	natanko ena lastna vrednost.\\
+    	V na"sem primeru so radiji krogov $R_1=|0.1|+|0.2|=0.3$,
+    	$R_2=|0.1|+|-0.1|=0.2$ in $R_3=|x|+|0.2|$.
+    	"Ce ozna"cimo s $K(s,r)$ krog s sredi"s"cem v $(s,0)$ in radijem $r$,
+    	potem so vse lastne vrednosti v uniji krogov
+    	$K(1,0.3)$, $K(2,0.2)$ in $K(3,|x|+0.2)$. "Ce je torej $|x|\leq 2.8$,
+    	v uniji ne more biti "stevil z negativno realno komponento.\\
+    	Matrika zagotovo nima dvojne lastne vrednosti, "ce so vse tri lastne
+    	vrednosti med seboj razli"cne. To pa je gotovo res tedaj, ko se
+    	Gersgorinovi krogi ne sekajo, torej, "ce je $|x|<0.6$.\\
+    	Pri izbolj"sanju ocene za lastne vrednosti se lahko opremo
+    	na dejstvo, da imata matriki $A$ in $X^{-1}AX$ iste lastne vrednosti.
+    	"Se posebej je to dejstvo zanimivo tedaj, ko za $X$ izberemo 
+    	kak"sno preprosto matriko (na primer diagonalno).\\
+    	Vzemimo torej $X={\rm diag}(a,1,1)$, kjer je $a>0$.
+    	V matriki $X^{-1}AX$ se prva vrstica mno"zi z $1/a$, prvi
+    	stolpec pa z $a$. Torej moramo paziti, da se prvi in drugi
+    	krog ne zdru"zita (tretjemu se radij ne spremeni, saj je
+    	$a_{31}=x=0$). Z malo razmisleka opazimo, da se
+    	prvi in drugi krog ne bosta zdru"zila, "ce bo
+    	$$ \frac{0.1}{a}+\frac{0.2}{a}+0.1a+0.1<1.$$
+    	To prevedemo nakvadratno neena"cbo $a^2-9a+3<0$.
+    	Zato mora biti $a$ manj"si od ve"cjega korena kvadratne ena"cbe
+    	$a^2-9a+3=0$, torej
+    	$$a<\frac{9+\sqrt{69}}{2}=8.6533$$
+    	Pri temu izbranemu $a$ je prvi radij manj"si od 
+    	$0.3/a=0.0347$, torej je najmanj"sa lastna vrednost
+    	na intervalu $(0.9653,1.0347)$.
+    	
+  
+  \item Re"sujete {\sl Besselovo} diferencialno ena"cbo
+    $$x^2\,y''(x)+x\,y'(x)+x^2\,y(x)=0, \quad y(0)=1,\ y'(0)=0.$$
+    Z Eulerjevo metodo in korakom $h=0.1$ ocenite vrednost
+    $y'(0.2)$.\\
+    {\sl Namig: $y''(0)=-\frac{1}{2}$}.\\
+    {\bf Re"sitev}: Ena"cbo drugega reda prevedemo na sistem prvega
+    $$\bfm{Y}'=[y',-\frac{1}{x}y'-y]^T=\bfm{F}(x,\bfm{Y}).$$
+    Z Eulerjevo metodo tako dobimo
+    $$\bfm{Y}_1=\bfm{Y}_0+h\bfm{F}(0,\bfm{Y}_0)=[1,0]^T+0.1[0,-1/2]^T=[1,-0.05]^T$$
+    (tu smo upo"stevali namig, da je $y''(0)=-1/2$, saj zaradi deljenja z $0$
+    ne moremo izra"cunati $y''(0)$).
+    Na drugem koraku dobimo
+    \begin{eqnarray*}
+    \bfm{Y}_2&=&\bfm{Y}_1+h\bfm{F}(0.1,\bfm{Y}_1)\\
+     &=&[1,-0.05]^T
+    +0.1[-0.05,-(1/0.1)(-0.05)-1]^T
+    = [0.995,-0.1]^T.
+    \end{eqnarray*}
+    Pribli"zek za $y'(0.2)$ je torej $-0.1$.
+
+\end{enumerate}
+\end{document} 

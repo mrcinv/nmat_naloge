@@ -1,0 +1,82 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts,amsmath}
+% Mno"zice realnih, naravnih in kompleksnih "stevil
+\def\RR{\mathbb{R}}
+\def\NN{\mathbb{N}}
+\def\CC{\mathbb{C}}
+\addtolength{\textheight}{4cm}
+\addtolength{\voffset}{-2cm}
+
+\newtheorem{definicija}{Definicija}
+\newtheorem{primer}{Primer}
+% Odebeljene "crke v math na"cinu 
+% (povezto po L.L. Schumaker - makro
+% za St. Malo Proceedings
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large IZPIT IZ NUMERI"CNE MATEMATIKE\\
+    25.8.2006}
+\end{center}
+\vspace{1.5cm}
+\begin{enumerate}
+\item Tabelo podatkov
+  $$
+    \begin{array}{r|llll}
+    	x & -3 & -2 & -1 & 0 \\ \hline
+    	f(x)& -23 & -5 &  1 &    1
+    \end{array}
+  $$
+  interpolirate s kubi"cnim polinomom.
+      \begin{enumerate}
+        \item Zapi"site interpolacijski polinom v Newtonovi obliki. 
+        \item Newtonovo obliko iz to"cke a) prepi"site
+          v standardno (torej v obliko $p_3(x)=a_3\,x^3+
+          a_2\,x^2+a_1\,x+a_0$).
+        \item Predpostavite, da tabela predstavlja vrednosti
+          neznane zvezne funkcije $f$ na $[-3,0]$.
+          Utemeljite, da ima $f$ ni"clo na $[-2,-1]$. 
+          Ni"clo ocenite tako, da namesto ni"cle funkcije $f$ (ki je
+          seveda ne poznate) izra"cunate ni"clo interpolacijskega
+          polinoma, ki ste ga zapisali v to"cki b). 
+          Ni"clo dolo"cite na dve decimalni mesti s katerokoli
+          numeri"cno metodo.
+      \end{enumerate}
+\item Re"sujete za"cetni problem drugega reda
+  $$
+    y''+2\,x\,y'+2\,x\,y=(3\,x-2)e^{-x},\quad y(0)=0,\quad y'(0)=1.
+  $$
+  \begin{enumerate}
+    \item Prevedite zgornji problem na re"sevanje
+      sistema dveh diferencialnih ena"cb prvega reda.
+    \item Z Eulerjevo metodo in korakom $h=0.1$ 
+      izra"cunajte numeri"cni pribli"zek za re"sitev
+      sistema v to"cki $x=0.2$. 
+    \item Preverite, da je
+      $y(x)=x\,e^{-x}$ re"sitev za"cetnega problema 
+      (iz\-ra\-"cu\-naj\-te
+      odvoda, vstavite v diferencilano ena"cbo in primerjajte
+      levo in desno stran).
+      Kolik"sna je torej absolutna napaka pribli"zka za $y'(0.2)$
+      iz to"cke b)?
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

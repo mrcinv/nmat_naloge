@@ -1,0 +1,66 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\Large {IZPIT IZ NUMERI"CNE MATEMATIKE}}\\
+   28. junij 2000
+\end{center}
+
+\vspace{1cm}
+
+\begin{enumerate}
+
+  \item Pribli"zke za re"sitev nelinearne ena"cbe $f(x)=0$ 
+  ra"cunamo  s {\sl Halleyejo metodo}:
+  $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)-\frac{1}{2}f''(x_n)
+  \frac{f(x_n)}{f'(x_n)}}.$$
+
+  \begin{enumerate}
+   
+   \item Napi"si "cim bolj ekonomi"cen algoritem ("cim manj izra"cunov 
+   vrednosti funkcije in odvodov) za ra"cunanje
+   pribli"zkov po Halleyevi metodi.
+
+   \item Izra"cunaj prva dva pribli"zka v primeru, ko je
+   $x_0=2$ in $f(x)=x^3-2$. Kam konvergira zaporedje pribli"zkov,
+   "ce je konvergentno? Koliko se $x_2$ razlikuje od re"sitve 
+    ena"cbe?
+    
+
+   \item Izra"cunaj prva dva pribli"zka pri enakih pogojih kot v (b)
+   "se z Newtonovo metodo in primerjaj rezultate s tistimi iz to"cke (b).
+
+  \end{enumerate}
+ 
+  \item Re"sujemo ena"cbo $y(x)=0.1$, kjer je $y(x)$
+  re"sitev za"cetnega problema 
+  $$y'(x)=e^{-x^2},\quad y(0)=0.$$
+
+\begin{enumerate}
+  \item Napi"si algoritem, ki z Newtonovo metodo ra"cuna 
+  pribli"zke re"sitve ena"cbe $y(x)=0.1$.
+
+  \item Izra"cunaj prva dva pribli"zka za re"sitev po Newtonovi 
+  metodi, "ce je $x_0=0.2$. Vrednost funkcije $y(x)$ 
+  ra"cunaj s trapezno metodo s korakom $h=x_n$ (glej Osnove numeri"cne
+  matematike, str. 143).
+  
+  \item Izra"cunaj prvi pribli"zek pri enakih pogojih kot
+  v to"cki (b) "se tako, da vrednost funkcije $y(x)$ 
+  izra"cuna"s z metodo Runge-Kutta 4. reda.
+
+  \item[\bf{Dodatek}:] Primerjaj rezultate iz (b) in (c) "ce ve"s, da je 
+  to"cna re"sitev ena"cbe $0.100336$.
+\end{enumerate}
+  
+
+\end{enumerate}
+
+
+\end{document}
+         

@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts}
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\NN{\mathbb{N}}
+% Boldface math
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}
+       \copy0\kern-\wd0
+       \raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       \kern\dimen0\box0}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large UVOD V NUMERI"CNE METODE\\
+    1. izpit, 7.2.2005\\
+    }
+\end{center}
+\vspace{2cm}
+
+\begin{enumerate}
+
+  \item Dolo"cite najmanj"so stopnjo polinoma s katerim
+    lahko interpoliramo naslednjo tabelo podatkov
+    $$\begin{array}{r|rrrrrr}
+      x & -2 & -1 & 0 & 1 & 2 & 3\\ \hline
+      y & -5 & 1  & 1 & 1 & 7 & 25
+      \end{array}.
+    $$
+    Prepri"cajte se, da ima polinom najni"zje stopnje, ki interpolira
+    zgornjo tabelo, eno samo ni"clo na $[-2,3]$. To ni"clo izra"cunajte s
+    tangentno metodo na dve decimalni mesti natan"cno.
+  
+  \item V naslednji tabeli so podatki hitrosti avtomobila ($v$[km/h])
+    v prvih dveh sekundah vo"znje
+    $$\begin{array}{l|rrrrr}
+    v & 40 & 46 & 51 & 55 & 59\\ \hline
+    t & 0  & 0.5 & 1 & 1.5 & 2
+    \end{array}.$$
+    S trapeznim in Simpsonovim pravilom izra"cunajte dol"zino poti 
+    (v me\-trih), ki jo je prevozil avtomobil v prvih dveh sekundah. Nato 
+    z vrednostmi hitrosti ob "casih $0.5s$, $1s$ in $1.5s$ "cim bolje ocenite
+    pospe"sek avtomobila po eni sekundi.
+
+  \item Naj bo 
+    $$A=\left(
+      \begin{array}{ccccccc}
+        x & 0 & 0 & \cdots & 0 & 0 & a_0\\
+        -1& x & 0 & \cdots & 0 & 0 & a_1\\
+        0 & -1& x & \cdots & 0 & 0 & a_2\\
+        \vdots & \vdots & \ddots & \ddots & \vdots & \vdots & \vdots\\
+        0 & 0 & \cdots & \cdots & -1 & x & a_{n-1}\\
+        0 & 0 & \cdots & \cdots & 0 & -1 & x
+      \end{array}\right) .
+    $$
+      Izra"cunajte determinanto matrike $A$ tako, da najprej
+      izra"cunate njen $LU$ razcep in upo"stevate dejstvo
+      $\det A=\det U=\prod_{i=1}^{n+1}u_{ii}$.
+  \item Nekdo je re"seval diferencialno ena"cbo $y''(x)=-x\,y(x)$ 
+    na intervalu $[0,0.2]$ z Eulerjevo metodo s korakom $h=0.1$.
+    Za vrednost funkcije $y(0.2)$ je dobil numeri"cni pribli"zek $0.2$,
+    za odvod $y'(0.2)$ pa $0.999$. Iz\-ra\-"cu\-najte vrednosti 
+    $y(0)$ in $y'(0)$?
+\end{enumerate}
+\end{document} 

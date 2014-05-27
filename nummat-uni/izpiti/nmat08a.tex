@@ -1,0 +1,41 @@
+\
+\begin{center}
+    {\large IZPIT IZ NUMERI"CNE MATEMATIKE}
+    
+    10. 6. 2008
+\end{center}
+\vspace{1.5cm}
+\newcommand{\si}{\mathrm{si}}
+\begin{enumerate}
+    \item 
+	Vrednosti funkcije integralski sinus, ki je definirana kot
+	\[\si(x)=\int_0^x \frac{\sin(t)}{t}\,dt,\] 
+	so podane v tabeli
+	\[\begin{array}{c|cccccc}
+	x& 1&	1.1&	1.2&	1.3&	1.4&	1.5\cr\hline
+	\si(x)&0.94608&   1.02869&   1.10805&   1.18396&   1.25623&1.32468
+    \end{array}\]
+    Iščemo vrednost \(x_0\), pri kateri je \(\si(x_0)=1\).
+    \begin{enumerate}
+	\item Z uporabo linerne interpolacije približno izračunaj \(x_0.\) 
+	\item Koliko se vrednost \(\si\) v približku razlikuje od 1? 
+	    Integral računaj s Simpsonovo formulo.
+	\item Približek izboljšaj še z enim korakom Newtonove metode. Uporabiš lahko prej izračunan integral. 
+	\item Koliko je sedaj razlika med vrednostjo funkcije \(\si\) in 1.
+	    \end{enumerate}
+% druga naloga
+\item  
+    Dan je začetni problem za NDE 2. reda
+	\[y''(x)+y(x)=0\] z začetnimi pogoji $y(1)=0.5$ ter $y'(1)=0.1$.
+    \begin{enumerate}
+	\item
+	Izračunaj točno rešitev, če veš, da je oblike
+	\[y(x)=A\sin(x)+B\cos(x).\]
+    \item Z Eulerjevo metodo s korakom $h=0.1$ poišči vrednost rešitve 
+	$y(1.2)$. 
+    \item Kolikšna je globalna napaka?
+	Kolikšna je lokalna napaka na prvem koraku?
+    \item
+	\emph{Dodatek:} Kolikšna je  lokalna napaka na drugem koraku?	    
+    \end{enumerate}
+\end{enumerate}

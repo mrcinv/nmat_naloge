@@ -1,0 +1,57 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+ 
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}   
+
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  21. september 2001
+\end{center}
+
+\vspace{1.5cm}
+\begin{enumerate}
+ \item V kraji"s"cih intervala $[a,a+h]$ poznamo vrednosti 
+    funkcije $f$ in njenih odvodov. Izpeljati "zelimo 
+    integracijsko formulo oblike
+    $$\int_{a}^{a+h} f(x)\,dx\approx \alpha\,f(a)+
+    \beta\,f'(a)+\gamma\,f(a+h)+\delta\,f'(a+h).$$
+  \begin{itemize}
+    \item[a)] Dolo"cite koeficiente $\alpha$, $\beta$, $\gamma$
+      in $\delta$ tako, da bo formula "cim vi"sjega reda (namig:
+      predpostavite lahko, da je $a=0$).
+    \item[b)] Na podlagi te formule izpeljite "se 
+      sestavljeno integracijsko pravilo.
+    \item[c)] S pravilom iz to"cke b) izra"cunajte integral
+      $$\int_{0}^{0.3} \sin{x}\,dx,$$
+      pri koraku $h=0.1$. Kolik"sna je absolutna napaka rezultata?
+  \end{itemize}
+
+ \item Re"sujete za"cetni problem
+    $$y''(x)+3\,y'(x)-4\,y(x)=0,\quad y(0)=0,\ y'(0)=5.$$
+  \begin{itemize}
+     \item[a)] Poi"s"cite to"cno re"sitev problema.
+     \item[b)] Prevedite diferencialno ena"cbo na sistem dveh
+       diferencialnih ena"cb prvega reda.
+     \item[c)] Sistem iz to"cke b) re"site z Eulerjevo metodo
+       na intevalu $[0,1]$ s korakom $h=0.25$. Kolik"sna je
+       globalna napaka v to"cki $x=1$?
+     \end{itemize}
+\end{enumerate}
+\end{document}
+         

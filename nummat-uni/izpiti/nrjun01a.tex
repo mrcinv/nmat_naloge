@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+ 
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}   
+
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  18. junij 2001
+\end{center}
+
+\begin{enumerate}
+
+  \item Re"sujemo sistem linearnih ena"cb
+    $$\left[
+    \begin{array}{cc}
+      U & A\\
+      0 & L
+    \end{array}
+    \right]\,\bfm{x}=\bfm{b},$$
+    kjer je $U$ zgornje trikotna matrika, $L$ spodnje trikotna matrika in
+    $A$ poljubna matrika (vse so reda $n\times n$).
+
+
+  \begin{enumerate}
+   
+     \item Napi"site algoritem za re"sevanje tega sistema ena"cb.
+       
+
+     \item Pre"stejte "stevilo potrebnih operacij (mno"zenj in deljenj).
+       
+       
+
+     \item Re"site sistem v primeru, ko je
+         $$U=
+         \left[
+         \begin{array}{ccc}
+            1 & 2 & 3\\
+            0 & 1 & 2\\
+            0 & 0 & 1
+         \end{array}
+         \right],
+         $$
+         ter $A=U$, $L=U^T$ in $\bfm{b}=[12,6,2,2,5,8]^T$.       
+       
+  \end{enumerate}
+
+  \item Znano je, da lahko integrale oblike
+    $$\int_{-1}^{1}f(x)\,dx$$
+    u"cinkovito ra"cunamo po pribli"zni formuli
+    $$\int_{-1}^{1}f(x)\,dx\approx \alpha_1\,f(x_1)+\alpha_2\,f(x_2),$$
+    kjer sta $x_1$ in $x_2$ ni"cli polinoma $L_2(x)=3\,x^2/2-1/2$.
+    
+
+  \begin{enumerate}
+    
+    \item Dolo"cite $\alpha_1$ in $\alpha_2$ tako, da bo formula "cim bolj
+          natan"cna.
+
+    \item Ugotovite za katere polinome formula ni ve"c to"cna.
+      
+    \item S pomo"cjo te formule izra"cunajte integral
+          $$\int_{-1}^{1}\frac{1}{1+x^2}\,dx$$
+          in izra"cunajte kolik"sna je absolutna napaka rezultata.
+      
+          
+
+  \end{enumerate} 
+\end{enumerate}
+
+
+\end{document}
+         

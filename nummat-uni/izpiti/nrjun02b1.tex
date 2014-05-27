@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper]{article}
+\addtolength{\textwidth}{4cm}
+\addtolength{\hoffset}{-2cm}
+\addtolength{\voffset}{-3cm}
+\addtolength{\textheight}{3cm}
+\usepackage[slovene]{babel}
+
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+ 
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}   
+
+
+\pagestyle{empty}
+
+\begin{document}
+{\large \begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  26. junij 2002
+\end{center}
+
+\begin{enumerate}
+
+  \item Za realno matriko $A_n$ reda $n\times n$ velja
+    \begin{eqnarray*}
+      &&a_{i,n-i+1}\neq 0, \quad i=1,2,\dots,n,\\
+      &&a_{i,j}=0, \quad j>n-i+1.
+    \end{eqnarray*}
+    Ostali elementi so poljubni.
+    \begin{itemize}
+      \item[a)] Napi"site en primer take matrike $A_4$.
+      \item[b)] Zapi"site u"cinkovit algoritem za re"sevanje sistema
+        $A_n\,\bfm{x}=\bfm{b}$, kjer je $\bfm{b}$ dani vektor dimenzije $n$.
+        Kolik"sna je "casovna zahtevnost va"sega postopka?
+      \item[c)] Kako bi popravili algoritem iz to"cke b), da bi deloval
+        tudi na sistemu $A_n^T\,\bfm{x}=\bfm{b}$?
+      \item[d)] Naj bo $n=4$. Re"site sistem $A_4\,\bfm{x}=[20,10,4,1]^T$, 
+        "ce je
+        $$a_{i,j}=\max\{6-i-j,0\},\quad i,j=1,2,\dots,4.$$
+    \end{itemize}
+
+  \item Integral ute"zene funkcije $f(x)\sqrt{x}$ ra"cunamo pribli"zno
+    po formuli
+    $$\int_{a}^{a+h} f(x)\sqrt{x}\,dx\approx \alpha f(a)+\beta f(a+h).$$
+    \begin{itemize}
+      \item[a)] Dolo"cite parametra $\alpha$, $\beta$ tako, da bo
+      formula "cim vi"sjega reda. (Nasvet: lahko predpostavite, da je $a=0$.)
+      \item[b)] Napi"site algoritem za ra"cunanje integrala
+        $$\int_{a}^b f(x)\sqrt{x}\,dx$$
+        s sestavljenim pravilom iz to"cke a).
+      \item[c)] Pravilo iz to"cke b) uporabite pri izra"cunu integrala
+        $$\int_0^{0.2}e^{-\sqrt{x}}\sqrt{x}\,dx$$
+        s korakom $h=0.1$.
+        Kolik"sna je napaka rezultata, "ce veste, da je
+        $$\int e^{-\sqrt{x}}\sqrt{x}\,dx=
+        -2\,e^{-\sqrt{x}}(2+2\sqrt{x}+x)+C?$$
+     \end{itemize}
+\end{enumerate}
+
+}
+\end{document}
+         

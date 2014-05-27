@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts,amsmath}
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\NN{\mathbb{N}}
+% Boldface math
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}
+       \copy0\kern-\wd0
+       \raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       \kern\dimen0\box0}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large UVOD V NUMERI"CNE METODE\\
+    4. izpit, 12.9.2005\\
+    }
+\end{center}
+\vspace{1cm}
+
+\begin{enumerate}
+  
+  \item Delec se giblje po krivulji
+    \begin{equation*}
+    	\bfm{r}(t)=
+    	\begin{pmatrix}
+    	  e^{-t}\\
+    	  t
+    	\end{pmatrix}, \quad t\geq 0.
+    \end{equation*}
+    Numeri"cno izra"cunajte tisto to"cko na krivulji, v
+    kateri je delec najbli"zje to"cki $\bfm{T}(0,1)$.
+    Rezultat naj bo to"cen na dve decimalni mesti.
+    
+  \item Integral funkcije $f$ na intervalu $[0,h]$
+    ra"cunate po pribli"zni formuli
+    \begin{equation*}
+      \int_0^h f(x)\,dx\approx \frac{h}{2}
+      \left(f(x_1)+f(x_2)\right).
+    \end{equation*}
+    Dolo"cite "stevili $x_1$ in $x_2$ tako, da bo
+    formula "cim vi"sjega reda. Ali ju lahko dolo"cite
+    tako, da bo formula natan"cna za polinome stopnje
+    $\leq 3$? Z izpeljano formulo numeri"cno
+    izra"cunajte 
+    \begin{equation*}
+      \int_0^{0.3}\sin{\sqrt{x}}\,dx.
+    \end{equation*}
+  
+  \item Naj bo 
+    \begin{equation*}
+      A=
+      \begin{pmatrix}
+        x & 1\\
+        1 & x
+      \end{pmatrix},\quad x>1.
+    \end{equation*}
+    Dolo"cite ${\rm cond}_\infty(A)$ in
+    ${\rm cond}_1(A)$.
+    
+  \item Re"sujete za"cetni problem 
+    \begin{equation*}
+      y^{'}=x\,y,\quad y(0)=1.
+    \end{equation*}
+    Kolik"sen je lahko najve"c korak $h>0$, da bo 
+    absolutna napaka pribli"zka po enem koraku Eulerjeve metode
+    manj"sa kot $0.1$.\\
+    {\sl Namig: Najprej izra"cunajte to"cno re"sitev!}
+\end{enumerate}
+\end{document} 

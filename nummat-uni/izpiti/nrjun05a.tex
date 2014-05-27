@@ -1,0 +1,82 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[slovene]{babel}
+\usepackage{amsfonts,graphicx}
+% Mno"zice realnih, naravnih in kompleksnih "stevil
+\def\RR{\mathbb{R}}
+\def\NN{\mathbb{N}}
+\def\CC{\mathbb{C}}
+\addtolength{\textheight}{4cm}
+\addtolength{\voffset}{-2cm}
+
+\newtheorem{definicija}{Definicija}
+\newtheorem{primer}{Primer}
+% Odebeljene "crke v math na"cinu 
+% (povezto po L.L. Schumaker - makro
+% za St. Malo Proceedings
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  6. junij 2005
+\end{center}
+\vspace{1cm}
+
+\begin{enumerate}
+  \item Temperatura v razgretem avtomobilu se spreminja s 
+    "casom pribli"zno takole
+    $$T(t)=T_0+\Delta T_0\,\exp(k\,t),$$
+    kjer je $T(t)$ temperatura ob
+    "casu $t$ v notranjosti avtomobila, $T_0$ znana konstantna zunanja
+    temperatura, $\Delta T_0$ razlika med notranjo in zunanjo
+    temperaturo ob za"cetku hlajenja (torej ob "casu $t=0$) in $k$
+    parameter, ki opisuje hitrost hlajenja.
+  \begin{itemize}
+    \item[a)] Zapi"site algoritem, ki bo ocenil $\Delta T_0$ in $k$
+      po metodi najmanj"sih kvadaratov, "ce so dani podatki o 
+      notranji temperaturi $T(t_i)$ ob nekaj izbranih "casih $t_i$.\\
+      {\sl Namig: logaritmirajte $T(t)-T_0$.}
+    \item[b)] Zunanja temperatura je $T_0=30C$. Temperaturo v 
+    avtomobilu smo izmerili v minutnih intervalih in dobili naslednjo
+    tabelo:%T0=30;k=-0.15/min;dT_0=15;
+    $$
+      \begin{array}{c|ccccc}
+        t & 1 & 2 & 3 & 4 & 5\\ \hline
+        T & 42.9106 & 41.1123 & 39.5644 & 38.2322 & 37.0855
+      \end{array}.
+    $$
+    Dolo"cite $\Delta T_0$ in $k$ za ta primer.
+    \item[c)] Kolik"sna bo temperatura v to"cki b) po $10$ minutah?
+      Po kolik"snem "casu bo temperatura padla na $35C$?
+  \end{itemize}
+  \item 
+    \begin{itemize}
+      Integral $I=\int_{a}^{a+h} f(x)\,dx$ ra"cunamo z enostavnim
+      trapeznim pravilom s korakom $h$, torej
+      $$ I\approx T(h):=\frac{h}{2}\left(f(a)+f(a+h)\right).$$
+     \item[a)] Kako bi izra"cunali $h$, "ce poznate $T(h)$?
+     \item[b)] Naj bo $a=0$, $f(x)=\exp(-x)$ in $T(h)=0.4016$.
+       Izra"cunajte $h$ na tri decimalna mesta.
+     \item[c)] Izra"cunajte vrednost integrala $I$ iz to"cke b) "se s
+       sestavljenim tra\-pez\-nim pravilom s korakom $h/2$ (kjer ste
+       $h$ 
+       izra"cunali v to"cki b)) in z Rombergovo metodo izra"cunajte
+       bolj"si pribli"zek.
+    \end{itemize}
+\end{enumerate}
+
+
+\end{document}

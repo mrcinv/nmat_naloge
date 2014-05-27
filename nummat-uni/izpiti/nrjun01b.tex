@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+ 
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}   
+
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  27. junij 2001
+\end{center}
+
+\begin{enumerate}
+
+  \item Tabelo podatkov
+   $$\begin{array}{|c||c|c|}
+        \hline
+        x & 1 & 2\\ \hline
+        y & 1 & 2\\ \hline
+      \end{array}
+   $$
+   "zelite aproksimirati po metodi najmanj"sih kvadratov s funkcijo
+   oblike 
+   $$y(x)=e^{\lambda\,x}.$$ 
+    
+  \begin{enumerate}
+   
+     \item Napi"site funkcijo, katere minimum je potrebno poiskati.
+  
+     \item Zapi"site ena"cbo, ki dolo"ca optimalni $\lambda$.
+       
+     \item Numeri"cno izra"cunajte optimalni $\lambda$ z Newtonovo metodo
+           na tri decimalna mesta. Ustrezni za"cetni pribli"zek dolo"cite
+           sami. 
+        
+  \end{enumerate}
+
+  \item Re"sujete za"cetni problem
+  $$y'(x)=-20\,y(x)+20,\quad y(0)=1.01.$$
+    
+  \begin{enumerate}
+    
+    \item Re"site problem z Eulerjevo metodo na intervalu $[0,1]$ s 
+          korakom $h=0.25$.
+          
+    \item Poi"s"cite to"cno re"sitev za"cetnega problema.
+      
+    \item Kolik"sna je lokalna napaka v to"cki $x=1/2$ in kolik"sna
+          globalna napaka pri $x=1$. Zakaj tako?
+            
+  \end{enumerate} 
+\end{enumerate}
+
+
+\end{document}
+         

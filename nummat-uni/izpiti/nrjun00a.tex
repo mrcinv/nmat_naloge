@@ -1,0 +1,60 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\pagestyle{empty}
+
+\begin{document}
+
+  \begin{center}
+    {\Large IZPIT IZ NUMERI"CNE MATEMATIKE}\\
+    15.6.2000
+  \end{center}
+\begin{enumerate}
+
+  \item Funkcija $f$ zado"s"ca pogojem: $f(0)=f_0$, $f(x_1)=f_1$
+  in $f(1)=f_2$, $0< x_1<1$. Na osnovi teh podatkov 
+  i"s"cemo interpolacijski
+  polinom $p(x)=a\,x^2+b\,x+c$, ki interpolira
+  $f$ v to"ckah $0$, $x_1$ in $1$. Polinom $p$ dolo"cimo
+  tako, da re"simo sistem linearnih ena"cb
+  $$p(0)=f_0,\quad p(x_1)=f_1,\quad p(1)=f_1.$$
+
+  \begin{enumerate}
+   
+     \item Poi"s"ci interpolacijski polinom na omenjeni na"cin
+     v primeru, ko je $x_1=1/3$, $f_0=0$, $f_1=2/9$ in
+     $f_2=0$.
+
+     \item Kak"sna je ob"cutljivost matrike sistema linearnih
+     ena"cb iz to"cke (a) v maksimum normi?\\
+     Spomni se, da je ob"cutljivost matrike $A$ v maksimum normi
+     definirana kot ${\rm cond}_\infty(A)=\|A\|_\infty\,
+     \|A^{-1}\|_\infty$.
+
+     \item  Kak"sen mora biti $x_1$, da bo ob"cutljivost matrike
+     dobljenega linearnega sistema v maksimum normi najmanj"sa?
+     Izra"cunaj najmanj"so ob"cutljivost!
+  \end{enumerate}
+
+  \item Re"sujemo ena"cbo $f(x)=0.1$, kjer je 
+        $$f(x)=\int_{0}^{x}e^{-t^2}\,dt.$$
+        
+        \begin{enumerate}
+         
+           
+          \item Zapi"si algoritem, ki z Newtonovo metodo ra"cuna re"sitev
+                zgornje ena"cbe.
+          \item S pomo"cjo algoritma iz to"cke (a) izra"cunaj prva dva 
+                pribli"zka, "ce je $x_0=0.2$, integral pa ra"cuna"s s
+                trapezno metodo s korakom $h=x_n$.
+          
+          \item Prva dva pribli"zka izra"cunaj "se tako, da integral 
+                ra"cuna"s z enostavno Simpsonovo formulo.
+        \end{enumerate}  
+
+\end{enumerate}
+
+
+\end{document}
+         

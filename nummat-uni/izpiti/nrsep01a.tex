@@ -1,0 +1,60 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+ 
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}   
+
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  6. september 2001
+\end{center}
+
+\vspace{1.5cm}
+\begin{enumerate}
+ \item Re"sujemo sistem linearnih ena"cb
+    \begin{eqnarray*}
+      x_1+x_2 &=& 1\\
+      x_2+x_3 &=& 2\\
+              &\vdots&\\
+      x_n+x_1 &=& n,
+    \end{eqnarray*}
+    kjer je $n$ liho "stevilo.
+ \begin{itemize}
+    \item[a)] Zapi"site sistem v matri"cni obliki in doka"zite,
+      da je vedno re"sljiv.
+    \item[b)] Predlagajte algoritem za re"sevanje tega sistema in
+      pre"stejte "stevilo potrebnih operacij (mno"zenj in deljenj).
+      Algoritem naj bo kar se da u"cinkovit.
+    \item[c)] Re"site sistem v primeru $n=5$.
+ \end{itemize}
+
+ \item Radi bi izra"cunali nekaj decimalk "stevila 
+        $\sqrt{2}$. V ta namen re"sujemo ena"cbo $x^2-2=0$
+        z navadno iteracijo takole
+        $$x_{n+1}=x_n+c\,(x_n^2-2).$$
+ \begin{itemize}
+      \item[a)] Izra"cunajte prve "stiri pribli"zke, "ce je
+        $c=-0.3$ in $x_0=1$.
+      \item[b)] Za katere vrednosti parametra $c$ metoda 
+        konvergira, "ce vzamemo $x_0$ dovolj blizu $\sqrt{2}$?
+      \item[c)] Dolo"cite parameter $c$, pri katerem metoda 
+        najhitreje konvergira.
+ \end{itemize}
+\end{enumerate}
+\end{document}
+         

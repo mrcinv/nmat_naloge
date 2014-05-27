@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts}
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\NN{\mathbb{N}}
+% Boldface math
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}
+       \copy0\kern-\wd0
+       \raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       \kern\dimen0\box0}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large UVOD V NUMERI"CNE METODE\\
+    2. kolokvij, 31.1.2005\\
+    }
+\end{center}
+
+\begin{enumerate}
+
+  \item Naj bo $A\in\RR^{n\times n}$ tridiagonalna matrika. 
+    Napi"site algoritem, ki v "casu ${\cal O}(n)$ izra"cuna
+    $LU$ razcep matrike $A$. Utemeljite, zakaj je va"s
+    algoritem res ustrezne "casovne zahtevnosti.\\
+    Predlagani algoritem uporabite za izra"cun $LU$ razcepa matrike
+    $$A=\left(
+      \begin{array}{ccc}
+        1 & 2 & 0\\
+        1 & 3 & 2\\
+        0 & 1 & 3
+      \end{array}
+      \right).$$
+        
+  
+  \item Tabelo podatkov
+   $$\begin{array}{c|rrrrr}
+     x_i & -2 & -1 & 0 & 1 & 2\\ \hline
+     y_i &  2 &  1 & 0 & 1 & 2
+     \end{array}
+   $$
+   zaradi o"citne simetrije aproksimiramo s parabolo oblike
+    $p(x)=\alpha\,x^2+\beta$. 
+    Izra"cunajte tisti par parametrov $\alpha$ in
+    $\beta$, pri katerem je dose"zena vrednost
+    $$\min_{\alpha,\beta\in\RR}\sum_{i=1}^5(p(x_i)-y_i)^2.$$
+  
+  \item Naj bo 
+    $$ 
+    A=\pmatrix{1   & 0.1 & 0.2\cr
+               0.1 &  2  & -0.1\cr
+               x   &  0.2& 3 }.
+    $$
+    Naslednje probleme re"site {\bf brez ra"cunanja} lastnih vrednosti:
+    \begin{itemize}
+      \item[a)] Preverite, da matrika $A$ za $x\in(-2.8,2.8)$ ne more imeti 
+        negativnih lastnih vrednosti. 
+      \item[b)] Za kak"sne $x\in\RR$ gotovo nima nobene dvojne
+        lastne vrednosti? 
+      \item[c)] "Cim bolje ocenite najmanj"so lastno vrednost v primeru, 
+        ko je $x=0$.
+    \end{itemize}
+    {\sl Namig: Uporabite Gershgorinov izrek.}
+  
+  \item Re"sujete {\sl Besselovo} diferencialno ena"cbo
+    $$x^2\,y''(x)+x\,y'(x)+x^2\,y(x)=0, \quad y(0)=1,\ y'(0)=0.$$
+    Z Eulerjevo metodo in korakom $h=0.1$ ocenite vrednost
+    $y'(0.2)$.\\
+    {\sl Namig: $y''(0)=-\frac{1}{2}$}.
+
+\end{enumerate}
+\end{document} 

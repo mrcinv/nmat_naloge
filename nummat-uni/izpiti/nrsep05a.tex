@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts}
+% Mno"zice realnih, naravnih in kompleksnih "stevil
+\def\RR{\mathbb{R}}
+\def\NN{\mathbb{N}}
+\def\CC{\mathbb{C}}
+\addtolength{\textheight}{4cm}
+\addtolength{\voffset}{-2cm}
+
+\newtheorem{definicija}{Definicija}
+\newtheorem{primer}{Primer}
+% Odebeljene "crke v math na"cinu 
+% (povezto po L.L. Schumaker - makro
+% za St. Malo Proceedings
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large IZPIT IZ NUMERI"CNE MATEMATIKE\\
+    29.8.2005}
+\end{center}
+\vspace{1.5cm}
+\begin{enumerate}
+  \item Robot se giblje po krivulji, ki je podana parametri"cno
+        s predpisom
+        $$\bfm{r}(t)=
+        \left(
+          \begin{array}{c}
+            t\\
+            e^{-t}
+          \end{array}
+        \right),\quad t\geq 0.
+        $$
+        V to"cki $\bfm{T}(2,2)$ se nahaja kontrolni senzor. 
+        Izra"cunajte tisto to"cko na krivulji gibanja 
+        robota, v kateri je robot najbli"zje senzorju.. 
+  \begin{enumerate}
+    \item Razdaljo robota do senzorja izrazite kot funkcijo
+      $f(t)$.
+    \item I"s"cete torej minimum funkcije $f$. Vsi kandidati za 
+      minimum so med re"sitvami nelinearne 
+      ena"cbe $f'(t)=0$. Zapi"site jo!
+    \item Ena"cba $f'(t)=0$ ima eno samo re"sitev. Poi"s"cite jo na
+      tri decimalna mesta natan"cno z Newtonowo metodo. Nato
+      dolo"cite iskano to"cko na krivulji.
+  \end{enumerate}
+  \item Integral funkcije $f$ na intervalu $[0,h]$ "zelite pribli"zno
+    ra"cunati s formulo
+    $$\int_0^h f(x)\,dx\approx \frac{h}{2}\,
+    \left(f(x_1\,h)+f(x_2\,h)\right).$$
+  \begin{enumerate}
+    \item Dolo"cite "stevili $x_1$ in $x_2$ tako, da bo formula
+      "cim vi"sjega reda.
+    \item Z dobljeno formulo pribli"zno izra"cunajte integral
+      $$\int_0^{0.5} \sin{x}\,dx.$$
+    \item Nato integral iz to"cke (b) izra"cunajte "se s trapezno 
+      formulo in ugotovite, katera formula je v tem primeru
+      bolj natan"cna.
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,115 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts}
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\NN{\mathbb{N}}
+% Boldface math
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}
+       \copy0\kern-\wd0
+       \raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       \kern\dimen0\box0}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large UVOD V NUMERI"CNE METODE\\
+    1. kolokvij, 16.12.2004\\
+    }
+\end{center}
+\vspace{2cm}
+
+\begin{enumerate}
+
+  \item Funkcijo $f(x)=\ln{x}$ imate tabelirano v 
+    to"ckah $x_0=10$, $x_1=11$ in $x_2=12$ (vrednosti 
+    $f(x_i)$ izra"cunajte sami). Ocenite vrednost $f(11.1)$
+    z vrednostjo kvadratnega interpolacijskega polinoma 
+    na to"ckah $x_i$, $i=0,1,2$. Nato "cim bolje ocenite napako, ki jo
+    pri tem naredite (pri tem ne smete uporabiti to"cne
+    vrednosti $f(11.1)$).
+    
+  \item Izpeljite integracijsko formulo oblike
+    $$\int_{0}^1 f(x)\,dx=\alpha\,f(0)+\beta\,f(1)+\gamma\,f'(0)+R(f),$$
+    da bo natan"cna za polinome "cim vi"sje stopnje. Nato 
+    z njo ocenite integral
+    $$\int_{0}^{0.2}\sin{x}\,dx$$
+    ter za ta primer izra"cunajte napako $R(f)$.
+   
+  \item Ni"clo funkcije $f_a(x)=x\,\ln{x}-a$ i"s"cete z navadno iteracijo
+   oblike
+   $$x_{n+1}=\frac{x_{n}+a}{\ln{x_n}+1}.$$
+   Preverite, da je ta iteracija ravno tangentna metoda  za re"sevanje
+   ena"cbe $f_a(x)=0$ z redom konvergence vsaj $2$.\\
+   Grafi"cno (ali kako druga"ce) utemeljite, da ima $f_1$ eno samo
+   ni"clo in jo z zgornjo iteracijo dolo"cite na tri decimalna mesta 
+   natan"cno.
+  
+  \item Naj bo $n\in\NN$, $\alpha\in\RR$ in 
+    $$A=\left(
+      \begin{array}{cc}
+        1 & \alpha \\
+        0 & 1
+      \end{array}\right).
+    $$
+    Izra"cunajte $\|A^n\|_p$ za $p=1,2,\infty$.
+\end{enumerate}
+\newpage
+\begin{center}
+  {\large UVOD V NUMERI"CNE METODE\\
+    1. kolokvij, 16.12.2004\\
+    }
+\end{center}
+\vspace{2cm}
+
+\begin{enumerate}
+
+  \item Funkcijo $f(x)=\ln{x}$ imate tabelirano v 
+    to"ckah $x_0=10$, $x_1=11$ in $x_2=12$ (vrednosti 
+    $f(x_i)$ izra"cunajte sami). Ocenite vrednost $f(11.1)$
+    z vrednostjo kvadratnega interpolacijskega polinoma 
+    na to"ckah $x_i$, $i=0,1,2$. Nato "cim bolje ocenite napako, ki jo
+    pri tem naredite (pri tem ne smete uporabiti to"cne
+    vrednosti $f(11.1)$).
+    
+  \item Izpeljite integracijsko formulo oblike
+    $$\int_{0}^1 f(x)\,dx=\alpha\,f(0)+\beta\,f(1)+\gamma\,f'(0)+R(f),$$
+    da bo natan"cna za polinome "cim vi"sje stopnje. Nato 
+    z njo ocenite integral
+    $$\int_{0}^{0.2}\sin{x}\,dx$$
+    ter za ta primer izra"cunajte napako $R(f)$.
+   
+  \item Ni"clo funkcije $f_a(x)=x\,\ln{x}-a$ i"s"cete z navadno iteracijo
+   oblike
+   $$x_{n+1}=\frac{x_{n}+a}{\ln{x_n}+1}.$$
+   Preverite, da je ta iteracija ravno tangentna metoda  za re"sevanje
+   ena"cbe $f_a(x)=0$ z redom konvergence vsaj $2$.\\
+   Grafi"cno (ali kako druga"ce) utemeljite, da ima $f_1$ eno samo
+   ni"clo in jo z zgornjo iteracijo dolo"cite na tri decimalna mesta 
+   natan"cno.
+  
+  \item Naj bo $n\in\NN$, $\alpha\in\RR$ in 
+    $$A=\left(
+      \begin{array}{cc}
+        1 & \alpha \\
+        0 & 1
+      \end{array}\right).
+    $$
+    Izra"cunajte $\|A^n\|_p$ za $p=1,2,\infty$.
+
+
+\end{enumerate}
+\end{document} 

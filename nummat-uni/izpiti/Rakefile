@@ -1,0 +1,37 @@
+#require "erb"
+
+predmet = "nmat"
+TEXFILES = FileList.new [predmet+"0*.tex"]
+
+FILES = [ predmet, predmet+"_vsi" ]
+FILES.each do |myfile|
+    # default task for predmet (without suffix .pdf)
+    task myfile => myfile+".pdf" do 
+    end
+    # generate pdf
+    file myfile+".pdf" => myfile+".tex" do
+	sh "pdflatex "+myfile
+    end
+    # generate tex files
+    file myfile+".tex" => TEXFILES+[myfile+".erb"] do
+	sh "erb "+myfile+".erb>"+myfile+".tex"
+    end
+end
+task :default => FILES do
+end    
+# clean preamble from TeX files
+task :strip => TEXFILES do
+    TEXFILES.each do |texfile|
+	tex = File.read(texfile)
+	tex = tex.gsub(/(\n|.)*begin\{document\}/,"")
+	tex = tex.gsub(/\\end\{document\}/,"")
+	tex = tex.gsub(/\\bfm/,"\\mathbf")
+	open(texfile,"w") do |f|
+	    f.write(tex)
+	end
+    end
+end
+
+task :clean do
+    rm FileList.new(["*.aux","*.log"])
+end

@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+ 
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}   
+
+\usepackage{amsfonts}
+
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  30. junij 2003
+\end{center}
+\vspace{1cm}
+
+\begin{enumerate}
+
+  \item Funkcija $f$ je podana s predpisom takole
+  $$f(x)=
+  \left\{
+  \begin{array}{rl}
+    -x^2+2, & -1\leq x\leq 1\\
+    (1-x)(x-2)x+1,&1\leq x\leq 3\\
+    -x-2, & x\geq 3.
+  \end{array}
+  \right.
+  $$  
+
+  \begin{itemize}
+    \item[a)] Prepri"cajte se, da z metodo regula falsi gotovo
+    poi"s"cemo ni"clo funkcije na intervalu $[-1,5]$.
+    \item[b)] Ni"clo poi"s"cite z metodo regula falsi na eno 
+    decimalno mesto natan\-"cno.
+    \item[c)] Koliko korakov bisekcije je potrebnih, da ni"clo poi"s"cete
+    na 8 mest natan"cno, "ce je za"cetni interval $[-1,5]$?
+  \end{itemize}
+ 
+  \item Re"sujete za"cetni problem
+  $$y''(x)+y(x)=0,\quad y(0)=1,\ y'(0)=0$$
+  na intervalu $[0,0.5]$.
+
+    \begin{itemize}
+      \item[a)] Prevedite problem na re"sevanje sistema dveh 
+      diferencialnih ena"cb prvega reda.
+
+      \item[b)] Re"site sistem ena"cb z Eulerjevo metodo s korakom $h=0.1$.
+
+      \item[c)] Izra"cunajte globalno napako numeri"cne re"sitve za"cetnega 
+      problema v to"cki $x=0.5$.
+
+     \end{itemize}
+\end{enumerate}
+   
+
+
+
+
+\end{document}
+         

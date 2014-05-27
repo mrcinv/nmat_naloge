@@ -1,0 +1,94 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+  IZPITI IZ NUMERI"CNIH METOD\\
+  jesen 2001
+\end{center}
+\begin{enumerate}
+ \item Re"sujemo sistem linearnih ena"cb
+    \begin{eqnarray*}
+      x_1+x_2 &=& 1\\
+      x_2+x_3 &=& 2\\
+              &\vdots&\\
+      x_n+x_1 &=& n,
+    \end{eqnarray*}
+    kjer je $n$ liho "stevilo.
+ \begin{itemize}
+    \item[a)] Zapi"site sistem v matri"cni obliki in doka"zite,
+      da je vedno re"sljiv.
+    \item[b)] Predlagajte algoritem za re"sevanje tega sistema in
+      pre"stejte "stevilo potrebnih operacij (mno"zenj in deljenj).
+      Algoritem naj bo kar se da u"cinkovit.
+    \item[c)] Re"site sistem v primeru $n=5$.
+ \end{itemize}
+
+ \item Radi bi izra"cunali nekaj decimalk "stevila 
+        $\sqrt{2}$. V ta namen re"sujemo ena"cbo $x^2-2=0$
+        z navadno iteracijo takole
+        $$x_{n+1}=x_n+c\,(x_n^2-2).$$
+ \begin{itemize}
+      \item[a)] Izra"cunajte prve "stiri pribli"zke, "ce je
+        $c=-0.3$ in $x_0=1$.
+      \item[b)] Za katere vrednosti parametra $c$ metoda 
+        konvergira, "ce vzamemo $x_0$ dovolj blizu $\sqrt{2}$?
+      \item[c)] Dolo"cite parameter $c$, pri katerem metoda 
+        najhitreje konvergira.
+ \end{itemize}
+
+ \item Funkcija $f$ je predstavljena s tabelo vrednosti
+    $$
+    \begin{array}{c|cccc}
+      x&-1&0&2&a\\
+      \hline
+      f(x)&-4&-2&8&0
+    \end{array}
+    $$
+  \begin{itemize}
+     \item[a)] Z metodo {\sl regula falsi} dolo"cite realno "stevilo
+      $a$ na dve decimalni mesti tako, da bo tabela predstavljala
+      vrednosti funkcije, ki jih interpolira polinom
+      $p(x)=x^3+x-2$.
+     \item[b)] Kak"sen pa mora biti $a$, da bo 
+      $$f[-1,0,2,a]=0?$$
+     \item[c)] Naj bo $a=1$. Dolo"cite premico, ki po metodi
+      najmanj"sih kvadratov aproksimira podatke iz tabele.
+  \end{itemize}
+
+  \item V kraji"s"cih intervala $[a,a+h]$ poznamo vrednosti 
+    funkcije $f$ in njenih odvodov. Izpeljati "zelimo 
+    integracijsko formulo oblike
+    $$\int_{a}^{a+h} f(x)\,dx\approx \alpha\,f(a)+
+    \beta\,f'(a)+\gamma\,f(a+h)+\delta\,f'(a+h).$$
+  \begin{itemize}
+    \item[a)] Dolo"cite koeficiente $\alpha$, $\beta$, $\gamma$
+      in $\delta$ tako, da bo formula "cim vi"sjega reda (namig:
+      predpostavite lahko, da je $a=0$).
+    \item[b)] Na podlagi te formule izpeljite "se 
+      sestavljeno integracijsko pravilo.
+    \item[c)] S pravilom iz to"cke b) izra"cunajte integral
+      $$\int_{0}^{0.3} \sin{x}\,dx,$$
+      pri koraku $h=0.1$. Kolik"sna je absolutna napaka rezultata?
+  \end{itemize}
+
+  \item Re"sujete za"cetni problem
+    $$y''(x)+3\,y'(x)-4\,y(x)=0,\quad y(0)=0,\ y'(0)=5.$$
+  \begin{itemize}
+     \item[a)] Poi"s"cite to"cno re"sitev problema.
+     \item[b)] Prevedite diferencialno ena"cbo na sistem dveh
+       diferencialnih ena"cb prvega reda.
+     \item[c)] Sistem iz to"cke b) re"site z Eulerjevo metodo
+       na intevalu $[0,1]$ s korakom $h=0.25$. Kolik"sna je
+       globalna napaka v to"cki $x=1$?
+     \end{itemize}
+  
+
+\end{enumerate}
+
+
+\end{document}
+         

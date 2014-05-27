@@ -1,0 +1,211 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts}
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\NN{\mathbb{N}}
+% Boldface math
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}
+       \copy0\kern-\wd0
+       \raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       \kern\dimen0\box0}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large UVOD V NUMERI"CNE METODE\\
+    Re"sitve izpita z dne 7.2.2005\\
+    }
+\end{center}
+\vspace{0.5cm}
+
+\begin{enumerate}
+
+  \item Dolo"cite najmanj"so stopnjo polinoma s katerim
+    lahko interpoliramo naslednjo tabelo podatkov
+    $$\begin{array}{r|rrrrrr}
+      x & -2 & -1 & 0 & 1 & 2 & 3\\ \hline
+      y & -5 & 1  & 1 & 1 & 7 & 25
+      \end{array}.
+    $$
+    Prepri"cajte se, da ima polinom najni"zje stopnje, ki interpolira
+    zgornjo tabelo, eno samo ni"clo na $[-2,3]$. To ni"clo izra"cunajte s
+    tangentno metodo na dve decimalni mesti natan"cno.\\
+    {\bf Re"sitev}: Najla"zje je, da polinom kar poi"s"cemo, saj ga
+    potrebujemo v drugem delu naloge. Uporabimo Newtonovo shemo
+    $$\begin{array}{rrrrrrr}
+      -2 & -5 &   &   &   &   &\\
+         &    & 6 &   &   &   &\\
+      -1 &  1 &   & -3&   &   &\\
+         &    & 0 &   & 1 &   &\\
+       0 &  1 &   & 0 &   & 0 &\\
+         &    & 0 &   & 1 &   &0\\
+       1 &  1 &   & 3 &   & 0 &\\
+         &    & 6 &   & 1 &   &\\
+       2 &  7 &   & 6 &   &   &\\
+         &    & 18&   &   &   &\\
+       3 & 25 &   &   &   &   &
+      \end{array}
+    $$
+    in dobimo polinom 
+    $$p(x)=-5+6(x+2)-3(x+2)(x+1)+(x+2)(x+1)x=
+    x^3-x+1.$$ 
+    Torej tabelo lahko interpoliramo s polinomom tretje stopnje.\\
+    Ker je $p(-2)<0$ in $p(3)>0$, ima $p$ na $[-2,3]$ eno ali tri ni"cle.
+    Toda $p'(x)=3x^2-1$, kar pomeni, da sta lokalna ekstrema lahko le
+    v $\pm 1/\sqrt{3}$. Hitro preverimo, da je $p''(1/\sqrt{3})>0$ in
+    $p(1/\sqrt{3})>0$, torej ima $p$ pozitivno vrednost v lokalnem
+    minimumu. Iz tega lahko sklepamo, da je na $[-2,3]$ ena sama ni"cla.\\
+    Tangentna metoda za iskanje ni"cle je
+    $$x_{n+1}=x_n-\frac{p(x_n)}{p'(x_n)}=x_n-\frac{x_n^3-x_n+1}{3x_n^2-1}=
+    \frac{2x_n^3-1}{3x_n^2-1}.$$
+    Z za"cetnim pribli"zkom $x_0=-2$ po "stirih korakih dobimo ni"clo $-1.32$
+    na dve decimalni mesti natan"cno.
+
+  \item V naslednji tabeli so podatki hitrosti avtomobila ($v$[km/h])
+    v prvih dveh sekundah vo"znje
+    $$\begin{array}{l|rrrrr}
+    v & 40 & 46 & 51 & 55 & 59\\ \hline
+    t & 0  & 0.5 & 1 & 1.5 & 2
+    \end{array}.$$
+    S trapeznim in Simpsonovim pravilom izra"cunajte dol"zino poti 
+    (v me\-trih), ki jo je prevozil avtomobil v prvih dveh sekundah. Nato 
+    z vrednostmi hitrosti ob "casih $0.5s$, $1s$ in $1.5s$ "cim bolje ocenite
+    pospe"sek avtomobila po eni sekundi.\\
+    {\bf Re"sitev}: Korak v tabeli je o"citno $h=0.5$. S trapeznim pravilom
+    dobimo oceno za pot
+    $$s=\frac{0.5}{2}(40+2*46+2*51+2*55+59)/3.6=27.9861m,$$
+    s Simpsonovim pa
+    $$s=\frac{0.5}{3}(40+4*46+2*51+4*55+59)/3.6=28.0093m$$
+    (fizikom menda ni treba posebej razlagati, 
+    zakaj faktor $3.6$ v imenovalcu!).
+    Pospe"sek najbolje ocenimo s sredinsko formulo za odvod
+    $$v'(t)\approx \frac{v(t+h)-v(t-h)}{2h}.$$
+    V na"sem primeru dobimo $v'(1)\approx 2.5m/s^2$.
+  \item Naj bo 
+    $$A=\left(
+      \begin{array}{ccccccc}
+        x & 0 & 0 & \cdots & 0 & 0 & a_0\\
+        -1& x & 0 & \cdots & 0 & 0 & a_1\\
+        0 & -1& x & \cdots & 0 & 0 & a_2\\
+        \vdots & \vdots & \ddots & \ddots & \vdots & \vdots & \vdots\\
+        0 & 0 & \cdots & \cdots & -1 & x & a_{n-1}\\
+        0 & 0 & \cdots & \cdots & 0 & -1 & x
+      \end{array}\right) .
+    $$
+      Izra"cunajte determinanto matrike $A$ tako, da najprej
+      izra"cunate njen $LU$ razcep in upo"stevate dejstvo
+      $\det A=\det U=\prod_{i=1}^{n+1}u_{ii}$.\\
+    {\bf Re"sitev}: Dokaj preprosto je izra"cunati $LU$ razcep
+    matrike $A$, saj je potrebno izra"cunati kvociente v $L$
+    samo na spodnji obdiagonali, v $U$ pa le elemente v zadnjem
+    stolpcu. Dobimo
+    $$L=\left(
+      \begin{array}{rrrrr}
+        1 & 0 & 0 & \cdots & 0\\
+        -\frac{1}{x} & 1 & 0 & \cdots &0\\
+        0 & -\frac{1}{x} & 1 & \cdots &0\\
+        \vdots & \vdots&\ddots&\ddots&\vdots\\
+        0&0&\cdots&-\frac{1}{x}&1
+      \end{array}\right)
+  $$
+  in
+  $$
+      U= \left(
+      \begin{array}{rrrr}
+        x & 0  & \cdots &a_0\\
+        0 & x  & \cdots &a_1+\frac{a_0}{x}\\
+        \vdots  & \vdots & \ddots &\vdots\\
+        0 & 0 &\cdots &x+\frac{a_{n-1}}{x}+\cdots+\frac{a_0}{x^n}
+      \end{array}\right).
+   $$
+   Torej je 
+   \begin{eqnarray*}
+     \det A=\det U&=&x^n\left(x+\frac{a_{n-1}}{x}+\cdots
+     +\frac{a_0}{x^n}\right)\\
+     &=&x^{n+1}+a_{n-1}x^{n-1}+\cdots +a_1 x+a_0.
+   \end{eqnarray*}
+  \item Nekdo je re"seval diferencialno ena"cbo $y''(x)=-x\,y(x)$ 
+    na intervalu $[0,0.2]$ z Eulerjevo metodo s korakom $h=0.1$.
+    Za vrednost funkcije $y(0.2)$ je dobil numeri"cni pribli"zek $0.2$,
+    za odvod $y'(0.2)$ pa $0.999$. Iz\-ra\-"cu\-najte vrednosti 
+    $y(0)$ in $y'(0)$?\\
+    {\bf Re"sitev}: Ena"cbo zapi"semo kot sistem prvega reda
+    $$\bfm{Y}'=\bfm{F}(x,\bfm{Y})=\left(
+    \begin{array}{r}
+      y_2\\
+      -x\,y_1
+    \end{array}\right),\quad \bfm{Y}=
+    \left(
+    \begin{array}{r}
+      y_1\\
+      y_2
+    \end{array}\right)=
+    \left(
+    \begin{array}{r}
+      y\\
+      y'
+    \end{array}\right).
+    $$
+    Zapi"simo dva koraka Eulerjeve metode
+    \begin{eqnarray*}
+      \bfm{Y}_1&=&\bfm{Y}_0+h\bfm{F}(x_0,\bfm{Y}_0)=
+    \left(
+    \begin{array}{r}
+      y_1(0)\\
+      y_2(0)
+    \end{array}\right)+
+    h
+    \left(
+    \begin{array}{r}
+      y_2(0)\\
+      -0\,y_1(0)
+    \end{array}\right)\\
+    &=&
+    \left(
+    \begin{array}{r}
+      y_1(0)+h\,y_2(0)\\
+      y_2(0)
+    \end{array}\right),
+    \end{eqnarray*}
+    \begin{eqnarray*}
+      \bfm{Y}_2&=&\bfm{Y}_1+h\bfm{F}(x_1,\bfm{Y}_1)=
+    \left(
+    \begin{array}{r}
+      y_1(0)+h\,y_2(0)\\
+      y_2(0)
+    \end{array}\right)\\
+    &+&h
+    \left(
+    \begin{array}{r}
+      y_2(0)\\
+      -0.1\,(y_1(0)+h\,y_2(0))
+    \end{array}\right)
+    =
+    \left(
+    \begin{array}{r}
+      0.2\\
+      0.999
+    \end{array}\right),
+    \end{eqnarray*}
+Upo"stevamo, da je $h=0.1$ in dobimo sistem ena"cb
+\begin{eqnarray*}
+   y_1(0)+0.2\,y_2(0)&=&0.2\\
+   -0.01\,y_1(0)+0.999\,y_2(0)&=&0.999,
+\end{eqnarray*}
+katerega re"sitev je $y_1(0)=0$ in $y_2(0)=1$.
+\end{enumerate}
+\end{document} 

@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+ 
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}   
+
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  20. september 2002
+\end{center}
+
+\begin{enumerate}
+
+  \item Naravni logaritem "stevila $a=1+\epsilon$, kjer je $|\epsilon|$
+    majhno "stevilo, lahko izra"cunamo pribli"zno tako, da
+    re"simo ena"cbo
+    $$\frac{1+\frac{x}{2}+\frac{x^2}{8}+\frac{x^3}{48}}
+      {1-\frac{x}{2}+\frac{x^2}{8}-\frac{x^3}{48}}=a.
+    $$
+    \begin{itemize}
+      \item[a)] Zgornjo ena"cbo preoblikujte v polinomsko.
+      \item[b)] Za ena"cbo iz to"cke a) napi"site algoritem, ki
+        ra"cuna njene re"sitve po Newtonovi metodi.
+      \item[c)] Z metodo iz to"cke b) izra"cunajte pribli"zek
+	za $\ln(1.1)$. Za"cetni pribli"zek naj bo $x_0=0$.
+        Dovolj je, "ce izra"cunate "se pribli"zka $x_1$ in $x_2$.
+      \item[d)] Kolik"sna je absolutna napaka rezultata iz c)?
+    \end{itemize}
+  \item  
+\end{enumerate}
+
+
+\end{document}
+         

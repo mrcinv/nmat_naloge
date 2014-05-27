@@ -1,0 +1,13 @@
+\input{preamble}
+\pagestyle{empty}
+
+\begin{document}
+<% 
+    files=Dir.glob("nmat[0-9][0-9][a-d].tex") 
+    files=files.sort 
+    files.each do |file|
+%>
+\include{<%=File.basename(file,".tex")%>}
+<% end %>
+
+\end{document}

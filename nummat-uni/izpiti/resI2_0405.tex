@@ -1,0 +1,139 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts,amsmath}
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\NN{\mathbb{N}}
+% Boldface math
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}
+       \copy0\kern-\wd0
+       \raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       \kern\dimen0\box0}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large Re"sitve drugega izpita iz UVNM,\\
+    5.5.2005\\
+    }
+\end{center}
+
+\begin{enumerate}
+
+  \item S tangentno metodo ra"cunate najmanj"so ni"clo
+      {\sl Laguerreovega} polinoma $L_3$. Naj bo za"cetni pribli"zek
+      $x_0=0$. Zapi"site pribli"zek $x_2$ na $4$ decimalna mesta.
+      Laguerreovi polinomi so dani rekurzivno takole
+      \begin{align*}
+        L_0(x)&=1,\\
+        L_1(x)&=1-x,\\
+        (n+1)\,L_{n+1}(x)&=(2\,n+1-x)\,L_n(x)-n\,L_{n-1}(x).
+      \end{align*}
+      Dolo"cite red konvergence metode pri iskanju te ni"cle.\\
+      {\sl Namig: Najprej izra"cunajte koeficiente polinoma $L_3$.}
+  
+   {\bf Re"sitev}: Iz rekurzivne formule dobimo
+   $$L_3(x)=\frac{1}{6}(-x^3+9\,x^2-18\,x+6).$$
+   Torej lahko iskanje ni"cle $L_3$ poenostavimo v iskanje ni"cle
+   funkcije $f(x)=x^3-9\,x^2+18\,x-6$.
+   Tangentna metoda se tedaj glasi
+   $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}=x_n-
+   \frac{x_n^3-9\,x_n^2+18\,x_n-6}{3\,x_n^2-18\,x_n+18}.$$
+   "Ce je $x_0=0$, dobimo $x_2=0.4114$.\\
+   Red konvergence je $2$, saj je ni"cla $\alpha$ enostavna
+   ($f$ ima tri razli"cne ni"cle) in $f''(\alpha)\neq 0$.
+  
+  \item {\sl Gauss--Chebysheva} kavadraturna formula
+      se glasi
+      $$\int_{-1}^{1}\frac{f(x)}{\sqrt{1-x^2}}\,dx=
+        \sum_{k=1}^n \alpha_k\,f\left(\cos\left(\frac{2k-1}{2n}\pi\right)\right)+
+        \frac{2\,\pi}{2^{2n}(2\,n)!}f^{(2n)}(\xi),$$ 
+      kjer je $\xi\in[-1,1]$. 
+      Dolo"cite konstanti $\alpha_1$ in $\alpha_2$ ter 
+      izra"cunajte numeri"cni pribli"zek
+      za integral
+      $$\int_{-1}^{1}\frac{e^{x}}{\sqrt{1-x^2}}\,dx$$
+      v primeru $n=2$. S pomo"cjo zgoraj zapisane formule
+      ocenite absolutno napako pri izra"cunu.
+
+    
+    {\bf Re"sitev}: Konstanti $\alpha_1$ in $\alpha_2$ izra"cunamo tako, da
+    za $f$ zaporedoma izberemo $1$ in $x$ ter zahtevamo, da je formula to"cna.
+    Dobimo sistem
+    \begin{align*}
+    	\alpha_1+\alpha_2&=\arcsin{x}\vert_{-1}^1=\pi,\\
+    	\alpha_1\frac{\sqrt{2}}{2}-\alpha_2\frac{\sqrt{2}}{2}&=0,
+    \end{align*}
+    katerega re"sitev je $\alpha_1=\alpha_2=\pi/2$.\\
+    Numeri"cni pribli"zek za integral je torej
+    $$\int_{-1}^{1}\frac{e^{x}}{\sqrt{1-x^2}}\,dx\approx
+    \frac{\pi}{2}\left(e^{\frac{\sqrt{2}}{2}}+e^{-\frac{\sqrt{2}}{2}}\right)=
+    3.9603.
+    $$
+    Iz Gauss--Chebysheve formule dobimo oceno za absolutno napako
+    \begin{align*}
+    	&\left|\int_{-1}^{1}\frac{e^{x}}{\sqrt{1-x^2}}\,dx-
+        \sum_{k=1}^2 \alpha_k\,e^{\cos\left(\frac{2k-1}{4}\pi\right)}
+       \right|\leq \frac{2\,\pi}{2^{4}(4)!}\max_{\xi\in[-1,1]}
+       (e^{x})^{(4)}\\
+       &<\frac{2\,\pi}{2^{4}(4)!}e^1=0.0445.
+    \end{align*}
+    
+  \item Tabelo podatkov $(x_i,f_i)$, $i=1,2,\dots,n$, 
+      aproksimirate s konstanto po metodi
+      najmanj"sih kvadratov. Preverite, da je konstanta enaka povpre"cni vrednosti
+      "stevil $f_i$.  
+    
+    {\bf Re"sitev}: Vzemimo za aproksimacijsko funkcijo $f(x)=c$, kjer
+     je $c$ iskana konstanta.
+     Minimizirati moramo funkcijo
+     $$E(c)=\sum_{i=1}^n(f(x_i)-f_i)^2=
+     \sum_{i=1}^n(c-f_i)^2.
+     $$
+     Ko njen odvod postavimo na $0$, dobimo pogoj
+     $$c=\frac{1}{n}\sum_{i=1}^n f_i,$$ 
+     kar je ravno povpre"cna vrednost.
+    	
+  
+  \item 
+    Nihanje matemati"cnega nihala opi"semo z eksaktnim  
+    $$\ddot\varphi(t)+\frac{g}{\ell}\sin(\varphi(t))=0, \quad \varphi(0)=\varphi_0,\ 
+      \dot\varphi(0)=\dot\varphi_0$$
+    in poenostavljenim 
+     $$\ddot\varphi(t)+\frac{g}{\ell}\varphi(t)=0, \quad \varphi(0)=\varphi_0,\ 
+      \dot\varphi(0)=\dot\varphi_0$$
+    za"cetnim problemom. 
+    Izra"cunajte razliko kotnih hitrosti, ki ju dobimo z re"sevanjem prvega in drugega
+    problema z Eulerjevo metodo po $0.5s$. Korak naj bo $0.25s$, $\ell=0.1m$,
+    $\varphi_0=0.5$ in $\dot\varphi_0=0s^{-1}$.
+    
+    {\bf Re"sitev}: Obe diferencialni ena"cbi prevedemo na sistem dveh 
+    prvega reda
+    \begin{align*}
+    	\bfm{Y}^{'}&:=\bfm{F}_1(t,\bfm{Y}):=[\bfm{Y}(2),-\frac{g}{\ell}\,\sin(\bfm{Y}(1))]^T,\\
+	\bfm{Y}^{'}&:=\bfm{F}_2(t,\bfm{Y}):=[\bfm{Y}(2),-\frac{g}{\ell}\,\bfm{Y}(1)]^T, 	
+    \end{align*}
+    kjer je $\bfm{Y}=[\varphi,\dot\varphi]^T$.
+    Eulerjeva metoda se potem glasi
+    $$\bfm{Y}_{i+1}=\bfm{Y}_i+h\bfm{F}_i(t_i,\bfm{Y}_i).$$
+    Z danimi podatki iz naloge pridemo do pribli"zkov za kotno hitrost.
+    V prvem primeru $\dot\varphi(0.5)\approx -0.2349$ in 
+    v drugem$\dot\varphi(0.5)\approx -0.2450$.
+    Torej je absolutna vrednost razlike enaka $0.0101$.
+    
+    
+\end{enumerate}
+\end{document} 

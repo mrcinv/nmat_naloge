@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts,amsmath}
+%Real and complex numbers
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\NN{\mathbb{N}}
+% Boldface math
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}
+       \copy0\kern-\wd0
+       \raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
+       \kern\dimen0\box0}}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large UVOD V NUMERI"CNE METODE\\
+    3. izpit, 13.6.2005\\
+    }
+\end{center}
+\vspace{1cm}
+
+\begin{enumerate}
+  
+  \item Integral $I=\int_{a}^{a+h} f(x)\,dx$ ra"cunate z enostavnim
+      trapeznim pravilom s korakom $h$, torej
+      $$ I\approx T(h):=\frac{h}{2}\left(f(a)+f(a+h)\right).$$
+      Kako bi izra"cunali $h$, "ce poznate $T(h)$?
+      Naj bo $a=0$, $f(x)=\exp(-x)$ in $T(h)=0.4016$. Koliko je v tem
+      primeru $h$?
+
+  \item Temperatura v razgretem avtomobilu se spreminja s 
+    "casom pribli"zno takole
+    $$T(t)=T_0+\Delta T_0\,\exp(k\,t),$$
+    kjer je $T(t)$ temperatura ob
+    "casu $t$ v notranjosti avtomobila, $T_0$ znana konstantna zunanja
+    temperatura, $\Delta T_0$ razlika med notranjo in zunanjo
+    temperaturo ob za"cetku hlajenja (torej ob "casu $t=0$) in $k$
+    parameter, ki opisuje hitrost hlajenja.\\
+    Zunanja temperatura je $T_0=30C$. Temperaturo v 
+    avtomobilu ste izmerili v minutnih intervalih in dobili naslednjo
+    tabelo:%T0=30;k=-0.15/min;dT_0=15;
+    $$
+      \begin{array}{c|ccccc}
+        t & 1 & 2 & 3 & 4 & 5\\ \hline
+        T & 42.9106 & 41.1123 & 39.5644 & 38.2322 & 37.0855
+      \end{array}.
+    $$
+    Z metodo najmanj"sih kvadratov dolo"cite $\Delta T_0$ in $k$ za ta primer.\\
+    {\sl Namig: Logaritmirajte koli"cino $T(t)-T_0$ in uporabite klasi"cno
+    metodo najmanj"sih kvadratov na logaritmiranih podatkih.}
+        
+  
+  \item Za matriko $A\in\RR^{n\times n}$ poznamo njen $LU$ razcep,
+        torej $A=L\,U$. Zapi"site {\bf u"cinkovit} algoritem za
+            re"sevanje sistema $A^T\,\bfm{x}=\bfm{b}$, kjer
+            je $\bfm{b}\in\RR^n$ znani vektor desnih strani sistema.
+            Kolik"sna je "casovna zahtevnost algoritma?
+            Izra"cunajte $\bfm{x}$, "ce je
+            $$
+              A=L\,U=
+              \left[
+                \begin{array}{ccc}
+                  1 & 0 & 0\\
+                  1 & 1 & 0\\
+                  1 & 1 & 1
+                \end{array}
+               \right]
+               \left[
+                \begin{array}{ccc}
+                  1 & 2 & 3\\
+                  0 & -1 & 2\\
+                  0 & 0 & -1
+                \end{array}
+               \right]
+            $$
+            in $\bfm{b}=[6,7,25]^T$.
+   \item Za"cetni problem 
+     $$y^{(2005)}(x)-2\,x\,y=0,\quad y(1)=1,\,y'(1)=1,\,\dots, y^{(2004)}(1)=1,
+     $$
+     re"sujete z Eulerjevo metodo s korakom $h=0.1$. Kak"sen je pribli"zek
+     za $y^{(2004)}(0.2)$.
+
+\end{enumerate}
+\end{document} 

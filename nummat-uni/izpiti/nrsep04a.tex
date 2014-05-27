@@ -1,0 +1,68 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[slovene]{babel}
+\usepackage{amsfonts,graphicx}
+% Mno"zice realnih, naravnih in kompleksnih "stevil
+\def\RR{\mathbb{R}}
+\def\NN{\mathbb{N}}
+\def\CC{\mathbb{C}}
+\addtolength{\textheight}{4cm}
+\addtolength{\voffset}{-2cm}
+
+\newtheorem{definicija}{Definicija}
+\newtheorem{primer}{Primer}
+% Odebeljene "crke v math na"cinu 
+% (povezto po L.L. Schumaker - makro
+% za St. Malo Proceedings
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  30. avgust 2004
+\end{center}
+\vspace{1cm}
+
+\begin{enumerate}
+  \item Dana je tabela podatkov
+    $$\begin{array}{|r|r|r|r|r|r|}
+           \hline
+	    	x & -2 & -1 & 0 & 1 & 2 \\ \hline
+		y & -5 &  0 & 1 & y_3 & y_4\\ \hline
+	\end{array}
+	$$
+	\begin{itemize}
+		\item[a)] Kak"sna mora biti zveza med $y_3$ in $y_4$,
+		da bo tabelo mogo"ce interpolirati s kubi"cnim polinomom?
+		\item [b)]Dolo"cite tak par "stevil $y_3$ in $y_4$,
+		da je tabelo mogo"ce interpolirati s kubi"cnim
+		polinomom z vodilnim koeficientom $1$.
+		\item[c)] Kolik"sna je vrednost interpolacijskega polinoma
+		iz b) pri $x=\pi/2$?
+								
+  \end{itemize}
+  \item I"s"cemo re"sitev za"cetnega problema $y'=y-x$, $y(0)=0$.
+    \begin{itemize}
+    	\item[a)] Poi"s"cite to"cno re"sitev za"cetnega problema.
+	\item[b)] Na intervalu $[0,1]$ poi"s"cite numeri"cno re"sitev 
+	z Adams-Bashforth-Moultonovo prediktor-korektor metodo "cetrtega 
+	reda. Dodatne vrednosti izra"cunajte z Runge-Kutta metodo "cetrtega 
+	reda. Za korak vzemite $0.25$.
+	\item[c)] Kolik"sna je globalna napaka pri $x=1$?
+    \end{itemize}
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts}
+% Mno"zice realnih, naravnih in kompleksnih "stevil
+\def\RR{\mathbb{R}}
+\def\NN{\mathbb{N}}
+\def\CC{\mathbb{C}}
+\addtolength{\textheight}{4cm}
+\addtolength{\voffset}{-2cm}
+
+\newtheorem{definicija}{Definicija}
+\newtheorem{primer}{Primer}
+% Odebeljene "crke v math na"cinu 
+% (povezto po L.L. Schumaker - makro
+% za St. Malo Proceedings
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\large IZREDNI IZPIT IZ NUMERI"CNE MATEMATIKE\\
+    28.11.2005}
+\end{center}
+\vspace{1.5cm}
+\begin{enumerate}
+  %nelinearne
+  \item Naj bo $a>0$. Z navadno iteracijo oblike
+    $$x_{n+1}=\alpha\,x_n+\beta\,\frac{a}{x_n},\quad n=0,1,\dots$$
+    "zelite izra"cunati pribli"zek $\sqrt{a}$. 
+
+  \begin{enumerate}
+    \item Dolo"cite parametra 
+    $\alpha$ in $\beta$ tako, da bo iteracija "cim hitreje
+    konvergirala za dovolj dober za"cetni pribli"zek.
+
+    \item Prepri"cajte se, da je iteracija, ki ste jo dobili v a),
+      ravno Newtonova metoda za re"sevanje ena"cbe $x^2-a=0$.
+
+    \item Z zgoraj izra"cunano iteracijo izra"cunajte
+      $\sqrt{10}$ na "stiri decimalna mesta natan"cno. Za $x_0$ izberite
+      $3$.
+
+  \end{enumerate}
+  {\sl Nasvet: Iteracijo zapi"site v obliki $x_{n+1}=g(x_n)$ in
+    zahtevajte, da je $g(\sqrt{a})=\sqrt{a}$ ter $g'(\sqrt{a})=0$.}
+  %interpolacija
+  \item Za neznano funkcijo $f$ poznate naslednje podatke
+    $$
+    \begin{array}{c|rrr}
+      x& -1 & 0 & 1 \\ \hline
+      f(x) & 1 & 1 & -1
+    \end{array}.
+    $$
+      
+
+  \begin{enumerate}
+    \item Izra"cunajte Newtonov intepolacijski polinom 
+      za zgornjo tabelo.
+
+    \item S pomo"cjo polinoma iz to"cke a) ocenite, kje ima $f$ ni"clo. 
+
+    \item Ocenite "se, kje ima $f$ lokalni maksimum (spet
+      s pomo"cjo polinoma).
+
+  \end{enumerate}
+  {\sl Namig: Ni"cla in ekstrem $f$ sta pribli"zno tam, kjer sta 
+    ni"cla in ekstrem polinoma.}
+\end{enumerate}
+
+\end{document}

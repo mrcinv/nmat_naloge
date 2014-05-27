@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[slovene]{babel}
+
+\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
+ 
+\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
+       \copy0\kern-\wd0%
+       \raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
+       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
+       \kern\dimen0\box0}}   
+
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+  IZPIT IZ NUMERI"CNE MATEMATIKE\\
+  14. junij 2002
+\end{center}
+
+\begin{enumerate}
+
+  \item Vemo, da za "stevila $x$, ki so po absolutni vrednosti dovolj majhna,
+    pribli"zno velja
+    $$\sin{x}\approx x-\frac{x^3}{3!}+\frac{x^5}{5!}.$$
+    \begin{itemize}
+       \item[a)] Omenjeno zvezo lahko uporabimo tudi za ra"cunanje vrednosti
+        $\arcsin{y}$, pri dovolj majhnem $y$. V ta namen re"sujemo
+        ena"cbo
+        $$x-\frac{x^3}{3!}+\frac{x^5}{5!}=y.$$
+        Napi"site algoritem, ki ra"cuna zaporedne pribli"zke za $\arcsin{y}$
+        tako, da ena"cbo re"sujete z Newtonovo iteracijo.
+       \item[b)]
+        Izra"cunajte drugi pribli"zek $x_2$ za $\arcsin{0.2}$ z metodo iz
+        to"cke a). Za"cetni pribli"zek naj bo $x_0=0.1$.
+       \item[c)] Kolik"sna je absolutna napaka rezultata iz to"cke b)?
+    \end{itemize}
+
+  \item Hermitov interpolacijski polinom tretje stopnje ima to lastnost, da 
+    interpolira vrednost funkcije in njenega odvoda v dveh izbranih to"ckah.
+    Dana je naslednja tabela podatkov
+    $$
+        \begin{array}{|l||l|l|}
+          \hline
+          x & 0 & 1 \\ \hline\hline
+          f(x) & 0 & \alpha \\ \hline
+          f'(x) & 0 & 1\\ \hline
+        \end{array}
+    $$
+     
+     \begin{itemize}
+      \item[a)] Poi"s"cite Hermitov polinom v primeru, ko je $\alpha=0$.
+      \item[b)] Kak"sen mora biti $\alpha$, da bo stopnja interpolacijskega 
+      polinoma kve"cjemu $2$?
+      \item[c)] Ali interpolacijski polinom obstaja za vsak $\alpha$?
+     \end{itemize}   
+\end{enumerate}
+
+
+\end{document}
+         
