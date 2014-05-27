@@ -1,29 +1,4 @@
-\documentclass[11pt,a4paper]{article}
 
-\usepackage[slovene]{babel}
-\usepackage{amsfonts,amsmath}
-%Real and complex numbers
-\def\RR{\mathbb{R}}
-\def\CC{\mathbb{C}}
-\def\NN{\mathbb{N}}
-% Boldface math
-\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
-
-\def\makebold#1{\mathord{\setbox0=\hbox{#1}
-       \copy0\kern-\wd0
-       \raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       \kern\dimen0\box0}}
-
-
-\pagestyle{empty}
-
-\begin{document}
 
 \begin{center}
   {\large UVOD V NUMERI"CNE METODE\\
@@ -65,10 +40,10 @@
   
   \item Za matriko $A\in\RR^{n\times n}$ poznamo njen $LU$ razcep,
         torej $A=L\,U$. Zapi"site {\bf u"cinkovit} algoritem za
-            re"sevanje sistema $A^T\,\bfm{x}=\bfm{b}$, kjer
-            je $\bfm{b}\in\RR^n$ znani vektor desnih strani sistema.
+            re"sevanje sistema $A^T\,\mathbf{x}=\mathbf{b}$, kjer
+            je $\mathbf{b}\in\RR^n$ znani vektor desnih strani sistema.
             Kolik"sna je "casovna zahtevnost algoritma?
-            Izra"cunajte $\bfm{x}$, "ce je
+            Izra"cunajte $\mathbf{x}$, "ce je
             $$
               A=L\,U=
               \left[
@@ -86,7 +61,7 @@
                 \end{array}
                \right]
             $$
-            in $\bfm{b}=[6,7,25]^T$.
+            in $\mathbf{b}=[6,7,25]^T$.
    \item Za"cetni problem 
      $$y^{(2005)}(x)-2\,x\,y=0,\quad y(1)=1,\,y'(1)=1,\,\dots, y^{(2004)}(1)=1,
      $$
@@ -94,4 +69,4 @@
      za $y^{(2004)}(0.2)$.
 
 \end{enumerate}
-\end{document} 
+ 

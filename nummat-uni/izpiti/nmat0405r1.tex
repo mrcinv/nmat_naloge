@@ -1,29 +1,4 @@
-\documentclass[12pt,a4paper]{article}
 
-\usepackage[slovene]{babel}
-\usepackage{amsfonts}
-%Real and complex numbers
-\def\RR{\mathbb{R}}
-\def\CC{\mathbb{C}}
-\def\NN{\mathbb{N}}
-% Boldface math
-\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
-
-\def\makebold#1{\mathord{\setbox0=\hbox{#1}
-       \copy0\kern-\wd0
-       \raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       \kern\dimen0\box0}}
-
-
-\pagestyle{empty}
-
-\begin{document}
 
 \begin{center}
   {\large UVOD V NUMERI"CNE METODE\\
@@ -144,11 +119,11 @@
     za odvod $y'(0.2)$ pa $0.999$. Iz\-ra\-"cu\-najte vrednosti 
     $y(0)$ in $y'(0)$?\\
     {\bf Re"sitev}: Ena"cbo zapi"semo kot sistem prvega reda
-    $$\bfm{Y}'=\bfm{F}(x,\bfm{Y})=\left(
+    $$\mathbf{Y}'=\mathbf{F}(x,\mathbf{Y})=\left(
     \begin{array}{r}
       y_2\\
       -x\,y_1
-    \end{array}\right),\quad \bfm{Y}=
+    \end{array}\right),\quad \mathbf{Y}=
     \left(
     \begin{array}{r}
       y_1\\
@@ -162,7 +137,7 @@
     $$
     Zapi"simo dva koraka Eulerjeve metode
     \begin{eqnarray*}
-      \bfm{Y}_1&=&\bfm{Y}_0+h\bfm{F}(x_0,\bfm{Y}_0)=
+      \mathbf{Y}_1&=&\mathbf{Y}_0+h\mathbf{F}(x_0,\mathbf{Y}_0)=
     \left(
     \begin{array}{r}
       y_1(0)\\
@@ -182,7 +157,7 @@
     \end{array}\right),
     \end{eqnarray*}
     \begin{eqnarray*}
-      \bfm{Y}_2&=&\bfm{Y}_1+h\bfm{F}(x_1,\bfm{Y}_1)=
+      \mathbf{Y}_2&=&\mathbf{Y}_1+h\mathbf{F}(x_1,\mathbf{Y}_1)=
     \left(
     \begin{array}{r}
       y_1(0)+h\,y_2(0)\\
@@ -208,4 +183,4 @@ Upo"stevamo, da je $h=0.1$ in dobimo sistem ena"cb
 \end{eqnarray*}
 katerega re"sitev je $y_1(0)=0$ in $y_2(0)=1$.
 \end{enumerate}
-\end{document} 
+ 

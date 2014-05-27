@@ -1,29 +1,4 @@
-\documentclass[12pt,a4paper]{article}
 
-\usepackage[slovene]{babel}
-\usepackage{amsfonts,amsmath}
-%Real and complex numbers
-\def\RR{\mathbb{R}}
-\def\CC{\mathbb{C}}
-\def\NN{\mathbb{N}}
-% Boldface math
-\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
-
-\def\makebold#1{\mathord{\setbox0=\hbox{#1}
-       \copy0\kern-\wd0
-       \raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0
-       \kern\dimen0\box0}}
-
-
-\pagestyle{empty}
-
-\begin{document}
 
 \begin{center}
   {\large UVOD V NUMERI"CNE METODE\\
@@ -36,14 +11,14 @@
   
   \item Delec se giblje po krivulji
     \begin{equation*}
-    	\bfm{r}(t)=
+    	\mathbf{r}(t)=
     	\begin{pmatrix}
     	  e^{-t}\\
     	  t
     	\end{pmatrix}, \quad t\geq 0.
     \end{equation*}
     Numeri"cno izra"cunajte tisto to"cko na krivulji, v
-    kateri je delec najbli"zje to"cki $\bfm{T}(0,1)$.
+    kateri je delec najbli"zje to"cki $\mathbf{T}(0,1)$.
     Rezultat naj bo to"cen na dve decimalni mesti.
     
   \item Integral funkcije $f$ na intervalu $[0,h]$
@@ -81,4 +56,4 @@
     manj"sa kot $0.1$.\\
     {\sl Namig: Najprej izra"cunajte to"cno re"sitev!}
 \end{enumerate}
-\end{document} 
+ 

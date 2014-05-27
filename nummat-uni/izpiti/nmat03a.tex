@@ -1,30 +1,4 @@
-\documentclass[12pt,a4paper]{article}
 
-\usepackage[slovene]{babel}
-
-\def\bfm#1{{\dimen0=.01em\dimen1=.009em\makebold{$#1$}}}
- 
-\def\makebold#1{\mathord{\setbox0=\hbox{#1}%
-       \copy0\kern-\wd0%
-       \raise\dimen1\copy0\kern-\wd0%
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
-       {\advance\dimen1 by \dimen1\raise\dimen1\copy0}\kern-\wd0%
-       \kern\dimen0\raise\dimen1\copy0\kern-\wd0%
-       \kern\dimen0\box0}}   
-
-\usepackage{amsfonts}
-
-%Real and complex numbers
-\def\RR{\mathbb{R}}
-\def\CC{\mathbb{C}}
-
-
-\pagestyle{empty}
-
-\begin{document}
 \begin{center}
   IZPIT IZ NUMERI"CNE MATEMATIKE\\
   13. junij 2003
@@ -36,20 +10,20 @@
   \item Naj bo $A\in\RR^{n\times n}$ diagonalno dominantna tridiagonalna
    matrika (od ni"c razli"cni elementi so lahko le na diagonali in na
    obeh stranskih obdiagonalah). Znano je, da v tem primeru Jacobijeva
-   metoda za re"sevanje sistema ena"cb $A\bfm{x}=\bfm{b}$
+   metoda za re"sevanje sistema ena"cb $A\mathbf{x}=\mathbf{b}$
    konvergira za vsak za"cetni pribli"zek.
   \begin{itemize}
      \item[a)] Zapi"site {\bf u"cinkovit algoritem} 
      (upo"stevajte strukturo matrike in ne
      izvajajte nepotrebih operacij) za re"sevanje sistema
-     $A\bfm{x}=\bfm{b}$ z Jacobijevo metodo. Pre"stejte "stevilo potrebnih
+     $A\mathbf{x}=\mathbf{b}$ z Jacobijevo metodo. Pre"stejte "stevilo potrebnih
      operacij (mno"zenj in deljenj) na enem koraku metode.
      \item[b)] Izra"cunajte drugi pribli"zek
-     (torej $\bfm{x}^{(2)}$) s to metodo, "ce je
+     (torej $\mathbf{x}^{(2)}$) s to metodo, "ce je
      $$A=\pmatrix{4 & 1 & 0 & 0\cr 1 & 3 & -1 & 0\cr
                 0 & 1 & 4 & 2\cr 0 & 0 & 1 & -3},
-     \quad \bfm{b}=[6,4,22,-9]^T,\quad
-         \bfm{x}^{(0)}=[0,0,0,0]^T.$$
+     \quad \mathbf{b}=[6,4,22,-9]^T,\quad
+         \mathbf{x}^{(0)}=[0,0,0,0]^T.$$
      \item[c)] Kako bi spremenili algoritem iz to"cke a), da bi deloval
      za petdiagonalno matriko (elementi so lahko od ni"c razli"cni le 
      na glavni in dveh stranskih diagonalah)?
@@ -78,5 +52,5 @@
 
 
 
-\end{document}
+
          
